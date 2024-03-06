@@ -57,6 +57,7 @@
     .demo{
       margin-left: 1vw;
       cursor: pointer;
+
       background-color: #0EF74D;
       //background-color: #3B9F46;
       border-radius: 1vw;
@@ -64,8 +65,8 @@
       font-size: 1.3vw;
       font-weight: 500;
       padding: 1vw;
-      text-decoration: underline;
       display: flex;
+      font-family: "Kanit", sans-serif;
       align-items: center;
       flex-direction: row;
       height: fit-content;
