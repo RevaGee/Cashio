@@ -1,0 +1,148 @@
+.header {
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;
+  border: 1px solid grey;
+  border-radius: 1vw;
+  position: sticky;
+  top: 0;
+  left: 5%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(232, 232, 232, .7);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1vw;
+
+  .left_side {
+    display: flex;
+    align-items: center;
+    .logo{
+      border: 1px solid #000000;
+      border-radius: 0.5vw;
+      padding: 1vw;
+      cursor: pointer;
+    }
+    img{
+      width: 100px;
+    }
+    .nav__links {
+      list-style: none;
+      display: flex;
+      font-size: 1vw;
+      li {
+        padding: 0 1.5vw;
+
+        &:last-child {
+          padding-right: 0;
+        }
+
+        a {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 500;
+          color: black;
+          text-decoration: none;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: #0EF74D;
+          }
+        }
+      }
+    }
+  }
+  .right_side{
+    display: flex;
+    .demo{
+      margin-left: 1vw;
+      cursor: pointer;
+      background-color: #0EF74D;
+      //background-color: #3B9F46;
+      border-radius: 1vw;
+      border: none;
+      font-size: 1.3vw;
+      font-weight: 500;
+      padding: 1vw;
+      text-decoration: underline;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      height: fit-content;
+      .button_icon{
+        margin-left: 1vw;
+        position: relative;
+      }
+      .button_arrow{
+        position: absolute;
+        top: 19%;
+        left: 25%;
+      }
+    }
+  }
+}
+
+.nav-link, .drop-down li {
+  list-style: none;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: currentColor;
+  }
+}
+
+.drop-down {
+  position: absolute;
+  padding: 0.5rem 0;
+  margin: 0.5rem -0.5rem;
+  background: antiquewhite;
+  color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  font-size: 12px;
+  display: none;
+
+  li:hover {
+    background: black;
+    color: #fff;
+    border-radius: 0.5rem;
+  }
+}
+
+.nav-link:hover {
+  background-color: black;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.services {
+  &:hover .drop-down {
+    display: block;
+    justify-content: center;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown-icon {
+    position: relative;
+    right: -5px;
+    transform: rotate(0deg);
+    transition: 0.3s ease-in-out all;
+    display: flex;
+    align-items: center;
+    width: 24px;
+    fill: gray;
+  }
+
+  &:hover .dropdown-icon {
+    transform: rotate(180deg);
+  }
+}
+
