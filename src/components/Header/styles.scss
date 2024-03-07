@@ -1,7 +1,7 @@
 .header {
   margin: 0 auto;
   width: 100%;
-  height: 100px;
+  height: fit-content;
   border: 1px solid grey;
   border-radius: 1vw;
   position: sticky;
@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1vw;
+  padding: 1vw 1vw;
 
   .left_side {
     display: flex;
@@ -23,9 +23,13 @@
       border-radius: 0.5vw;
       padding: 1vw;
       cursor: pointer;
+      position: relative;
+      width: 10vw;
+      height: 1.5vw;
     }
     img{
-      width: 100px;
+      width: 10vw;
+      position: fixed;
     }
     .nav__links {
       list-style: none;
@@ -144,4 +148,112 @@
 }
 .language{
   height: fit-content;
+}
+
+input[type = "checkbox"]{
+  visibility: hidden;
+  display: none;
+}
+.burger{
+  margin: 0 0 0 1vw;
+  display: none;
+  width: 30px;
+  height: 20px;
+}
+.bar{
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  span{
+    height: 10px;
+    margin: 0;
+  }
+  .middle{
+    height: 4px;
+    width: 30px;
+    background-color: black;
+    border-radius: 50px;
+    position: absolute;
+    transition: 0.3s ease;
+  }
+  .top{
+    bottom: 0;
+    height: 4px;
+    width: 30px;
+    background: black;
+    border-radius: 50px;
+    position: absolute;
+    transition: 0.3s ease;
+  }
+  .bottom{
+    top: 8px;
+    height: 4px;
+    width: 30px;
+    background: black;
+    border-radius: 50px;
+    position: absolute;
+    transition: 0.3s ease;
+  }
+}
+input[type = "checkbox"]:checked ~ .bar .top{
+  transform: rotate(-45deg);
+  width: 30px;
+  transform-origin: right;
+  top: -2px;
+}
+input[type = "checkbox"]:checked ~ .bar .bottom{
+  transform: rotate(45deg);
+  width: 30px;
+  transform-origin: right;
+  top: 19px;
+}
+input[type = "checkbox"]:checked ~ .bar .middle{
+  transform: translateX(20px);
+  opacity: 0;
+}
+.show_menu{
+  position: absolute;
+  top: -2%;
+  left: -50px;
+  width: 60%;
+  height: 100vh;
+  transition: 0.3s ease;
+  background-color: yellow;
+  .nav__links{
+    display: flex;
+    flex-direction: column;
+    li{
+      margin-bottom: 20px;
+      a{
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media(max-width: 768px) {
+  .navigation{
+    position: absolute;
+    left: -200px;
+    top: -2%;
+    width: 60%;
+    height: 100vh;
+    transition: 0.3s ease;
+    .nav__links{
+      display: flex;
+      flex-direction: column;
+      li{
+        margin-bottom: 20px;
+        a{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .burger{
+    display: flex;
+  }
 }
