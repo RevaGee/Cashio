@@ -46,7 +46,7 @@
           transition: all 0.3s ease;
 
           &:hover {
-            color: #0EF74D;
+            color: #3B9F46;
           }
         }
       }
@@ -54,30 +54,21 @@
   }
   .right_side{
     display: flex;
+    align-items: center;
     .demo{
+      color: #FFFFFF;
       margin-left: 1vw;
       cursor: pointer;
-      background-color: #0EF74D;
-      //background-color: #3B9F46;
+      background-color: #3B9F46;
       border-radius: 1vw;
       border: none;
       font-size: 1.3vw;
       font-weight: 500;
       padding: 1vw;
-      text-decoration: underline;
       display: flex;
       align-items: center;
       flex-direction: row;
       height: fit-content;
-      .button_icon{
-        margin-left: 1vw;
-        position: relative;
-      }
-      .button_arrow{
-        position: absolute;
-        top: 19%;
-        left: 25%;
-      }
     }
   }
 }
@@ -107,14 +98,14 @@
   display: none;
 
   li:hover {
-    background: black;
+    background: #3B9F46;
     color: #fff;
     border-radius: 0.5rem;
   }
 }
 
 .nav-link:hover {
-  background-color: black;
+  background-color: #3B9F46;
   color: #fff;
   border-radius: 0.5rem;
 }
@@ -128,6 +119,7 @@
   a {
     display: flex;
     align-items: center;
+    font-size: 1.2vw;
   }
 
   .dropdown-icon {
@@ -137,12 +129,19 @@
     transition: 0.3s ease-in-out all;
     display: flex;
     align-items: center;
-    width: 24px;
+    width: 1.5vw;
     fill: gray;
   }
 
   &:hover .dropdown-icon {
     transform: rotate(180deg);
+    fill: #FFFFFF;
   }
 }
-
+.nav-links{
+  margin: 0;
+  padding: 0;
+}
+.language{
+  height: fit-content;
+}
