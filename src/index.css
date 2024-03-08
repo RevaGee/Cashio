@@ -1,11 +1,11 @@
 :root{
   --body_background:white;
-  --body_color: #afafaf;
+  --body_color: rgb(232, 232, 232);
   --text_color:black;
 }
 [data-theme='dark']{
   --body_background: #282c34;
-  --body_color: black;
+  --body_color: grey;
   --text_color:#3B9F46;
 }
 

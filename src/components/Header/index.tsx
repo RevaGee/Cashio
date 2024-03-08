@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./styles.scss"
 import Logo from "../../images/CASHIO_logo_black.png"
 import {ArrowUp} from "../../images/icons/ArrowUp";
+import DarkMode from "../DarkMode/DarkMode";
 
 export const Header = () => {
     const[open, isOpen] = useState(false);
@@ -12,7 +13,7 @@ export const Header = () => {
         isOpen(!open);
     };
     return(
-        <div className="header">
+        <div className={open ? "mobile_header" : "header"}>
             <div className = "left_side">
                 <div className = "logo"><img src={Logo} alt=""/></div>
                 <div>
@@ -28,6 +29,7 @@ export const Header = () => {
                 </div>
             </div>
             <div className="right_side">
+                <DarkMode/>
                 <div className="language">
                     <ul className="nav-links">
                         <li className="nav-link services">
