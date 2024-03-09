@@ -16,7 +16,7 @@ export const Header = () => {
         <div className={open ? "mobile_header" : "header"}>
             <div className = "left_side">
                 <div className = "logo"><img src={Logo} alt=""/></div>
-                <div>
+                <div className = "nav_block">
                     <nav className={open ? "show_menu" : "navigation"}>
                         <ul className="nav__links">
                             <li><a href="#">FEATURES</a></li>
@@ -29,8 +29,8 @@ export const Header = () => {
                 </div>
             </div>
             <div className="right_side">
-                <DarkMode/>
-                <div className="language">
+                {/*<DarkMode/>*/}
+               {/* <div className="language">
                     <ul className="nav-links">
                         <li className="nav-link services">
                             <a>EN
@@ -45,7 +45,7 @@ export const Header = () => {
                             </ul>
                         </li>
                     </ul>
-                </div>
+                </div>*/}
                 <button className="demo" onClick={handleTelegramLink}>
                     Get a free demo
                 </button>

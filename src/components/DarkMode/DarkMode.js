@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { ReactComponent as Sun } from "./Sun.svg";
 import { ReactComponent as Moon } from "./Moon.svg";
 import "./DarkMode.css";
@@ -24,7 +24,7 @@ const DarkMode = () => {
             />
             <label className='dark_mode_label' for='darkmode-toggle'>
                 <Sun />
-                <Moon />
+                {/*<Moon />*/}
             </label>
         </div>
     );
