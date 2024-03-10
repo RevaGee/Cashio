@@ -1,7 +1,9 @@
 .dark_mode_label {
+	position: fixed;
+	right: 1vw;
+	bottom: 2vh;
 	width: 65px;
 	height: 30px;
-	position: relative;
 	display: block;
 	background: linear-gradient(#777, #3a3a3a);
 	border-radius: 200px;
