@@ -6,11 +6,15 @@ import DarkMode from '../DarkMode/DarkMode';
 
 export const Header = () => {
 	const [open, isOpen] = useState(false);
+	const [language, isLanguage] = useState(false);
 	const handleTelegramLink = () => {
 		window.open('https://t.me/zheka_revor', '_blank');
 	};
 	const handleClick = () => {
 		isOpen(!open);
+	};
+    const handleLanguageClick = () => {
+		isLanguage(!language);
 	};
 	return (
 		<div className={open ? 'mobile_header' : 'header'}>
@@ -18,7 +22,7 @@ export const Header = () => {
 				<div className='logo'>
 					<img src={Logo} alt='' />
 				</div>
-				<div>
+				<div className = "nav_block">
 					<nav className={open ? 'show_menu' : 'navigation'}>
 						<ul className='nav__links'>
 							<li>
@@ -41,17 +45,16 @@ export const Header = () => {
 				</div>
 			</div>
 			<div className='right_side'>
-				<DarkMode />
 				<div className='language'>
 					<ul className='nav-links'>
-						<li className='nav-link services'>
+						<li className='nav-link services' onClick={handleLanguageClick}>
 							<a>
 								EN
-								<span className='material-icons dropdown-icon'>
+								<span className='material-icons dropdown-icon' style={language?{transform:"rotate(180deg)"}:{}}>
 									<ArrowUp />
 								</span>
 							</a>
-							<ul className='drop-down'>
+							<ul className='drop-down' style={language?{display:'block',justifyContent:'center'}:{}}>
 								<li>EN</li>
 								<div className='location-line'></div>
 								<li>UA</li>

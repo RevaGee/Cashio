@@ -1,9 +1,10 @@
 .mobile_header {
 	margin: 0 auto;
 	width: 100%;
-	height: fit-content;
+    height: 35vw;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
 	border: 1px solid grey;
-	border-radius: 1vw;
 	position: sticky;
 	top: 0;
 	left: 5%;
@@ -14,6 +15,7 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 1vw 1vw;
+    transition: 0.3s ease;
 
 	.left_side {
 		display: flex;
@@ -37,17 +39,30 @@
 			width: 10vw;
 			position: fixed;
 		}
+        .nav_block{
+          border-top: 1px solid gray;
+          width: 100%;
+          position: fixed;
+          left: 0;
+          top: 20%;
+        }
 
 		.nav__links {
 			list-style: none;
 			display: flex;
 			font-size: 1vw;
+            margin: 0;
+            padding: 0;
 
 			li {
 				padding: 0 1.5vw;
+                &:first-child{
+                  margin-top: 1vw;
+                }
 
 				&:last-child {
 					padding-right: 0;
+                    margin-bottom: 0;
 				}
 
 				a {
@@ -55,7 +70,7 @@
 					font-weight: 500;
 					color: var(--text_color);
 					text-decoration: none;
-					transition: all 0.3s ease;
+                    font-size: 2vw;
 
 					&:hover {
 						color: #3b9f46;
@@ -90,10 +105,11 @@
 
 .header {
 	margin: 0 auto;
-	width: 90%;
-	height: fit-content;
+	width: 100%;
+	height: 6vw;
 	border: 1px solid #c8c8c8;
-	border-radius: 1.5vw;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
 	position: sticky;
 	top: 0;
 	left: 5%;
@@ -102,9 +118,9 @@
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	padding: 1vw 2.5vw;
-
+    transition: 0.3s ease;
 	.left_side {
 		display: flex;
 		align-items: center;
@@ -113,9 +129,11 @@
 			border-radius: 0.5vw;
 			padding: 1vw;
 			cursor: pointer;
-			position: relative;
 			width: 10vw;
 			height: 1.5vw;
+            position: fixed;
+            left: 1vw;
+            top: 1vw;
 		}
 		img {
 			width: 10vw;
@@ -149,6 +167,9 @@
 	.right_side {
 		display: flex;
 		align-items: center;
+        position: fixed;
+        right: 1vw;
+        top: 1vw;
 		.demo {
 			color: #ffffff;
 			margin-left: 1vw;
@@ -197,7 +218,6 @@
 
 .drop-down {
 	position: absolute;
-	// padding: 0.5rem 0;
 	margin: 0.5rem -0.5rem;
 	background: rgb(240, 240, 240);
 	color: black;
@@ -227,15 +247,17 @@
 
 .nav-link:hover {
 	background: #e0e0e0;
-	// color: #fff;
 	border-radius: 0.5rem;
 }
 
+
 .services {
-	&:hover .drop-down {
-		display: block;
-		justify-content: center;
-	}
+	/*&:hover {
+		.drop-down{
+			display: block;
+			justify-content: center;
+		}
+	}*/
 
 	a {
 		display: flex;
@@ -251,11 +273,6 @@
 		display: flex;
 		align-items: center;
 		width: 1.5vw;
-		fill: gray;
-	}
-
-	&:hover .dropdown-icon {
-		transform: rotate(180deg);
 		fill: gray;
 	}
 }
@@ -339,9 +356,10 @@ input[type='checkbox']:checked ~ .bar .middle {
 		display: flex;
 		flex-direction: column;
 		li {
-			margin-bottom: 20px;
+          transition: 0.5s ease;
+			margin-bottom: 3vw;
 			a {
-				font-size: 16px;
+				font-size: 1vw;
 			}
 		}
 	}
@@ -349,20 +367,7 @@ input[type='checkbox']:checked ~ .bar .middle {
 @media (max-width: 768px) {
 	.navigation {
 		position: absolute;
-		width: 100%;
-		left: 0;
 		top: -200px;
-		transition: 0.3s ease;
-		.nav__links {
-			display: flex;
-			flex-direction: column;
-			li {
-				margin-bottom: 20px;
-				a {
-					font-size: 16px;
-				}
-			}
-		}
 	}
 	.burger {
 		display: flex;
