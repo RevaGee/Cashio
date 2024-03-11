@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './styles.scss';
 import Logo from '../../images/CASHIO_logo_black.png';
 import { ArrowUp } from '../../images/icons/ArrowUp';
-import DarkMode from '../DarkMode/DarkMode';
+import DarkMode from "../DarkMode/DarkMode";
 
 export const Header = () => {
 	const [open, isOpen] = useState(false);
@@ -26,19 +26,19 @@ export const Header = () => {
 					<nav className={open ? 'show_menu' : 'navigation'}>
 						<ul className='nav__links'>
 							<li>
-								<a href='#'>FEATURES</a>
+								<a href='#'>Features</a>
 							</li>
 							<li>
-								<a href='#'>WHY US</a>
+								<a href='#'>Why Us</a>
 							</li>
 							<li>
-								<a href='#'>ABOUT US</a>
+								<a href='#'>About Us</a>
 							</li>
 							<li>
-								<a href='#'>PRICING</a>
+								<a href='#'>Pricing</a>
 							</li>
 							<li>
-								<a href='#'>CONTACTS</a>
+								<a href='#'>Contacts</a>
 							</li>
 						</ul>
 					</nav>
@@ -67,6 +67,7 @@ export const Header = () => {
 				<button className='demo' onClick={handleTelegramLink}>
 					Get a free demo
 				</button>
+				<DarkMode/>
 				<label className='burger'>
 					<input type='checkbox' name='' />
 					<div className='bar' onClick={handleClick}>
