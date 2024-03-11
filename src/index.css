@@ -2,16 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 [data-theme='dark'] {
-	--body_background: #282c34;
+	transition: 0.3s ease-out;
+	--body_background: #151515;
 	--body_color: #1E1E1E;
-	--text_color: #3b9f46;
-	transition: 1s ease-out;
+	--text_color: #bcbcbc;
+	--header_color: rgb(30, 30, 30);
+	--burger_color: #ebebeb;
+	--logo_color: invert(1);
 }
-[data-theme='light'] {
-	transition: 1s ease-out;
-	--body_background: #F7F8FA;
+[data-theme='light'], :root {
+	transition: 0.3s ease-out;
+	--body_background: #F8F6F4;
 	--body_color: rgb(240, 240, 240);
-	--text_color: black;
+	--text_color: #bcbcbc;
+	--header_color: rgb(239, 240, 239);
+	--burger_color: #292836;
+	--logo_color: invert(0);
 }
 
 body {

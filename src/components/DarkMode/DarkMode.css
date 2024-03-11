@@ -9,50 +9,40 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #fff;
 	border-radius: 200px;
 	cursor: pointer;
 	transition: 0.3s;
 	padding: 2px;
 	margin-left: 10px;
+	background-color: transparent;
 }
 .dark_mode_input {
 	width: 0;
 	height: 0;
 	visibility: hidden;
 }
-.dark_mode_input:checked + .dark_mode_label {
-	background: #fff;
-}
-
 
 .dark_mode_label svg {
 	position: absolute;
 	width: 20px;
 	z-index: 100;
 }
-.dark_mode_label svg.sun {
-	fill: #7e7e7e;
+.dark_mode_label .sun {
+	fill: #E4E6E4;
 	/* transition: 0.3s; */
 	visibility: hidden;
 }
-.dark_mode_label svg.moon {
-	fill: #fff;
+.dark_mode_label .moon {
+	fill: #404742;
 	/* transition: 0.3s; */
 	visibility: visible;
 }
-.dark_mode_input:checked + .dark_mode_label svg.sun {
+.dark_mode_input:checked + .dark_mode_label .sun {
 	fill: #7e7e7e;
 	visibility: visible;
 }
-.dark_mode_input:checked + .dark_mode_label svg.moon {
+.dark_mode_input:checked + .dark_mode_label .moon {
 	fill: #fff;
 	visibility: hidden;
-}
-[data-theme='dark'] .dark_mode_label {
-	background: #ebebeb;
 }
 
-[data-theme='light'] .dark_mode_label {
-	background: #1E1E1E;
-}

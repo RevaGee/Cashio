@@ -1,7 +1,6 @@
 import React from 'react';
 import {Header} from "./components/Header";
 import {Footer} from "./components/Footer";
-import DarkMode from "./components/DarkMode/DarkMode";
 
 function App() {
   return (
