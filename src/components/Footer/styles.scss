@@ -15,7 +15,6 @@
     background-color: var(--header_color);
     box-sizing: border-box;
     justify-content: space-between;
-    padding: 1vw 1vw;
     transition: 0.3s ease;
   }
 }
@@ -46,30 +45,35 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-bottom: 1px solid gray;
 }
 .footer_end_content{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: fit-content;
+  padding: 0 5%;
 }
 
 .footer__text p {
   font-size: 1em;
   margin-top: 10%;
   //color: #D8D8D8;
-  filter: var(--logo_color);
+  color: var(--text_color);
 }
 .footer__copyright p {
   font-size: 1em;
   display: flex;
   margin-top: 20px;
-  padding: 5%;
-  margin-bottom: 10%;
-  filter: var(--logo_color);
+  //padding: 5%;
+  //margin-bottom: 10%;
+  color: var(--text_color);
 }
 .modal_prv_content{
-  padding:5%;
-  filter: var(--logo_color);
+  color: var(--text_color);
+  p{
+    cursor: pointer;
+  }
 }
 .modal {
   position: fixed;

@@ -28,7 +28,7 @@
 	z-index: 100;
 }
 .dark_mode_label .sun {
-	fill: #E4E6E4;
+	fill: #FFFFFF;
 	/* transition: 0.3s; */
 	visibility: hidden;
 }
@@ -38,7 +38,7 @@
 	visibility: visible;
 }
 .dark_mode_input:checked + .dark_mode_label .sun {
-	fill: #7e7e7e;
+	fill:  #FFFFFF;
 	visibility: visible;
 }
 .dark_mode_input:checked + .dark_mode_label .moon {

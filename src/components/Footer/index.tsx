@@ -36,12 +36,13 @@ export const Footer = () => {
                 <div className="modal">
                     <div className="modal__content">
                         <button onClick={closeModal}>Close</button>
-                        <p>Privacy Policy
+                        <p>
+                            Privacy Policy
                             Last Updated: 26/01/2024
 
-                            Welcome To Techida!
+                            Welcome To CASHIO!<br/>
 
-                            At [Your Company Name], We Are Committed To Protecting The Privacy And Security Of Your
+                            At CASHIO, we are committed to protecting the privacy and security of your
                             Personal Information. This Privacy Policy Outlines How We Collect, Use, Disclose, And
                             Protect Your Information When You Use Our Website And Services. By Using Our Website And
                             Services, You Consent To The Practices Described In This Privacy Policy. Please Take A
@@ -107,7 +108,8 @@ export const Footer = () => {
 
 
                             Thank You For Choosing [Your Company Name]. We Appreciate Your Cooperation And Adherence To
-                            These Terms.</p>
+                            These Terms.
+                        </p>
                     </div>
                 </div>
             )}
