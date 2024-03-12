@@ -31,15 +31,15 @@ export const Footer = () => {
                         <p>Privacy Policy</p>
                     </div>
                 </div>
-                {isModalOpen && (
-                    <div className="modal">
-                        <div className="modal__content">
-                            <button onClick={closeModal}>Close</button>
-                            <p>Modal Content Here</p>
-                        </div>
-                    </div>
-                )}
             </div>
+            {isModalOpen && (
+                <div className="modal">
+                    <div className="modal__content">
+                        <button onClick={closeModal}>Close</button>
+                        <p>Modal Content Here</p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
