@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import './styles.scss';
-import Logo from '../../images/CASHIO_logo_green.png';
+// import Logo from '../../images/CASHIO_logo_green.png';
 import {ArrowUp} from '../../images/icons/ArrowUp';
+import {Logo} from "../../images/icons/CASHIO_logo_black";
 import DarkMode from "../DarkMode/DarkMode";
 import {useTranslation} from "react-i18next";
 import i18n from "../../translation/i18n";
@@ -36,7 +37,7 @@ export const Header = () => {
         <div className={open ? 'mobile_header' : 'header'}>
             <div className='left_side'>
                 <div className='logo'>
-                    <img src={Logo} alt=''/>
+                    <Logo/>
                 </div>
                 <div className="nav_block">
                     <nav className={open ? 'show_menu' : 'navigation'}>
