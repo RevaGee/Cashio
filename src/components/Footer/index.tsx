@@ -12,6 +12,11 @@ export const Footer = () => {
     const closeModal = () => {
         setIsModalOpen(false);
     }
+    const handleOutsideClick = (event: any) => {
+        if (event.target === event.currentTarget) {
+            setIsModalOpen(false);
+        }
+    };
 
     return (
         <div className="footer">
@@ -33,7 +38,7 @@ export const Footer = () => {
                 </div>
             </div>
             {isModalOpen && (
-                <div className="modal">
+                <div className="modal" onClick={handleOutsideClick}>
                     <div className="modal__content">
                         <button onClick={closeModal}>Close</button>
                         <p>
