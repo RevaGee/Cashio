@@ -1,5 +1,29 @@
 .scroll-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  z-index: 999;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
+  .progress {
+    height: 50px;
+    width: 50px;
+    background-color: var(--header_color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .btn_arrow_up{
+      fill: #1FA84F;
+    }
+  }
 }

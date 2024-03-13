@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {ButtonArrow} from "../../images/icons/ButtonArrow";
+import './style.scss'
 
 const ArrowScroll: React.FC = () => {
     const [showScroll, setShowScroll] = useState(false);
@@ -41,35 +42,20 @@ const ArrowScroll: React.FC = () => {
     }, [showScroll]);
 
     const buttonStyle: React.CSSProperties = {
-        position: "fixed",
-        bottom: "20px",
-        right: "20px",
-        backgroundColor: "#007bff",
-        color: "#fff",
-        border: "",
-        borderRadius: "50%",
-        width: "40px",
-        height: "40px",
-        fontSize: "24px",
-        cursor: "pointer",
-        opacity: showScroll ? 1 : 0,
-        transition: "opacity 0.3s",
-        zIndex: 999,
+        display: showScroll ? "grid" : "none",
+        background: `conic-gradient(rgb(31, 168, 79) ${scrollProgress}%, rgb(215, 215, 215) ${scrollProgress}%)`
     };
 
+
     const progressBarStyle: React.CSSProperties = {
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-        height: "4px",
-        backgroundColor: "#1b8f32",
-        width: `${scrollProgress}%`,
+
     };
 
     return (
-        <div style={buttonStyle} onClick={scrollTop}>
-            <i className="fas fa-arrow-up"><ButtonArrow/></i>
-            <div style={progressBarStyle}></div>
+        <div style={buttonStyle} onClick={scrollTop} className = 'scroll-top-button'>
+            <span style={progressBarStyle} className='progress'>
+                <div className="btn_arrow_up"><ButtonArrow/></div>
+            </span>
         </div>
     );
 };
