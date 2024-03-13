@@ -46,7 +46,7 @@ const ArrowScroll: React.FC = () => {
         right: "20px",
         backgroundColor: "#007bff",
         color: "#fff",
-        border: "none",
+        border: "",
         borderRadius: "50%",
         width: "40px",
         height: "40px",
@@ -62,9 +62,8 @@ const ArrowScroll: React.FC = () => {
         bottom: 0,
         left: 0,
         height: "4px",
-        backgroundColor: "#007bff",
+        backgroundColor: "#1b8f32",
         width: `${scrollProgress}%`,
-        transition: "width 0.3s",
     };
 
     return (
