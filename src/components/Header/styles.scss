@@ -5,7 +5,6 @@
     height: 35vw;
     border-bottom-left-radius: 1vw;
     border-bottom-right-radius: 1vw;
-	//border: 1px solid grey;
 	position: fixed;
 	top: 0;
 	backdrop-filter: blur(10px);
@@ -23,18 +22,15 @@
 		flex-direction: column;
 
 		.logo {
-			//border: 1px solid #000000;
 			border-radius: 0.5vw;
 			padding: 15px;
 			cursor: pointer;
-			//position: relative;
 			width: 125px;
 			height: 20px;
 			position: fixed;
 			left: 15px;
 			top: 15px;
 			color: #1FA84F;
-			//filter: var(--logo_color);
 		}
 
 		img {
@@ -85,24 +81,49 @@
 		display: flex;
 		align-items: center;
 		right: 15px;
-		top: 15px;
+		top: 20px;
 		.demo {
 			transition: 0.8s all ease;
 			height: 52px;
-			color: #ffffff;
 			margin-left: 10px;
 			cursor: pointer;
-			//background-color: #1FA84F;
-			background-color: var(--header_color);
 			border-radius: 10px;
 			border: none;
 			font-size: 20px;
 			font-weight: 600;
-			padding: 10px;
 			display: flex;
 			align-items: center;
 			flex-direction: row;
-			transform: rotate(-50%, -50%);
+			background: #1FA84F;
+			color: var(--buttton_text_color);
+			padding: 8px 25px;
+			overflow: hidden;
+			justify-content: center;
+			text-align: center;
+			letter-spacing: .5px;
+			outline: none;
+			z-index: 1;
+
+			&:hover{
+				color: var(--text_color);
+				background: #EFF0EF;
+				border: 1px solid #1FA84F;
+			}
+		}
+		.demo::before{
+			background: var(--header_color);
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: -1;
+			transition: all 0.6s ease;
+			width: 100%;
+			height: 0;
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		.demo:hover::before{
+			height: 400%;
 		}
 	}
 }
@@ -111,7 +132,6 @@
 	margin: 0 auto;
 	width: 100%;
 	height: 90px;
-	//border: 1px solid #c8c8c8;
     border-bottom-left-radius: 1vw;
     border-bottom-right-radius: 1vw;
 	position: fixed;
@@ -129,21 +149,14 @@
 		display: flex;
 		align-items: center;
 		.logo {
-			//border: 1px solid #000000;
-			//border-radius: 0.5vw;
 			border-radius: 0.5vw;
-			//padding: 1vw;
 			padding: 15px;
 			cursor: pointer;
-			//width: 10vw;
 			width: 125px;
-			//height: 1.5vw;
 			height: 20px;
             position: fixed;
-            //left: 1vw;
             left: 15px;
             top: 15px;
-			//filter: var(--logo_color);
 		}
 		img {
 			width: 125px;
@@ -152,7 +165,6 @@
 		.nav__links {
 			list-style: none;
 			display: flex;
-			//font-size: 1vw;
 			font-size: 16px;
 			margin-left: 150px;
 			li {
@@ -180,7 +192,7 @@
 		align-items: center;
         position: fixed;
         right: 15px;
-        top: 15px;
+        top: 20px;
 		.demo {
 			background: #1FA84F;
 			height: 52px;
@@ -188,7 +200,6 @@
 			margin-left: 10px;
 			cursor: pointer;
 			border-radius: 10px;
-			//border: 1px solid #1FA84F;
 			border: none;
 			font-size: 20px;
 			font-weight: 600;
@@ -206,7 +217,6 @@
 			z-index: 1;
 			&:hover{
 				color: var(--text_color);
-				//border: none;
 				background: #EFF0EF;
 				border: 1px solid #1FA84F;
 			}
@@ -253,7 +263,6 @@
 
 .drop-down {
 	position: absolute;
-	//margin: 0.5rem -0.5rem;
 	background: rgb(240, 240, 240);
 	color: black;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -380,8 +389,21 @@ input[type='checkbox']:checked ~ .bar .middle {
 }
 
 
-
+@media(max-width: 1200px){
+	.nav__links{
+		li{
+			a{
+				font-size: 14px;
+			}
+		}
+	}
+}
 @media(max-width: 992px){
+	.language{
+		position: fixed;
+		right: 50px;
+		top: 25px
+	}
 
 	.mobile_header{
 		height: 400px;
@@ -403,6 +425,9 @@ input[type='checkbox']:checked ~ .bar .middle {
 	}
 	.burger {
 		display: flex;
+		position: fixed;
+		right: 15px;
+		top: 37px
 	}
 	.navigation {
 		position: absolute;
