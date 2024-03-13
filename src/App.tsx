@@ -1,7 +1,7 @@
 import React from 'react';
 import {Header} from "./components/Header";
 import {Footer} from "./components/Footer";
-import {Arrow} from "./components/Arrow";
+import ArrowScroll  from "./components/Arrow";
 
 function App() {
     return (
@@ -19,7 +19,7 @@ function App() {
             <div style={{backgroundColor: "transparent", height: "300px", width: "90%", margin: "0 auto"}}></div>
             <div style={{backgroundColor: "blue", height: "300px", width: "90%", margin: "0 auto"}}></div>
             <div style={{backgroundColor: "transparent", height: "300px", width: "90%", margin: "0 auto"}}></div>
-                <Arrow/>
+                <ArrowScroll/>
             <Footer/>
         </div>
     );
