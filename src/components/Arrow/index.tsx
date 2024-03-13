@@ -26,9 +26,9 @@ const ArrowScroll: React.FC = () => {
     };
 
     const checkScrollTop = () => {
-        if (!showScroll && window.pageYOffset > 400) {
+        if (!showScroll && window.pageYOffset > 50) {
             setShowScroll(true);
-        } else if (showScroll && window.pageYOffset <= 400) {
+        } else if (showScroll && window.pageYOffset <= 50) {
             setShowScroll(false);
         }
     };
