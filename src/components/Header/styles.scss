@@ -398,6 +398,26 @@ input[type='checkbox']:checked ~ .bar .middle {
 		}
 	}
 }
+@media(max-width: 1130px){
+	.nav__links{
+		margin-left: 110px !important;
+		li{
+			padding: 0 1vw !important;
+		}
+	}
+	.demo{
+		font-size: 18px !important;
+	}
+	.language{
+		.nav-links{
+			li{
+				a{
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
 @media(max-width: 992px){
 	.language{
 		position: fixed;
