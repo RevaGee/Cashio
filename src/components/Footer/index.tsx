@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./styles.scss"
-import Logo from "../../images/CASHIO_logo_black.png";
+import {LogoFooter} from "../../images/icons/iconizer-CASHIO_logo_green";
+
 
 export const Footer = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,11 +18,12 @@ export const Footer = () => {
     //     }
     // };
 
+    // @ts-ignore
     return (
         <div className="footer">
             <div className="footer__content">
                 <div className="footer_start_content">
-                    <div className="logo_footer"><img src={Logo} alt=""/></div>
+                    <div className="logo_footer"><LogoFooter /></div>
 
                     <div className="footer__text">
                         <p>Grow your business with CASHIO</p>

@@ -8,7 +8,7 @@
 	--text_color: #bcbcbc;
 	--header_color: rgb(30, 30, 30);
 	--burger_color: #ebebeb;
-	--logo_color: invert(1);
+	--logo_color: invert(0);
 	--buttton_text_color: #000000;
 }
 [data-theme='light'], :root {
