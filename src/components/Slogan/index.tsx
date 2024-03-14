@@ -1,0 +1,47 @@
+import React from "react";
+import Imgslogan from "../../images/Imgslogan.png"
+import {useTranslation} from "react-i18next";
+import '../Slogan/style.scss'
+
+export const Slogan = () => {
+    const {t} = useTranslation();
+
+    const handleTelegramLink = () => {
+        window.open('https://t.me/zheka_revor', '_blank');
+    };
+
+    return (
+        <div className="slogan">
+            <div className="slogan_content">
+                <div className="img_and_text">
+                    <div className="slogan_text">
+                        <div className="slogan_head_text">
+                            <p>ЦЕЙ КУСОК КОДА НАПИСАВ ЄБЛАН ТАК ШО ВИПРАВЛЯЙ</p>
+                            {/*<p>MAKING MONEY BY OPTIMIZING PROCESSES</p>*/}
+                        </div>
+
+                        <div className="signature">
+                            <p>Продукт созданный профессионалами для профессионалов</p>
+
+                        </div>
+                    </div>
+                    <div className="slogan_image">
+                        <img src={Imgslogan} alt="" className="img_slogan"/>
+                    </div>
+                </div>
+                <div className="info_slogan">
+                    <button className='demo_slogan' onClick={handleTelegramLink}>
+                        {t('Get a free demo')}
+                    </button>
+                    <div className="info_text">
+                        <p>250K+</p>
+
+                        <p>500+</p>
+
+                        <p>24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}

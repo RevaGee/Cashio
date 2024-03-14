@@ -1,0 +1,74 @@
+
+.slogan {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: column;
+  padding: 50px;
+}
+.img_and_text{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.slogan_text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: inherit;
+}
+
+.slogan_head_text {
+  font-size: 74px;
+  font-weight: bold;
+  color: var(--text_color);
+}
+
+.signature {
+  font-size: 18px;
+  color: var(--text_color);
+}
+
+.img_slogan {
+  width: 900px;
+  height: auto;
+}
+
+.demo_slogan {
+  height: 52px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background: #1FA84F;
+  color: var(--buttton_text_color);
+  padding: 8px 25px;
+  overflow: hidden;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: .5px;
+  outline: none;
+  z-index: 1;
+}
+
+.info_slogan {
+  display: flex;
+  font-weight: bold;
+  color: var(--text_color);
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.info_text {
+  font-weight: bold;
+  color: var(--text_color);
+  display: flex;
+  justify-content: space-between;
+}
