@@ -1,8 +1,5 @@
 
 .dark_mode_label {
-	/*position: fixed;
-	right: 1vw;
-	bottom: 2vh;*/
 	border: 2px solid #1E8843;
 	width: 40px;
 	height: 40px;
@@ -29,12 +26,10 @@
 }
 .dark_mode_label .sun {
 	fill: #FFFFFF;
-	/* transition: 0.3s; */
 	visibility: hidden;
 }
 .dark_mode_label .moon {
 	fill: #404742;
-	/* transition: 0.3s; */
 	visibility: visible;
 }
 .dark_mode_input:checked + .dark_mode_label .sun {

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './styles.scss';
-// import Logo from '../../images/CASHIO_logo_green.png';
 import {ArrowUp} from '../../images/icons/ArrowUp';
 import {Logo} from "../../images/icons/CASHIO_logo_black";
 import DarkMode from "../DarkMode/DarkMode";
