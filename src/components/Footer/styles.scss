@@ -20,12 +20,12 @@
 }
 
 .logo_footer {
-  border: 1px solid #000000;
   border-radius: 0.5vw;
   margin-top: 2%;
   padding: 1vw;
   filter: var(--logo_color);
   cursor: pointer;
+
 }
 
 .logo_footer img {
@@ -91,4 +91,29 @@
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
+}
+@media(max-width: 480px){
+  .footer_start_content{
+    p{
+      font-size: 16px;
+    }
+  }
+  .footer_end_content{
+    flex-direction: column;
+    p{
+      font-size: 16px;
+    }
+  }
+}
+@media(max-width: 370px){
+  .footer_start_content{
+    p{
+      font-size: 4vw;
+    }
+  }
+  .footer_end_content{
+    p{
+      font-size: 4vw;
+    }
+  }
 }
