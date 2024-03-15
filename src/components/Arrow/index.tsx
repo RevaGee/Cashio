@@ -35,11 +35,12 @@ const ArrowScroll: React.FC = () => {
     };
 
     useEffect(() => {
-        window.addEventListener("scroll", checkScrollTop);
-        return () => {
-            window.removeEventListener("scroll", checkScrollTop);
-        };
-    }, [showScroll]);
+            window.addEventListener("scroll", checkScrollTop);
+            return () => {
+                window.removeEventListener("scroll", checkScrollTop);
+            };
+        },
+        [showScroll,checkScrollTop]);
 
     const buttonStyle: React.CSSProperties = {
         display: showScroll ? "grid" : "none",

@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import "./styles.scss"
 import {LogoFooter} from "../../images/icons/iconizer-CASHIO_logo_green";
 
 
 export const Footer = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    // const [isModalOpen, setIsModalOpen] = useState(false);
 
     // const openModal = () => {
     //     setIsModalOpen(true);
