@@ -17,11 +17,11 @@ export const Slogan = () => {
                     <div className="slogan_text">
                         <div className="slogan_head_text">
                             <p>ЦЕЙ КУСОК КОДА НАПИСАВ ЄБЛАН ТАК ШО ВИПРАВЛЯЙ</p>
-                            {/*<p>MAKING MONEY BY OPTIMIZING PROCESSES</p>*/}
+                            {/*<p>{t('Making Money')}</p>*/}
                         </div>
 
                         <div className="signature">
-                            <p>Продукт созданный профессионалами для профессионалов</p>
+                            <a>{t('Professionals')}</a>
 
                         </div>
                     </div>
