@@ -16,6 +16,8 @@ export const Slogan = () => {
                 <div className="img_and_text">
                     <div className="slogan_text">
                         <div className="slogan_head_text">
+                            <p>{t('Making')}</p>
+                            <span>{t('Money')}</span>
                             <p>{t('Making Money')}</p>
                         </div>
                         <div className="signature">
