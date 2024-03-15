@@ -16,29 +16,26 @@ export const Slogan = () => {
                 <div className="img_and_text">
                     <div className="slogan_text">
                         <div className="slogan_head_text">
-                            <p>ЦЕЙ КУСОК КОДА НАПИСАВ ЄБЛАН ТАК ШО ВИПРАВЛЯЙ</p>
-                            {/*<p>{t('Making Money')}</p>*/}
+                            <p>{t('Making Money')}</p>
                         </div>
-
                         <div className="signature">
                             <a>{t('Professionals')}</a>
+                        </div>
+                        <div>
+                            <button className='demo_slogan' onClick={handleTelegramLink}>
+                                {t('Get a free demo')}
+                            </button>
+                            <div className="info_text">
+                                <p>250K+</p>
 
+                                <p>500+</p>
+
+                                <p>24/7</p>
+                            </div>
                         </div>
                     </div>
                     <div className="slogan_image">
                         <img src={Imgslogan} alt="" className="img_slogan"/>
-                    </div>
-                </div>
-                <div className="info_slogan">
-                    <button className='demo_slogan' onClick={handleTelegramLink}>
-                        {t('Get a free demo')}
-                    </button>
-                    <div className="info_text">
-                        <p>250K+</p>
-
-                        <p>500+</p>
-
-                        <p>24/7</p>
                     </div>
                 </div>
             </div>

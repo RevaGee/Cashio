@@ -12,7 +12,6 @@ function App() {
             <Header/>
             <ParticlesComponent/>
             <Slogan/>
-            <div style={{backgroundColor: "red", height: "300px", width: "90%", margin: "0 auto"}}></div>
             <div style={{backgroundColor: "transparent", height: "300px", width: "90%", margin: "0 auto"}}></div>
             <div style={{backgroundColor: "yellow", height: "300px", width: "90%", margin: "0 auto"}}></div>
             <div style={{backgroundColor: "transparent", height: "300px", width: "90%", margin: "0 auto"}}></div>
