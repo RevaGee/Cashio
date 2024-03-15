@@ -14,7 +14,7 @@ export const Slogan = () => {
         <div className="slogan">
             <div className="img_and_text">
                 <div className="slogan_text">
-                    <div className="slogan_head_text">
+                    <div className="slogan_head_text" >
                         <p>{t('Making')} <span>{t('Money')}</span> {t('Making Money')}</p>
                     </div>
                     <div className="signature">
@@ -26,7 +26,7 @@ export const Slogan = () => {
                         </button>
                         <div className="info_text">
                             <div className = "digits"><h1>250K+</h1><p>Automated processes</p></div>
-                            <div className = "digits"><h1>500+</h1><p>Full financial reports</p></div>
+                            <div className = "digits digits_margin"><h1>500+</h1><p>Full financial reports</p></div>
                             <div className = "digits"><h1>24/7</h1><p>Live support</p></div>
                         </div>
                     </div>

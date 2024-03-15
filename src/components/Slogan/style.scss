@@ -1,6 +1,6 @@
 
 .slogan {
-  display: flex;
+  //display: flex;
   align-items: center;
   justify-content: left;
   flex-direction: column;
@@ -48,6 +48,7 @@
 
 .demo_slogan {
   background: #1FA84F;
+  width: fit-content;
   height: 52px;
   color: var(--buttton_text_color);
   cursor: pointer;
@@ -98,31 +99,45 @@
 
 }
 
-.info_text {
-  font-weight: bold;
-  color: var(--text_color);
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-}
 
 .button_digits{
   margin-top: 30px;
-  .digits{
-    margin-top: 50px;
+  .info_text {
+    font-weight: bold;
+    color: var(--text_color);
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    h1{
-      margin-bottom: 5px;
-      margin-top: 0;
+    justify-content: space-between;
+    width: 90%;
+
+    .digits_margin {
+      margin: 50px 10px 0 10px;
     }
-    P{
-      color: #7a7a7a;
-      margin-top: 0;
-      margin-bottom: 0;
+
+    .digits {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      h1 {
+        margin-bottom: 5px;
+        margin-top: 0;
+      }
+
+      P {
+        color: #7a7a7a;
+        margin-top: 0;
+        margin-bottom: 0;
+        white-space: nowrap;
+      }
     }
   }
+}
+.info_text_hidden{
+  display: none;
+}
+@media(max-width: 1300px){
+
 }
 @media(max-width: 1200px){
   .img_slogan {
@@ -130,6 +145,7 @@
   }
   .info_text{
     width: 100%;
+    justify-content: space-around;
   }
 }
 @media(max-width: 992px){
@@ -137,8 +153,11 @@
     flex-direction: column;
   }
   .info_text{
-    margin-left: 30px;
-    width: 70% !important;
+    margin-left: 10px;
+    //width: 70% !important;
+    .digits_margin{
+      margin: 0 5px 0 5px;
+    }
     .digits{
       margin-top: 0;
       h1{
@@ -150,10 +169,16 @@
     }
   }
   .button_digits{
+    margin-top: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
+    .demo_slogan{
+      margin-top: 30px;
+      width: 100%;
+      justify-content: center;
+    }
   }
 }
 @media(max-width: 768px){
@@ -161,20 +186,32 @@
     font-size: 8vw;
   }
   .signature{
-    font-size: 4vw;
+    font-size: 3vw;
   }
   .img_slogan{
     width: 85vw;
   }
   .info_text{
-    width: 50% !important;
+    //width: 60vw !important;
     .digits{
       h1{
         font-size: 4vw !important;
       }
       p{
-        font-size: 14px;
+        font-size: 2vw;
       }
     }
+  }
+}
+@media(max-width: 480px){
+  .demo_slogan{
+    font-size: 4vw;
+    padding: 0 3vw
+  }
+}
+
+@media(max-width: 360px){
+  .demo_slogan{
+    height: 40px;
   }
 }
