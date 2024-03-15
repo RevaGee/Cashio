@@ -8,7 +8,7 @@
 	position: fixed;
 	top: 0;
 	backdrop-filter: blur(10px);
-	background-color: var(--header_color);
+	background-color: var(--header_color) !important;
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
@@ -137,8 +137,8 @@
 	position: fixed;
 	z-index: 3;
 	top: 0;
-	backdrop-filter: blur(10px);
-	background-color: var(--header_color);
+	//backdrop-filter: blur(10px);
+	//background-color: var(--header_color);
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
@@ -431,6 +431,7 @@ input[type='checkbox']:checked ~ .bar .middle {
 	.show_menu {
 		transition: 0.3s ease;
 		.nav__links {
+			margin-left: 0 !important;
 			display: flex;
 			flex-direction: column;
 			li {
@@ -454,6 +455,7 @@ input[type='checkbox']:checked ~ .bar .middle {
 		top: -200px;
 	}
 	.header{
+		background-color: var(--header_color) !important;
 		.demo{
 			position: absolute;
 			top: -200px;

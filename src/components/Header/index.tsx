@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './styles.scss';
 import {ArrowUp} from '../../images/icons/ArrowUp';
 import {Logo} from "../../images/icons/CASHIO_logo_black";
@@ -14,8 +14,20 @@ export const Header = () => {
 
 
     const {t} = useTranslation();
-
-
+    const [showScroll, setShowScroll] = useState(false);
+    const checkScrollTop = () => {
+        if (!showScroll && window.pageYOffset > 50) {
+            setShowScroll(true);
+        } else if (showScroll && window.pageYOffset <= 50) {
+            setShowScroll(false);
+        }
+    };
+    useEffect(() => {
+        window.addEventListener("scroll", checkScrollTop);
+        return () => {
+            window.removeEventListener("scroll", checkScrollTop);
+        };
+    }, [showScroll]);
     const handleLanguageChange = (language: string) => {
         setSelectedLanguage(language);
         i18n.changeLanguage(language);
@@ -33,7 +45,7 @@ export const Header = () => {
 
 
     return (
-        <div className={open ? 'mobile_header' : 'header'}>
+        <div className={open ? 'mobile_header' : 'header'} style={{backgroundColor: showScroll ? `var(--header_color)` : 'transparent',}}>
             <div className='left_side'>
                 <div className='logo'>
                     <Logo/>
