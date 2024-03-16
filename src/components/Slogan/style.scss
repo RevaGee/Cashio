@@ -50,14 +50,14 @@
 
 .img_slogan {
   //width: 700px;
-  width: 42vw;
+  width: 40vw;
   height: auto;
 }
 
 .demo_slogan {
   background: #1FA84F;
-  width: fit-content;
-  height: 52px;
+  //width: fit-content;
+  height: 48px;
   color: var(--buttton_text_color);
   cursor: pointer;
   border-radius: 10px;
@@ -94,7 +94,7 @@
     transform: translate(-50%, -50%) rotate(45deg);
   }
   &:hover::before{
-    height: 500%;
+    height: 550%;
   }
 }
 
