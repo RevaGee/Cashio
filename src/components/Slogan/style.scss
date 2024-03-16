@@ -16,7 +16,8 @@
 .slogan_text {
   display: flex;
   flex-direction: column;
-  //justify-content: space-between;
+  justify-content: space-between;
+  height: calc(100vh - 80px);
   /*text-align: left;
   margin-bottom: inherit;*/
 }
@@ -105,6 +106,7 @@
 
 .button_digits{
   //margin-top: 30px;
+  //display: flex;
   margin-top: 1vw;
   .info_text {
     font-weight: bold;
