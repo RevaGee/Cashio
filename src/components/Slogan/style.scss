@@ -1,17 +1,15 @@
 
 .slogan {
-  //display: flex;
+  //display: block;
   //align-items: center;
   //justify-content: left;
   //flex-direction: column;
   width: 90%;
-  height: 100vh;
   margin: 80px auto;
 }
 .img_and_text{
   display: flex;
-  align-items: center;
-  justify-content: left;
+  justify-content: space-between;
 }
 
 .slogan_text {
@@ -44,7 +42,8 @@
 }
 
 .img_slogan {
-  width: 55vw;
+  //width: 700px;
+  width: 42vw;
   height: auto;
 }
 
