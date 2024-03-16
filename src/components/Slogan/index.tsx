@@ -1,5 +1,5 @@
 import React from "react";
-import ImgSlogan from "../../images/ImgSlogan.png"
+import ImgSlogan from "../../images/Imgslogan.png"
 import {useTranslation} from "react-i18next";
 import '../Slogan/style.scss'
 
