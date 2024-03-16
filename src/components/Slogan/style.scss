@@ -155,6 +155,12 @@
   }
 }
 @media(max-width: 992px){
+  .slogan_image{
+    margin-top: 15px;
+  }
+  .demo_slogan:hover::before{
+    height: 1600% !important;
+  }
   .img_and_text{
     flex-direction: column;
   }
