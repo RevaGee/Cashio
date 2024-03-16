@@ -1,11 +1,12 @@
 
 .slogan {
   //display: flex;
-  align-items: center;
-  justify-content: left;
-  flex-direction: column;
+  //align-items: center;
+  //justify-content: left;
+  //flex-direction: column;
   width: 90%;
-  margin: 0 auto;
+  height: 100vh;
+  margin: 80px auto;
 }
 .img_and_text{
   display: flex;
@@ -14,7 +15,6 @@
 }
 
 .slogan_text {
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -23,7 +23,8 @@
 
 .slogan_head_text {
   display: flex;
-  font-size: 60px;
+  //font-size: 60px;
+  font-size: 5vw;
   font-weight: bold;
   color: var(--text_color);
   p{
@@ -37,12 +38,13 @@
 }
 
 .signature {
-  font-size: 25px;
+  //font-size: 25px;
+  font-size: 2vw;
   color: var(--text_color);
 }
 
 .img_slogan {
-  width: 700px;
+  width: 55vw;
   height: auto;
 }
 
@@ -101,7 +103,8 @@
 
 
 .button_digits{
-  margin-top: 30px;
+  //margin-top: 30px;
+  margin-top: 1vw;
   .info_text {
     font-weight: bold;
     color: var(--text_color);
@@ -114,7 +117,8 @@
     }
 
     .digits {
-      margin-top: 50px;
+      //margin-top: 50px;
+      margin-top: 1.5vw;
       display: flex;
       flex-direction: column;
       text-align: center;
@@ -136,12 +140,9 @@
 .info_text_hidden{
   display: none;
 }
-@media(max-width: 1300px){
-
-}
 @media(max-width: 1200px){
   .img_slogan {
-    width: 600px;
+    //width: 600px;
   }
   .info_text{
     width: 100%;
@@ -151,6 +152,9 @@
 @media(max-width: 992px){
   .img_and_text{
     flex-direction: column;
+  }
+  .img_slogan{
+    width: 85vw;
   }
   .info_text{
     margin-left: 10px;
@@ -189,7 +193,7 @@
     font-size: 3vw;
   }
   .img_slogan{
-    width: 85vw;
+    //width: 85vw;
   }
   .info_text{
     //width: 60vw !important;
