@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './styles.scss';
 import {ArrowUp} from '../../images/icons/ArrowUp';
-import {Logo} from "../../images/icons/CASHIO_logo_black";
+import {LogoFooter} from "../../images/icons/iconizer-CASHIO_logo_green";
 import DarkMode from "../DarkMode/DarkMode";
 import {useTranslation} from "react-i18next";
 import i18n from "../../translation/i18n";
@@ -48,7 +48,7 @@ export const Header = () => {
         <div className={open ? 'mobile_header' : 'header'} style={{backgroundColor: showScroll ? `var(--header_color)` : 'transparent',}}>
             <div className='left_side'>
                 <div className='logo'>
-                    <Logo/>
+                    <LogoFooter/>
                 </div>
                 <div className="nav_block">
                     <nav className={open ? 'show_menu' : 'navigation'}>
