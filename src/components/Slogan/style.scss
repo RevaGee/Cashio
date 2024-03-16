@@ -5,6 +5,7 @@
   //justify-content: left;
   //flex-direction: column;
   width: 90%;
+  height: 100vh;
   margin: 80px auto;
 }
 .img_and_text{
@@ -15,8 +16,9 @@
 .slogan_text {
   display: flex;
   flex-direction: column;
-  text-align: left;
-  margin-bottom: inherit;
+  //justify-content: space-between;
+  /*text-align: left;
+  margin-bottom: inherit;*/
 }
 
 .slogan_head_text {
@@ -110,6 +112,7 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
+    font-size: 1.2vw;
 
     .digits_margin {
       margin: 50px 10px 0 10px;
@@ -135,9 +138,6 @@
       }
     }
   }
-}
-.info_text_hidden{
-  display: none;
 }
 @media(max-width: 1200px){
   .img_slogan {
