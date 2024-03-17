@@ -5,7 +5,7 @@
   //justify-content: left;
   //flex-direction: column;
   width: 90%;
-  height: 100vh;
+  //height: 100vh;
   margin: 80px auto;
 }
 .img_and_text{
@@ -157,6 +157,7 @@
 @media(max-width: 992px){
   .slogan_image{
     margin-top: 15px;
+    height: auto;
   }
   .demo_slogan:hover::before{
     height: 1600% !important;
