@@ -1,0 +1,60 @@
+.collages{
+  width: 90%;
+  margin: 100px auto;
+  /*display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 2vw;*/
+}
+.collage{
+  color: var(--text_color);
+  font-size: 1vw;
+  padding: 1vw;
+  border-radius: 1vw;
+  transition: 0.3s ease;
+  box-sizing: border-box;
+  width: 300px;
+  height: 300px;
+  margin: 3vw;
+
+  &:hover{
+    background-color: var(--header_color);
+    //border: 1px solid #1FA84F;
+    box-shadow:
+    0 0 32px #1FA84F;
+  }
+}
+@media(max-width: 1200px){
+  .collage{
+    font-size: 1.1vw;
+  }
+}
+@media(max-width: 992px){
+  .collages{
+    grid-template-columns: auto auto;
+    grid-gap: 10vw;
+    .collage{
+      font-size: 1.5vw;
+    }
+  }
+}
+@media(max-width: 768px){
+  .collages{
+    grid-template-columns: auto;
+    .collage{
+      font-size: 2vw;
+    }
+  }
+}
+
+
+.slider-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1vw;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
