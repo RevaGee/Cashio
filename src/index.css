@@ -10,6 +10,7 @@
 	--burger_color: #ebebeb;
 	--logo_color: invert(0);
 	--buttton_text_color: #000000;
+	--boxColor: #1e1e1e;
 }
 [data-theme='light'], :root {
 	transition: 0.3s ease-out;
@@ -20,7 +21,7 @@
 	--burger_color: #292836;
 	--logo_color: invert(0);
 	--buttton_text_color: #FFFFFF;
-
+	--boxColor: #eff0ef;
 }
 
 body {

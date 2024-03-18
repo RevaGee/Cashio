@@ -5,6 +5,7 @@ import ArrowScroll from "./components/Arrow";
 import ParticlesComponent from "./components/Paralax/particles";
 import {Slogan} from "./components/Slogan";
 import {Collages} from "./components/Collages";
+import {Questions} from "./components/Questions";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
             <ParticlesComponent/>
             <Slogan/>
             <Collages/>
+            <Questions/>
             <div style={{backgroundColor: "transparent", height: "300px", width: "90%", margin: "0 auto"}}></div>
             <div style={{backgroundColor: "blue", height: "300px", width: "90%", margin: "0 auto"}}></div>
             <div style={{backgroundColor: "transparent", height: "300px", width: "90%", margin: "0 auto"}}></div>
