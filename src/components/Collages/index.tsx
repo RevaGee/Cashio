@@ -16,11 +16,13 @@ import { Reporting } from "../../images/icons/Reporting";
 import { Payout } from "../../images/icons/Payout";
 import { Redirect } from "../../images/icons/Redirect";
 import './styles.scss';
+import {useTranslation} from "react-i18next";
 
 export const Collages = () => {
     const [showRightButton, setShowRightButton] = useState(true);
     const [showLeftButton, setShowLeftButton] = useState(false);
     const sliderRef = useRef<Slider>(null);
+    const {t} = useTranslation();
     const RightArrow = () => (
         <div className={showRightButton ? "right_arrow" : "right_arrow_hide"} onClick={() => sliderRef.current?.slickNext()} />
     );
@@ -56,80 +58,63 @@ export const Collages = () => {
                 <Slider ref={sliderRef} {...settings}>
                     <Collage
                         image={<Reports/>}
-                        title={"Reports & Insights"}
-                        description={"From personal experience, we have come to realize that the majority of losses in " +
-                            "the sphere come from inattention, inaccurate and untimely analytics. Our goal was to optimize" +
-                            " and simplify the analytics process for each division in the company to minimize the risk of" +
-                            " losses and simplify the control of the company's indicators as much as possible"}
+                        title = {t('Reports & Insights')}
+                        description={t('Reports & Insights text')}
                     />
                     <Collage
                         image={<CollageSvg/>}
-                        title={"Real-Time Stats"}
-                        description={"We realize that this product is a tool for professionals and we give you the " +
-                            "opportunity to make quality assessment as you need it." +
-                            "Analyze baer/team/advertiser/geo/ofer/statuses/conversions/validity "}
+                        title={t('Real-Time Stats')}
+                        description={t('Real-Time Stats text')}
                     />
                     <Collage
                         image={<Confidence/>}
-                        title={"Confidence "}
-                        description={"The system is completely secure and safe for the user. Your data belongs only to" +
-                            " you. The security protocol protects against unauthorized logins and leaks. Even we as" +
-                            " developers do not have access to your data without your knowledge"}
+                        title={t("Confidence")}
+                        description={t("Confidence text")}
                     />
                     <Collage
                         image={<Tracking/>}
-                        title={"Tracking & Atribution"}
-                        description={"We pursue the principle of losslessness and transparency in traffic flow"}
+                        title={t("Tracking & Atribution")}
+                        description={t("Tracking & Atribution text")}
                     />
                     <Collage
                         image={<Automize/>}
-                        title={"Automation"}
-                        description={"A lot of important metrics for the financier, affiliate/bizdev and management may" +
-                            " be underestimated by the baer team and vice versa. Such connections are quite numerous and" +
-                            " accounted for in our product implementation to easily work for profitability"}
+                        title={t("Automation")}
+                        description={t("Automation text")}
                     />
                     <Collage
                         image={<Integration/>}
-                        title={"Integrations"}
-                        description={"Easy integration and technical support ensures security, anonymity, and timely " +
-                            "fulfillment of requests"}
+                        title={t("Integrations")}
+                        description={t("Integrations text")}
                     />
                     <Collage
                         image={<Support/>}
-                        title={"Теch support"}
-                        description={"Produced not just by the support service, but by a team of professionals who have " +
-                            "developed this product and face your problems often enough to solve really difficult and" +
-                            " painful problems"}
+                        title={t("Теch support")}
+                        description={t("Теch support text")}
                     />
                     <Collage
                         image={<Security/>}
-                        title={"Anti-Fraud Protection"}
-                        description={"CRM constantly analyzes requests and filters out unwanted requests based on your " +
-                            "parameters"}
+                        title={t("Anti-Fraud Protection")}
+                        description={t("Anti-Fraud Protection text")}
                     />
                     <Collage
                         image={<MultipleUser/>}
-                        title={"Workspaces & Multi-User Access"}
-                        description={"Our system is an infrastructural solution with division into roles not only for " +
-                            "qualitative and profitable functioning of the company but also chips like: tracking, status" +
-                            " system for advertisers, block of targets and protection system against unauthorized logins"}
+                        title={t("Workspaces & Multi-User Access")}
+                        description={t("Workspaces & Multi-User Access text")}
                     />
                     <Collage
                         image={<Reporting/>}
-                        title={"Multi-Dimensional Reporting"}
-                        description={"Detailed analytics on each of the team members, products, advertisers, which allows " +
-                            "easy and objective decision making on optimizations of any level"}
+                        title={t("Multi-Dimensional Reporting")}
+                        description={t("Multi-Dimensional Reporting text")}
                     />
                     <Collage
                         image={<Payout/>}
-                        title={"Multi-Cost and Payout Tracking"}
-                        description={"All possible spend types and payment models are taken into consideration while" +
-                            " creating, making the system suitable for all available verticals"}
+                        title={t("Multi-Cost and Payout Tracking")}
+                        description={t("Multi-Cost and Payout Tracking text")}
                     />
                     <Collage
                         image={<Redirect/>}
-                        title={"Redirect Methods"}
-                        description={"Prioritize, allocate, and re-allocate traffic at your personal discretion"}
+                        title={t("Redirect Methods")}
+                        description={t("Redirect Methods text")}
                     />
                 </Slider>
             </div>

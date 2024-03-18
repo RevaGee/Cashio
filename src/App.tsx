@@ -11,7 +11,7 @@ function App() {
     return (
         <div style={{width: "100%", margin: "0 auto"}} className="App">
             <Header/>
-            {/*<ParticlesComponent/>*/}
+            <ParticlesComponent/>
             <Slogan/>
             <Collages/>
             <div style={{backgroundColor: "transparent", height: "300px", width: "90%", margin: "0 auto"}}></div>
