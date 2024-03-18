@@ -1,3 +1,4 @@
+import React, { useState, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,22 +18,42 @@ import { Redirect } from "../../images/icons/Redirect";
 import './styles.scss';
 
 export const Collages = () => {
+    const [showRightButton, setShowRightButton] = useState(true);
+    const [showLeftButton, setShowLeftButton] = useState(false);
+    const sliderRef = useRef<Slider>(null);
+    const RightArrow = () => (
+        <div className={showRightButton ? "right_arrow" : "right_arrow_hide"} onClick={() => sliderRef.current?.slickNext()} />
+    );
 
-
+    const LeftArrow = () => (
+        <div className={showLeftButton ? "left_arrow" : "left_arrow_hide"} onClick={() => sliderRef.current?.slickPrev()} />
+    );
 
     const settings = {
-        dots: true,
-        infinite: true,
+        dots: false,
+        infinite: false,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 3,
         rows: 2,
+        nextArrow: <RightArrow />,
+        prevArrow: <LeftArrow />,
+        afterChange: (index: number) => {
+            if (index === 0) {
+                setShowLeftButton(false);
+                setShowRightButton(true);
+            } else {
+                setShowLeftButton(true);
+                setShowRightButton(false);
+            }
+        }
     };
+
 
     return (
         <div className='slider-wrapper'>
             <div className='slider-container'>
-                <Slider {...settings}>
+                <Slider ref={sliderRef} {...settings}>
                     <Collage
                         image={<Reports/>}
                         title={"Reports & Insights"}
@@ -115,5 +136,7 @@ export const Collages = () => {
         </div>
     );
 };
+
+
 
 
