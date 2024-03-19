@@ -32,14 +32,22 @@ export const Questions = () => {
                         "Какие ваши преимущества в сравнении с конкурентами?",
                         "Есть ли какие-то ограничения в использовании?"
                     ].map((question, index) => (
-                        <div key={index} className="question_content" onClick={() => toggleQuestion(index)}>
+                        <div
+                            key={index} className="question_content"
+                            style={
+                                arrowRotatedIndexes.includes(index) ? {maxHeight: "150px", transition: "max-height 0.3s"} : {maxHeight: "40px"}
+                            }
+                            onClick={() => toggleQuestion(index)}
+                        >
                             <div className="question">
                                 <p>{question}</p>
-                                <div className = 'question_svg' style={arrowRotatedIndexes.includes(index) ? { transform: "rotate(180deg)", transition: " transform 0.3s ease" } : {transform: "rotate(0deg)", transition: " transform 0.3s ease"}}>
+                                <div className = 'question_svg'
+                                     style={arrowRotatedIndexes.includes(index) ? { transform: "rotate(180deg)", transition: " transform 0.3s ease" } :
+                                         {transform: "rotate(0deg)", transition: " transform 0.3s ease"}}>
                                     <ArrowUpQuestions />
                                 </div>
                             </div>
-                            <div className="answer">
+                            <div className="answer" >
                                 {openIndexes.includes(index) && (
                                     <p>
                                         {index === 0 && "Для общего удобства используется USDT."}
@@ -50,7 +58,7 @@ export const Questions = () => {
                                 )}
                             </div>
                         </div>
-                        ))}
+                    ))}
                 </div>
             </div>
         </div>
