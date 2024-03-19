@@ -44,11 +44,32 @@ export const Collages = () => {
             if (index === 0) {
                 setShowLeftButton(false);
                 setShowRightButton(true);
-            } else {
+            } else if(index > 0 && index !== 6){
                 setShowLeftButton(true);
+            }else{
                 setShowRightButton(false);
             }
-        }
+        },
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    rows: 1,
+                    initialSlide: 0
+                }
+            },
+        ]
     };
 
 
