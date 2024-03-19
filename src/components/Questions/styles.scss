@@ -1,58 +1,76 @@
-.logo_faq {
-  width: 700px;
-  height: auto;
-}
-
 .questions {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+  .left_content{
+    .logo_faq {
+      width: 50vw;
+      height: auto;
+    }
+  }
+  .right_content{
+    width: 100%;
+    .box {
+      padding: 20px;
+      .question_content {
+        cursor: pointer;
+        margin-bottom: 15px;
+        border: 1px solid #1b8f32;
+        background-color: var(--boxColor);
+        padding: 10px;
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+        height: 100%;
+        position: relative;
+        .question{
+          width: 100%;
+          display: flex;
+          cursor: pointer;
+          justify-content: space-between;
+          //margin-bottom: 15px;
+          color: var(--text_color);
+          border-radius: 5px;
+          p{
+            margin: 0;
+            font-weight: bold;
+            font-size: 17px;
+          }
+          &_svg{
+            width: 24px;
+            height: 24px;
+          }
+        }
+        .answer {
+          margin-top: 0;
+          p{
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
-.box {
-  padding: 20px;
+@media(max-width: 992px){
+  .questions{
+    flex-direction: column;
+    .logo_faq{
+      width: 100%;
+    }
+  }
+}
+@media(max-width: 480px){
+  .question{
+    p{
+      font-size: 4vw !important;
+    }
+  }
+  .answer {
+    p{
+      font-size: 3vw;
+    }
+  }
 }
 
-.questions {
-  display: flex;
-  cursor: pointer;
-  margin-bottom: 15px;
-  color: var(--text_color);
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.question_content {
-  cursor: pointer;
-  margin-bottom: 15px;
-  border: 1px solid #1b8f32;
-  background-color: var(--boxColor);
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.question p {
-  margin: 0;
-  font-weight: bold;
-  font-size: 24px;
-}
-
-
-.question p {
-  margin-bottom: 5px;
-}
-
-.answer {
-  //background-color: #f9f9f9;
-  border-radius: 5px;
-  //padding: 10px;
-  margin-top: 10px;
-
-}
-
-.answer p {
-  margin: 0;
-}
