@@ -1,16 +1,21 @@
 import React, {useState} from "react";
 import "./styles.scss";
 import QuestionLogo from "../../images/QuestionLogo.png";
+import {ArrowUpQuestions} from "../../images/icons/ArrowUpQuestions";
 
 export const Questions = () => {
     const [openIndexes, setOpenIndexes] = useState<number[]>([]);
+    const [arrowRotatedIndexes, setArrowRotatedIndexes] = useState<number[]>([]);
 
     const toggleQuestion = (index: number) => {
+        const isArrowRotated = arrowRotatedIndexes.includes(index);
         const isOpen = openIndexes.includes(index);
         if (isOpen) {
             setOpenIndexes(openIndexes.filter((i) => i !== index));
+            setArrowRotatedIndexes(arrowRotatedIndexes.filter((i) => i !== index));
         } else {
             setOpenIndexes([...openIndexes, index]);
+            setArrowRotatedIndexes([...arrowRotatedIndexes, index]);
         }
     };
 
@@ -30,13 +35,16 @@ export const Questions = () => {
                         <div key={index} className="question_content" onClick={() => toggleQuestion(index)}>
                             <div className="question">
                                 <p>{question}</p>
+                                <div className = 'question_svg' style={arrowRotatedIndexes.includes(index) ? { transform: "rotate(180deg)", transition: " transform 0.3s ease" } : {transform: "rotate(0deg)", transition: " transform 0.3s ease"}}>
+                                    <ArrowUpQuestions />
+                                </div>
                             </div>
                             <div className="answer">
                                 {openIndexes.includes(index) && (
-                                    <p className="answer">
-                                        {index === 0 && "для общего удобства используется USDT"}
-                                        {index === 1 && "нет, Вам будет выделен буферный период, для этого свяжитесь с Вашим менеджером"}
-                                        {index === 2 && "Мы знаем на практике и с какими проблемами сталкиваются арбитражные команды и партнёрские программы и решили их с помощью нашего продукта"}
+                                    <p>
+                                        {index === 0 && "Для общего удобства используется USDT."}
+                                        {index === 1 && "Нет, Вам будет выделен буферный период, для этого свяжитесь с Вашим менеджером."}
+                                        {index === 2 && "Мы знаем на практике и с какими проблемами сталкиваются арбитражные команды и партнёрские программы и решили их с помощью нашего продукта."}
                                         {index === 3 && "Нет. Ответственность за использование за Вами."}
                                     </p>
                                 )}
