@@ -12,7 +12,7 @@
   "Making Money": "BY OPTIMIZING PROCESSES",
 
   "Reports & Insights": "Reports & Insights",
-  "Real-Time Stats": "Reports & Insights",
+  "Real-Time Stats": "Real-Time Stats",
   "Confidence": "Confidence",
   "Tracking & Atribution": " Tracking & Atribution",
   "Automation": "Automation",
@@ -24,17 +24,17 @@
   "Multi-Cost and Payout Tracking": "Multi-Cost and Payout Tracking",
   "Redirect Methods": "Redirect Methods",
 
-  "Reports & Insights text": "From personal experience, we have come to realize that the majority of losses in the sphere come from inattention, inaccurate and untimely analytics. Our goal was to optimize and simplify the analytics process for each division in the company to minimize the risk of losses and simplify the control of the company's indicators as much as possible",
-  "Real-Time Stats text": "We realize that this product is a tool for professionals and we give you the opportunity to make quality assessment as you need it. Analyze baer/team/advertiser/geo/ofer/statuses/ \n conversions/validity",
-  "Confidence text": "The system is completely secure and safe for the user. Your data belongs only to you. The security protocol protects against unauthorized logins and leaks. Even we as developers do not have access to your data without your knowledge",
-  "Tracking & Atribution text": "We pursue the principle of losslessness and transparency in traffic flow",
-  "Automation text": "A lot of important metrics for the financier, affiliate/bizdev and management may be underestimated by the baer team and vice versa. Such connections are quite numerous and accounted for in our product implementation to easily work for profitability",
-  "Integrations text": "Easy integration and technical support ensures security, anonymity, and timely fulfillment of requests",
-  "Теch support text": "Produced not just by the support service, but by a team of professionals who have developed this product and face your problems often enough to solve really difficult and painful problems",
-  "Anti-Fraud Protection text": "CRM constantly analyzes requests and filters out unwanted requests based on your parameters",
-  "Workspaces & Multi-User Access text": "Our system is an infrastructural solution with division into roles not only for qualitative and profitable functioning of the company but also chips like: tracking, status system for advertisers, block of targets and protection system against unauthorized logins",
-  "Multi-Dimensional Reporting text": "Detailed analytics on each of the team members, products, advertisers, which allows easy and objective decision making on optimizations of any level",
-  "Multi-Cost and Payout Tracking text": "All possible spend types and payment models are taken into consideration while creating, making the system suitable for all available verticals",
-  "Redirect Methods text": "Prioritize, allocate, and re-allocate traffic at your personal discretion"
+  "Reports & Insights text": "From personal experience, we have come to realize that the majority of losses in the sphere come from inattention, inaccurate and untimely analytics. Our goal was to optimize and simplify the analytics process for each division in the company.",
+  "Real-Time Stats text": "Ability to make quality assessments as you need them.Analysis of baer/team/advertiser/geo/ofer/statuses/ \n conversions/validity.",
+  "Confidence text": "Your data belongs only to you. The security protocol protects against unauthorized logins and leaks.",
+  "Tracking & Atribution text": "We pursue the principle of losslessness and transparency in traffic flow.",
+  "Automation text": "Many important metrics can be underestimated. There are quite a few such relationships and they are taken into account in our product realization.",
+  "Integrations text": "Easy integration and technical support ensures security, anonymity, and timely fulfillment of requests.",
+  "Теch support text": "Produced not just by a support team, but by a team of professionals.",
+  "Anti-Fraud Protection text": "CRM constantly analyzes requests and filters out unwanted requests based on your parameters.",
+  "Workspaces & Multi-User Access text": "Our system is an infrastructure solution with a division into roles and a large number of additional reports and metrics.",
+  "Multi-Dimensional Reporting text": "Detailed analytics on each of the team members, products, advertisers, which allows easy and objective decision making on optimizations of any level.",
+  "Multi-Cost and Payout Tracking text": "All possible spend types and payment models are taken into consideration while creating, making the system suitable for all available verticals.",
+  "Redirect Methods text": "Prioritize, allocate, and re-allocate traffic at your personal discretion."
 
 }
