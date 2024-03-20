@@ -38,15 +38,15 @@ export const Collages = () => {
         slidesToShow: 3,
         slidesToScroll: 3,
         rows: 2,
+        accessibility: true,
         nextArrow: <RightArrow />,
         prevArrow: <LeftArrow />,
         afterChange: (index: number) => {
             if (index === 0) {
                 setShowLeftButton(false);
                 setShowRightButton(true);
-            } else if(index > 0 && index !== 6){
+            } else {
                 setShowLeftButton(true);
-            }else{
                 setShowRightButton(false);
             }
         },
@@ -56,17 +56,44 @@ export const Collages = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    infinite: true,
-                    dots: true
+                    infinite: false,
+                    dots: true,
+                    adaptiveHeight: true,
+                    afterChange: (index: number) => {
+                        if (index === 0) {
+                            setShowLeftButton(false);
+                        } else {
+                            setShowLeftButton(true);
+                        }
+                        if(index >= 3){
+                            setShowRightButton(false);
+                        }else{
+                            setShowRightButton(true);
+                        }
+                    },
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                     rows: 1,
-                    initialSlide: 0
+                    initialSlide: 0,
+                    dots: true,
+                    adaptiveHeight: true,
+                    afterChange: (index: number) => {
+                        if (index === 0) {
+                            setShowLeftButton(false);
+                        } else {
+                            setShowLeftButton(true);
+                        }
+                        if(index >= 10){
+                            setShowRightButton(false);
+                        }else{
+                            setShowRightButton(true);
+                        }
+                    },
                 }
             },
         ]
