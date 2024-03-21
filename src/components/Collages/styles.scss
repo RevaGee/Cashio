@@ -8,10 +8,9 @@
   padding: 1vw;
   border-radius: 1vw;
   transition: 0.3s ease;
-  //box-sizing: border-box;
-  /*width: 300px;
-  height: 270px;
-  margin: 3vw;*/
+  width: fit-content;
+  height: 285px;
+  margin: 3.5vw;
 
   &:hover{
     background-color: var(--header_color);
@@ -19,23 +18,32 @@
     0 0 32px #1FA84F;
   }
 }
-/*.slick-active{
-  display: grid !important;
-  grid-template-columns: calc(90%/3) calc(90%/3) calc(90%/3) !important;
-  grid-gap: 2vw !important;
-}*/
-.slick_slide{
-  margin: 0 auto;
+.slick_list{
+  height: fit-content !important;
 }
+.slick_slide{
+  margin: 0 auto !important;
+}
+
 @media(max-width: 1200px){
   .collage{
-    font-size: 1.1vw;
+    font-size: 1.2vw;
+    height: 275px;
   }
 }
 @media(max-width: 992px){
   .slider-wrapper{
     .collage{
+      height: 260px;
       font-size: 1.5vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 4vw;
+      &:hover{
+        box-shadow: 0 0 20px #1FA84F;
+      }
     }
   }
 }
@@ -43,14 +51,44 @@
   .slider-wrapper{
     .collage{
       font-size: 2vw;
+      height: 32vw;
+    }
+  }
+}
+@media(max-width: 480px){
+  .collage{
+    margin: 30px auto !important;
+    width: 290px !important;
+    height: 300px !important;
+    font-size: 15px !important;
+    border-radius: 40px;
+  }
+  .right_arrow, .left_arrow{
+    display: none !important;
+  }
+}
+@media(max-width: 380px){
+  .collage{
+
+  }
+}
+.slick-dots{
+  bottom: -35px !important;
+  li{
+    margin: 0 1px;
+    button:before{
+      color: #1FA84F;
+    }
+  }
+  li.slick-active {
+    button:before {
+      opacity: 0.75;
+      color: #1FA84F;
     }
   }
 }
 
-.slick-prev{
-  display: none !important;
-}
-.slick-next{
+.slick-prev, .slick-next{
   display: none !important;
 }
 .right_arrow, .left_arrow{
@@ -95,7 +133,8 @@
 
 .left_arrow
 {
-  left: -25px;
+  left: 0;
+  z-index: 1;
 }
 [dir='rtl'] .slick-prev
 {
@@ -111,9 +150,9 @@
   content: '→';
 }
 
-.right_arrow
-{
-  right: -25px;
+.right_arrow {
+  right: 0;
+  z-index: 1;
 }
 [dir='rtl'] .right_arrow
 {

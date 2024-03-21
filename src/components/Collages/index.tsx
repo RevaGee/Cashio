@@ -32,13 +32,11 @@ export const Collages = () => {
     );
 
     const settings = {
-        dots: false,
         infinite: false,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 3,
         rows: 2,
-        accessibility: true,
         nextArrow: <RightArrow />,
         prevArrow: <LeftArrow />,
         afterChange: (index: number) => {
@@ -57,7 +55,6 @@ export const Collages = () => {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     infinite: false,
-                    dots: true,
                     adaptiveHeight: true,
                     afterChange: (index: number) => {
                         if (index === 0) {
@@ -76,12 +73,18 @@ export const Collages = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                     rows: 1,
+                    infinite: true,
                     initialSlide: 0,
-                    dots: true,
                     adaptiveHeight: true,
+                    dots: true,
+                    autoplaySpeed: 4000,
+                    autoplay: true,
+                    pauseOnDotsHover: true,
+                    pauseOnFocus: true,
+                    pauseOnHover: true,
                     afterChange: (index: number) => {
                         if (index === 0) {
                             setShowLeftButton(false);
