@@ -17,19 +17,19 @@ export const Contacts = () => {
             <div className='left_position'>
                 <div className='head_text'>
                     <div className='head_head'>
-                        <p>WE’RE JUST A MESSAGE AWAY</p>
+                        <p>{t('contacts.WE’RE JUST A MESSAGE AWAY')}</p>
                     </div>
                     <div className='head_description'>
-                        <p>Contact Us</p>
+                        <h1>{t('contacts.Contact Us')}</h1>
                     </div>
                 </div>
                 <div className='overlay_box '>
                     <div className='under_text'>
                         <div className='under_head'>
-                            <p>Reach out to our team</p>
+                            <p>{t('contacts.Reach out to our team')}</p>
                         </div>
                         <div className='under_description'>
-                            <p> We’re here to answer your questions and provide assistance.</p>
+                            <p> {t('contacts.We’re here to answer your questions and provide assistance')}.</p>
                         </div>
                         <button className='demo_contacts' onClick={handleTelegramLink}>
                             {t('Get a free demo')}

@@ -110,62 +110,62 @@ export const Collages = () => {
                     <Collage
                         image={<Reports/>}
                         title = {t('Reports & Insights')}
-                        description={t('Reports & Insights text')}
+                        description={t('text.Reports & Insights text')}
                     />
                     <Collage
                         image={<CollageSvg/>}
                         title={t('Real-Time Stats')}
-                        description={t('Real-Time Stats text')}
+                        description={t('text.Real-Time Stats text')}
                     />
                     <Collage
                         image={<Confidence/>}
                         title={t("Confidence")}
-                        description={t("Confidence text")}
+                        description={t("text.Confidence text")}
                     />
                     <Collage
                         image={<Tracking/>}
                         title={t("Tracking & Atribution")}
-                        description={t("Tracking & Atribution text")}
+                        description={t("text.Tracking & Atribution text")}
                     />
                     <Collage
                         image={<Automize/>}
                         title={t("Automation")}
-                        description={t("Automation text")}
+                        description={t("text.Automation text")}
                     />
                     <Collage
                         image={<Integration/>}
                         title={t("Integrations")}
-                        description={t("Integrations text")}
+                        description={t("text.Integrations text")}
                     />
                     <Collage
                         image={<Support/>}
                         title={t("Теch support")}
-                        description={t("Теch support text")}
+                        description={t("text.Теch support text")}
                     />
                     <Collage
                         image={<Security/>}
                         title={t("Anti-Fraud Protection")}
-                        description={t("Anti-Fraud Protection text")}
+                        description={t("text.Anti-Fraud Protection text")}
                     />
                     <Collage
                         image={<MultipleUser/>}
                         title={t("Workspaces & Multi-User Access")}
-                        description={t("Workspaces & Multi-User Access text")}
+                        description={t("text.Workspaces & Multi-User Access text")}
                     />
                     <Collage
                         image={<Reporting/>}
                         title={t("Multi-Dimensional Reporting")}
-                        description={t("Multi-Dimensional Reporting text")}
+                        description={t("text.Multi-Dimensional Reporting text")}
                     />
                     <Collage
                         image={<Payout/>}
                         title={t("Multi-Cost and Payout Tracking")}
-                        description={t("Multi-Cost and Payout Tracking text")}
+                        description={t("text.Multi-Cost and Payout Tracking text")}
                     />
                     <Collage
                         image={<Redirect/>}
                         title={t("Redirect Methods")}
-                        description={t("Redirect Methods text")}
+                        description={t("text.Redirect Methods text")}
                     />
                 </Slider>
             </div>
