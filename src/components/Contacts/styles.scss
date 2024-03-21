@@ -29,15 +29,12 @@
   margin-bottom: 50px;
 
   .head_head {
-    display: flex;
     font-size: 15px;
-    height: 1vw;
   }
 
   .head_description {
-    display: flex;
-    font-size: 38px;
-    font-weight: bold;
+    font-size: 25px;
+    margin: 0;
   }
 }
 
@@ -95,7 +92,7 @@
     transform: translate(-50%, -50%) rotate(45deg);
   }
   &:hover::before{
-    height: 550%;
+    height: 720%;
   }
 }
 
@@ -105,8 +102,8 @@
 }
 .image_placeholder {
   border-radius: 2vw;
-  width: 800px;
-  height: 800px;
+  width: 55vw;
+  height: 55vw;
   z-index: -1;
   background: -webkit-linear-gradient(90deg, hsla(141, 69%, 39%, 1) 0%, hsla(181, 89%, 25%, 1) 100%);
 }

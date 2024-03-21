@@ -20,7 +20,7 @@ export const Contacts = () => {
                         <p>WE’RE JUST A MESSAGE AWAY</p>
                     </div>
                     <div className='head_description'>
-                        <p>Contact Us</p>
+                        <h1>Contact Us</h1>
                     </div>
                 </div>
                 <div className='overlay_box '>
