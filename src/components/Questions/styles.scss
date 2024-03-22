@@ -4,7 +4,7 @@
     margin: 0 auto;
     h4{
       color: #1FA84F;
-      font-size: 16px;
+      font-size: 20px;
       width: 50%;
     }
     h1{
@@ -23,7 +23,6 @@
   .questions {
     display: flex;
     justify-content: space-between;
-    //align-items: center;
     width: 90%;
     margin: 0 auto;
 
@@ -44,12 +43,9 @@
         .question_content {
           cursor: pointer;
           margin-bottom: 15px;
-          //border: 1px solid #1b8f32;
           background-color: var(--boxColor);
           padding: 20px;
           border-radius: 5px;
-          /*height: fit-content;
-          transition: 0.8s ease;*/
           .question {
             width: 100%;
             display: flex;
