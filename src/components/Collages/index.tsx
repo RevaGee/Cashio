@@ -20,7 +20,7 @@ import {useTranslation} from "react-i18next";
 
 export const Collages = () => {
     const [showRightButton, setShowRightButton] = useState(true);
-    const [showLeftButton, setShowLeftButton] = useState(false);
+    const [showLeftButton, setShowLeftButton] = useState(true);
     const sliderRef = useRef<Slider>(null);
     const {t} = useTranslation();
     const RightArrow = () => (
@@ -37,15 +37,13 @@ export const Collages = () => {
         slidesToShow: 3,
         slidesToScroll: 3,
         rows: 2,
-        nextArrow: <RightArrow />,
-        prevArrow: <LeftArrow />,
         afterChange: (index: number) => {
             if (index === 0) {
-                setShowLeftButton(false);
+                setShowLeftButton(true);
                 setShowRightButton(true);
             } else {
                 setShowLeftButton(true);
-                setShowRightButton(false);
+                setShowRightButton(true);
             }
         },
         responsive: [
@@ -54,16 +52,22 @@ export const Collages = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    infinite: false,
+                    infinite: true,
                     adaptiveHeight: true,
+                    dots: true,
+                    autoplaySpeed: 4000,
+                    autoplay: true,
+                    pauseOnDotsHover: true,
+                    pauseOnFocus: true,
+                    pauseOnHover: true,
                     afterChange: (index: number) => {
                         if (index === 0) {
-                            setShowLeftButton(false);
+                            setShowLeftButton(true);
                         } else {
                             setShowLeftButton(true);
                         }
                         if(index >= 3){
-                            setShowRightButton(false);
+                            setShowRightButton(true);
                         }else{
                             setShowRightButton(true);
                         }
@@ -87,12 +91,12 @@ export const Collages = () => {
                     pauseOnHover: true,
                     afterChange: (index: number) => {
                         if (index === 0) {
-                            setShowLeftButton(false);
+                            setShowLeftButton(true);
                         } else {
                             setShowLeftButton(true);
                         }
                         if(index >= 10){
-                            setShowRightButton(false);
+                            setShowRightButton(true);
                         }else{
                             setShowRightButton(true);
                         }
@@ -104,70 +108,82 @@ export const Collages = () => {
 
 
     return (
-        <div className='slider-wrapper'>
-            <div className='slider-container'>
-                <Slider ref={sliderRef} {...settings}>
-                    <Collage
-                        image={<Reports/>}
-                        title = {t('Reports & Insights')}
-                        description={t('text.Reports & Insights text')}
-                    />
-                    <Collage
-                        image={<CollageSvg/>}
-                        title={t('Real-Time Stats')}
-                        description={t('text.Real-Time Stats text')}
-                    />
-                    <Collage
-                        image={<Confidence/>}
-                        title={t("Confidence")}
-                        description={t("text.Confidence text")}
-                    />
-                    <Collage
-                        image={<Tracking/>}
-                        title={t("Tracking & Atribution")}
-                        description={t("text.Tracking & Atribution text")}
-                    />
-                    <Collage
-                        image={<Automize/>}
-                        title={t("Automation")}
-                        description={t("text.Automation text")}
-                    />
-                    <Collage
-                        image={<Integration/>}
-                        title={t("Integrations")}
-                        description={t("text.Integrations text")}
-                    />
-                    <Collage
-                        image={<Support/>}
-                        title={t("Теch support")}
-                        description={t("text.Теch support text")}
-                    />
-                    <Collage
-                        image={<Security/>}
-                        title={t("Anti-Fraud Protection")}
-                        description={t("text.Anti-Fraud Protection text")}
-                    />
-                    <Collage
-                        image={<MultipleUser/>}
-                        title={t("Workspaces & Multi-User Access")}
-                        description={t("text.Workspaces & Multi-User Access text")}
-                    />
-                    <Collage
-                        image={<Reporting/>}
-                        title={t("Multi-Dimensional Reporting")}
-                        description={t("text.Multi-Dimensional Reporting text")}
-                    />
-                    <Collage
-                        image={<Payout/>}
-                        title={t("Multi-Cost and Payout Tracking")}
-                        description={t("text.Multi-Cost and Payout Tracking text")}
-                    />
-                    <Collage
-                        image={<Redirect/>}
-                        title={t("Redirect Methods")}
-                        description={t("text.Redirect Methods text")}
-                    />
-                </Slider>
+        <div className = 'collages'>
+            <div className = 'text_buttons'>
+                <div className = 'collages_text'>
+                    <p>ADAPT, UPGRADE, SUCCEED</p>
+                    <h1>HOW CAM CASHIO HELP GROWN YOUR BUSINESS?</h1>
+                </div>
+                <div className = 'collages_buttons'>
+                    <RightArrow />
+                    <LeftArrow />
+                </div>
+            </div>
+            <div className='slider-wrapper'>
+                <div className='slider-container'>
+                    <Slider ref={sliderRef} {...settings}>
+                        <Collage
+                            image={<Reports/>}
+                            title = {t('Reports & Insights')}
+                            description={t('text.Reports & Insights text')}
+                        />
+                        <Collage
+                            image={<CollageSvg/>}
+                            title={t('Real-Time Stats')}
+                            description={t('text.Real-Time Stats text')}
+                        />
+                        <Collage
+                            image={<Confidence/>}
+                            title={t("Confidence")}
+                            description={t("text.Confidence text")}
+                        />
+                        <Collage
+                            image={<Tracking/>}
+                            title={t("Tracking & Atribution")}
+                            description={t("text.Tracking & Atribution text")}
+                        />
+                        <Collage
+                            image={<Automize/>}
+                            title={t("Automation")}
+                            description={t("text.Automation text")}
+                        />
+                        <Collage
+                            image={<Integration/>}
+                            title={t("Integrations")}
+                            description={t("text.Integrations text")}
+                        />
+                        <Collage
+                            image={<Support/>}
+                            title={t("Теch support")}
+                            description={t("text.Теch support text")}
+                        />
+                        <Collage
+                            image={<Security/>}
+                            title={t("Anti-Fraud Protection")}
+                            description={t("text.Anti-Fraud Protection text")}
+                        />
+                        <Collage
+                            image={<MultipleUser/>}
+                            title={t("Workspaces & Multi-User Access")}
+                            description={t("text.Workspaces & Multi-User Access text")}
+                        />
+                        <Collage
+                            image={<Reporting/>}
+                            title={t("Multi-Dimensional Reporting")}
+                            description={t("text.Multi-Dimensional Reporting text")}
+                        />
+                        <Collage
+                            image={<Payout/>}
+                            title={t("Multi-Cost and Payout Tracking")}
+                            description={t("text.Multi-Cost and Payout Tracking text")}
+                        />
+                        <Collage
+                            image={<Redirect/>}
+                            title={t("Redirect Methods")}
+                            description={t("text.Redirect Methods text")}
+                        />
+                    </Slider>
+                </div>
             </div>
         </div>
     );

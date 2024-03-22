@@ -1,6 +1,32 @@
 .slider-wrapper{
-  width: 90%;
-  margin: 100px auto;
+  width: 96%;
+  margin: 40px auto;
+}
+.collages{
+  margin: 200px 0 200px 0;
+  .text_buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    .collages_text{
+      p{
+        color: #1FA84F;
+        font-size: 20px;
+      }
+      h1{
+        color: var(--text_color);
+        font-size: 45px;
+        margin-bottom: 0;
+      }
+    }
+    .collages_buttons{
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
 }
 .collage{
   color: var(--text_color);
@@ -46,6 +72,9 @@
       }
     }
   }
+  .right_arrow, .left_arrow{
+    display: none !important;
+  }
 }
 @media(max-width: 768px){
   .slider-wrapper{
@@ -65,6 +94,14 @@
   }
   .right_arrow, .left_arrow{
     display: none !important;
+  }
+  .collages_text{
+    h1{
+      font-size: 40px !important;
+    }
+  }
+  .collages{
+    margin: 150px 0 150px 0 !important;
   }
 }
 @media(max-width: 380px){
@@ -91,37 +128,36 @@
 .slick-prev, .slick-next{
   display: none !important;
 }
+.right_arrow{
+  margin-left: 20px !important;
+}
 .right_arrow, .left_arrow{
-  position: absolute;
-  top: 50%;
   display: block;
-  width: 20px;
-  height: 20px;
+  //width: 20px;
+  //height: 20px;
   padding: 0;
-  transform: translate(0, -50%);
   cursor: pointer;
   border: none;
   outline: none;
   background-color: transparent;
+
 }
-.right_arrow_hide, .left_arrow_hide{
+/*.right_arrow_hide, .left_arrow_hide{
   position: absolute;
   top: 50%;
   display: none;
-  width: 20px;
-  height: 20px;
   padding: 0;
   transform: translate(0, -50%);
   cursor: pointer;
   border: none;
   outline: none;
   background-color: transparent;
-}
+}*/
 .left_arrow:before,
 .right_arrow:before
 {
   font-family: 'slick';
-  font-size: 20px;
+  font-size: 50px;
   line-height: 1;
 
   opacity: .75;
