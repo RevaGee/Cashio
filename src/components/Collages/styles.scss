@@ -87,7 +87,7 @@
 @media(max-width: 480px){
   .collage{
     margin: 30px auto !important;
-    width: 290px !important;
+    width: 290px ;
     height: 300px !important;
     font-size: 15px !important;
     border-radius: 40px;
@@ -106,7 +106,7 @@
 }
 @media(max-width: 380px){
   .collage{
-
+    width: 260px !important;
   }
 }
 .slick-dots{
