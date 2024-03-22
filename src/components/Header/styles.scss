@@ -23,13 +23,10 @@
 
 		.logo {
 			border-radius: 0.5vw;
-			padding: 15px;
 			cursor: pointer;
-			width: 125px;
-			height: 20px;
 			position: fixed;
-			left: 15px;
-			top: 10px;
+			left: 5%;
+			top: 25px;
 			color: #1FA84F;
 		}
 
@@ -80,7 +77,7 @@
 		position: fixed;
 		display: flex;
 		align-items: center;
-		right: 15px;
+		right: 5%;
 		top: 20px;
 		.demo {
 			transition: 0.8s all ease;
@@ -150,13 +147,10 @@
 		align-items: center;
 		.logo {
 			border-radius: 0.5vw;
-			padding: 15px;
 			cursor: pointer;
-			width: 125px;
-			height: 20px;
             position: fixed;
-            left: 15px;
-            top: 10px;
+            left: 5%;
+            top: 25px;
 		}
 		img {
 			width: 125px;
@@ -191,7 +185,7 @@
 		display: flex;
 		align-items: center;
         position: fixed;
-        right: 15px;
+        right: 5%;
         top: 20px;
 		.demo {
 			background: #1FA84F;
@@ -400,7 +394,6 @@ input[type='checkbox']:checked ~ .bar .middle {
 }
 @media(max-width: 1130px){
 	.nav__links{
-		margin-left: 110px !important;
 		li{
 			padding: 0 1vw !important;
 		}
@@ -421,7 +414,7 @@ input[type='checkbox']:checked ~ .bar .middle {
 @media(max-width: 992px){
 	.language{
 		position: fixed;
-		right: 50px;
+		right: 10%;
 		top: 25px
 	}
 
@@ -447,7 +440,7 @@ input[type='checkbox']:checked ~ .bar .middle {
 	.burger {
 		display: flex;
 		position: fixed;
-		right: 15px;
+		right: 5%;
 		top: 37px
 	}
 	.navigation {
