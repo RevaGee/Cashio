@@ -35,7 +35,7 @@ export const Collages = () => {
         infinite: false,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 6,
         rows: 2,
         afterChange: (index: number) => {
             if (index === 0) {
