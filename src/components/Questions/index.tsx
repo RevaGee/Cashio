@@ -35,6 +35,8 @@ export const Questions = () => {
                 </div>
                 <div className="right_content">
                     <div className="box">
+                        {/*<Accordion questionsAnswers={questionsAnswers} />*/}
+
                         {[
                             "Какие способы оплаты?",
                             "Если я не смогу заплатить вовремя, потеряю ли я данные?",
@@ -77,3 +79,92 @@ export const Questions = () => {
         </div>
     );
 };
+
+export const Accordion = (props: {
+    questionsAnswers: Array<{ question: string; answer: string }>;
+}) => {
+    const [activeIndex, setActiveIndex] = useState<number>();
+    const renderedQuestionsAnswers = props.questionsAnswers.map((item, index) => {
+        const showDescription = index === activeIndex ? "show-description" : "";
+        const arrowDown = index === activeIndex ? "arrow_turned_down" : "";
+        return (
+            <AccordionItem
+                arrowDown={arrowDown}
+                showDescription={showDescription}
+                item={item}
+                index={index + 1}
+                onClick={() => {
+                    setActiveIndex(index);
+                }}
+            />
+        );
+    });
+
+    return (
+        <dl className="faq_list">{renderedQuestionsAnswers}</dl>
+    );
+};
+
+interface IAccordionItem {
+    showDescription: string;
+    item: any;
+    index: number;
+    onClick: () => void;
+    arrowDown: string;
+}
+
+const AccordionItem = ({
+   showDescription,
+   item,
+   index,
+   onClick,
+   arrowDown,
+}: IAccordionItem) => {
+    const [isArrowUpRotated, setIsArrowUpRotated] = useState(false);
+    return (
+        <div className={`faq_question question_content  ${showDescription}`} key={item.question}>
+            <div className="faq_question__content">
+                <button
+                    className={`faq_list__title`}
+                    onClick={() => {
+                        onClick();
+                        setIsArrowUpRotated(!isArrowUpRotated);
+                    }}
+                >
+                    {item.question}
+                    <div className={`arrow_up ${isArrowUpRotated ? arrowDown : ""}`}>
+                        <ArrowUpQuestions_2 />
+                    </div>
+                </button>
+                <p
+                    id={`faq${index + 1}_desc`}
+                    className={`faq_list__text ${
+                        isArrowUpRotated ? showDescription : ""
+                    }`}
+                >
+                    {item.answer}
+                </p>
+            </div>
+        </div>
+    );
+};
+
+
+const questionsAnswers = [
+    {
+        question: "Какие способы оплаты?",
+        answer: "Для общего удобства используется USDT.",
+    },
+    {
+        question: "Если я не смогу заплатить вовремя, потеряю ли я данные?",
+        answer: "Нет, Вам будет выделен буферный период, для этого свяжитесь с Вашим менеджером.",
+    },
+    {
+        question: "Какие ваши преимущества в сравнении с конкурентами?",
+        answer: "Мы знаем на практике и с какими проблемами сталкиваются арбитражные команды и партнёрские программы и решили их с помощью нашего продукта.",
+    },
+    {
+        question: "Есть ли какие-то ограничения в использовании?",
+        answer: "Нет. Ответственность за использование за Вами.",
+    },
+];
