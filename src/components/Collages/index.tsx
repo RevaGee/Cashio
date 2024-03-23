@@ -17,12 +17,22 @@ import { Payout } from "../../images/icons/Payout";
 import { Redirect } from "../../images/icons/Redirect";
 import './styles.scss';
 import {useTranslation} from "react-i18next";
+import {useInView} from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 export const Collages = () => {
     const [showRightButton, setShowRightButton] = useState(true);
     const [showLeftButton, setShowLeftButton] = useState(true);
     const sliderRef = useRef<Slider>(null);
     const {t} = useTranslation();
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+    });
+    const [ref_2, inView_2] = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });
     const RightArrow = () => (
         <div className={showRightButton ? "right_arrow" : "right_arrow_hide"} onClick={() => sliderRef.current?.slickNext()} />
     );
@@ -109,7 +119,12 @@ export const Collages = () => {
 
     return (
         <div className = 'collages'>
-            <div className = 'text_buttons'>
+            <motion.div
+                className = 'text_buttons'
+                ref={ref}
+                animate={{opacity: inView ? 1 : 0, x: inView ? 0 : -200}}
+                transition={{duration: 0.5}}
+            >
                 <div className = 'collages_text'>
                     <p>ADAPT, UPGRADE, SUCCEED</p>
                     <h1>HOW CAM CASHIO HELP GROWN YOUR BUSINESS?</h1>
@@ -118,8 +133,14 @@ export const Collages = () => {
                     <RightArrow />
                     <LeftArrow />
                 </div>
-            </div>
-            <div className='slider-wrapper'>
+            </motion.div>
+            <motion.div
+                className='slider-wrapper'
+                ref={ref_2}
+                initial={{opacity: 0}}
+                animate={{opacity: inView_2 ? 1 : 0, y: inView_2 ? 0 : 200}}
+                transition={{duration: 0.5}}
+            >
                 <div className='slider-container'>
                     <Slider ref={sliderRef} {...settings}>
                         <Collage
@@ -184,7 +205,7 @@ export const Collages = () => {
                         />
                     </Slider>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };
