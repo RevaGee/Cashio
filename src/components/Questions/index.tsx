@@ -70,8 +70,9 @@ export const Questions = () => {
                                     maxHeight: openIndexes.includes(index) ? "150px" : "90px",
                                 }}
                                 onClick={() => toggleQuestion(index)}
-                                animate={{opacity: inView_3 ? 1 : 0, y: inView_3 ? 0 : 200}}
-                                transition={{duration: 0.5, delay: index * 0.1}}
+                                initial={{opacity: 0, y: 300}}
+                                animate={{opacity: inView_3 ? 1 : 0, y: inView_3 ? 0 : 300}}
+                                transition={{duration: 0.5, delay: index * 0.3}}
                                 variants={{
                                     visible: {
                                         opacity: 1,
