@@ -2,18 +2,29 @@ import React from "react";
 import ImgSlogan from "../../images/Imgslogan.png"
 import {useTranslation} from "react-i18next";
 import '../Slogan/style.scss'
+import { motion } from "framer-motion";
+import {useInView} from "react-intersection-observer";
 
 export const Slogan = () => {
     const {t} = useTranslation();
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+    });
 
     const handleTelegramLink = () => {
         window.open('https://t.me/zheka_revor', '_blank');
     };
 
     return (
-        <div className="slogan">
+        <div className="slogan" ref={ref}>
             <div className="img_and_text">
-                <div className="slogan_text">
+                <motion.div
+                    className="slogan_text"
+                    initial={{opacity: 0}}
+                    animate={{opacity: inView ? 1 : 0, y: inView ? 0 : 1000}}
+                    transition={{duration: 1}}
+                >
                     <div>
                         <div className="slogan_head_text" >
                             <p>{t('Making')} <span>{t('Money')}</span> {t('Making Money')}</p>
@@ -32,10 +43,15 @@ export const Slogan = () => {
                             <div className = "digits"><h1>24/7</h1><p>{t('anderDigits.anderDigits3')}</p></div>
                         </div>
                     </div>
-                </div>
-                <div className="slogan_image">
+                </motion.div>
+                <motion.div
+                    className="slogan_image"
+                    initial={{opacity: 0, x: 200}}
+                    animate={{opacity: inView ? 1 : 0, x: inView ? 0 : 200}}
+                    transition={{duration: 1}}
+                >
                     <img src={ImgSlogan} alt="" className="img_slogan"/>
-                </div>
+                </motion.div>
             </div>
         </div>
     );
