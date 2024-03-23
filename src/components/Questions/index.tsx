@@ -19,15 +19,11 @@ export const Questions = () => {
     }, [controls, inView]);
 
     const toggleQuestion = (index: number) => {
-        const isArrowRotated = arrowRotatedIndexes.includes(index);
         const isOpen = openIndexes.includes(index);
-        if (isOpen) {
-            setOpenIndexes(openIndexes.filter((i) => i !== index));
-            setArrowRotatedIndexes(arrowRotatedIndexes.filter((i) => i !== index));
-        } else {
-            setOpenIndexes([...openIndexes, index]);
-            setArrowRotatedIndexes([...arrowRotatedIndexes, index]);
-        }
+        setOpenIndexes(isOpen ? openIndexes.filter(i => i !== index) : [...openIndexes, index]);
+        setArrowRotatedIndexes(
+            isOpen ? arrowRotatedIndexes.filter(i => i !== index) : [...arrowRotatedIndexes, index]
+        );
     };
 
     return (
@@ -75,25 +71,39 @@ export const Questions = () => {
                                     maxHeight: openIndexes.includes(index) ? "150px" : "90px",
                                 }}
                                 onClick={() => toggleQuestion(index)}
-                                initial="hidden"
-                                animate={controls}
-                                variants={{
-                                    visible: { opacity: 1, y: 0 },
-                                    hidden: { opacity: 0, y: -20 },
+                                initial={{ opacity: 0, x: -100 }}
+                                animate={{
+                                    opacity: 1,
+                                    x: 0,
                                 }}
-                                transition={{ duration: 0.3, delay: index * 0.1 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                variants={{
+                                    visible: {
+                                        opacity: 1,
+                                        y: 0,
+                                        transition: { duration: 0.5 },
+                                    },
+                                    hidden: {
+                                        opacity: 0,
+                                        y: -20,
+                                        transition: { duration: 0.5 },
+                                    },
+                                }}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                             >
                                 <motion.div
                                     className="question"
                                     initial={{ opacity: 0, y: -20 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }}
+                                    transition={{ duration: 0.3 }}
                                 >
                                     <p>{question}</p>
                                     <motion.div
                                         className="question_svg"
                                         animate={{
                                             rotate: arrowRotatedIndexes.includes(index) ? 180 : 0,
+                                            transition: { duration: 0.3 },
                                         }}
                                     >
                                         <ArrowUpQuestions_2 />
@@ -102,8 +112,11 @@ export const Questions = () => {
                                 <motion.div
                                     className="answer"
                                     initial={{ opacity: 0, y: -20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }}
+                                    animate={{
+                                        opacity: openIndexes.includes(index) ? 1 : 0,
+                                        y: openIndexes.includes(index) ? 0 : -20,
+                                        transition: { duration: 0.3 },
+                                    }}
                                 >
                                     {openIndexes.includes(index) && (
                                         <p>
