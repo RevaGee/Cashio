@@ -19,7 +19,7 @@ export const Questions = () => {
         threshold: 0.8,
     });
     const [ref_3, inView_3] = useInView({
-        triggerOnce: false,
+        triggerOnce: true,
         threshold: 0.1,
     });
 
