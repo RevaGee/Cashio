@@ -22,7 +22,6 @@
   "Multi-Dimensional Reporting": "Multi-Dimensional Reporting",
   "Multi-Cost and Payout Tracking": "Multi-Cost and Payout Tracking",
   "Redirect Methods": "Redirect Methods",
-
   "text": {
     "Reports & Insights text": "From personal experience, we have come to realize that the majority of losses in the sphere come from inattention, inaccurate and untimely analytics. Our goal was to optimize and simplify the analytics process for each division in the company.",
     "Real-Time Stats text": "Ability to make quality assessments as you need them.Analysis of baer/team/advertiser/geo/ofer/statuses/ \n conversions/validity.",
@@ -42,5 +41,27 @@
     "Contact Us": "Contact Us",
     "Reach out to our team": "Reach out to our team",
     "We’re here to answer your questions and provide assistance": "We’re here to answer your questions and provide assistance"
+  },
+  "questions": {
+    "question1": "What are the payment methods?",
+    "question2": "If I can't pay on time, will I lose my data?",
+    "question3": "What are your advantages compared to competitors?",
+    "question4": "Are there any usage restrictions?"
+  },
+  "answer": {
+    "answer1": "USDT is used for general convenience.",
+    "answer2": "No, you will be given a buffer period, please contact your manager for this.",
+    "answer3": "We have practical experience with the problems faced by arbitration teams and affiliate programs and have solved them using our product.",
+    "answer4": "No. The responsibility for usage is yours."
+  },
+  "heading": {
+    "heading1":"FAQ",
+    "heading2":"Frequently Asked Questions",
+    "heading3":"As A Matter Of Fact The Unification Of The Coherent Software Provides \n A Strict Control Over The Accomplishment Of Intended Estimation"
+  },
+  "anderDigits": {
+    "anderDigits1":"Automated processes",
+    "anderDigits2":"Full financial reports",
+    "anderDigits3":"Live support"
   }
 }

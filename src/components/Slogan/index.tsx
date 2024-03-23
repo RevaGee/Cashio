@@ -27,9 +27,9 @@ export const Slogan = () => {
                             {t('Get a free demo')}
                         </button>
                         <div className="info_text">
-                            <div className = "digits"><h1>250K+</h1><p>Automated processes</p></div>
-                            <div className = "digits digits_margin"><h1>500+</h1><p>Full financial reports</p></div>
-                            <div className = "digits"><h1>24/7</h1><p>Live support</p></div>
+                            <div className = "digits"><h1>250K+</h1><p>{t('anderDigits.anderDigits1')}</p></div>
+                            <div className = "digits digits_margin"><h1>500+</h1><p>{t('anderDigits.anderDigits2')}</p></div>
+                            <div className = "digits"><h1>24/7</h1><p>{t('anderDigits.anderDigits3')}</p></div>
                         </div>
                     </div>
                 </div>
