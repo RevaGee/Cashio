@@ -1,5 +1,5 @@
-import React, {useState, useEffect, useRef} from "react";
-import {motion, useAnimation} from "framer-motion";
+import React, {useState} from "react";
+import {motion} from "framer-motion";
 import "./styles.scss";
 import QuestionLogo from "../../images/customer.png";
 import {ArrowUpQuestions_2} from "../../images/icons/ArrowUpQuestions_2";
