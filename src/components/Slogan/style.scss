@@ -5,7 +5,7 @@
   //justify-content: left;
   //flex-direction: column;
   //width: 90%;
-  //height: 100vh;
+  height: 100vh;
   //min-height: 100vh;
   //width: 100%;
   //margin: 100px auto;
@@ -13,7 +13,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  margin-top: 100px;
+  margin-top: 0;
 }
 .img_and_text{
   width: 100%;
@@ -25,7 +25,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 5px;
+  //margin-top: 5px;
+  margin-top: 75px;
   //height: calc(100vh - 80px);
   /*text-align: left;
   margin-bottom: inherit;*/
@@ -62,6 +63,7 @@
   width: 700px;
   //width: 40vw;
   height: auto;
+  margin-top: 75px;
 }
 
 .demo_slogan {
@@ -127,7 +129,8 @@
     color: var(--text_color);
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    //width: 90%;
+    width: 110%;
     //font-size: 1.0vw;
     font-size: 16px;
 
@@ -173,6 +176,7 @@
     max-width:960px;
   }
   .img_slogan{
+    margin-top: 75px;
     width: 100%;
   }
 }
@@ -182,7 +186,8 @@
     max-width:1140px;
   }
   .slogan_image{
-    height: 600px;
+    //height: 600px;
+    height: 725px;
   }
 }
 
@@ -197,6 +202,10 @@
 }
 
 @media(max-width: 1200px){
+  .slogan{
+    margin-top: 100px;
+    height: auto;
+  }
   .slogan_image{
     margin-top: 15px;
     height: auto;
@@ -209,6 +218,7 @@
   }
   .info_text{
     margin-left: 10px;
+    width: 100% !important;
     //width: 70% !important;
     .digits_margin{
       margin: 0 5px 0 5px;
@@ -237,6 +247,9 @@
   }
 }
 @media(max-width: 768px){
+  .slogan{
+    margin-top: 50px;
+  }
   .slogan_head_text{
     font-size: 8vw;
   }
