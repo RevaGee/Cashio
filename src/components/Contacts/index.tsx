@@ -23,7 +23,7 @@ export const Contacts = () => {
                         <h1>{t('contacts.Contact Us')}</h1>
                     </div>
                 </div>
-                <div className='overlay_box '>
+                <div className='overlay_box'>
                     <div className='under_text'>
                         <div className='under_head'>
                             <p>{t('contacts.Reach out to our team')}</p>
