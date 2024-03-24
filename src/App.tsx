@@ -7,21 +7,22 @@ import {Slogan} from "./components/Slogan";
 import {Collages} from "./components/Collages";
 import {Questions} from "./components/Questions";
 import {Contacts} from "./components/Contacts";
+import './index.css'
 
 
 function App() {
     return (
         <div style={{width: "100%", margin: "0 auto"}} className="App">
             <Header/>
-            <ParticlesComponent/>
+            {/*<ParticlesComponent/>*/}
             <Slogan/>
-            <Collages/>
-            <Questions/>
+            {/*<Collages/>
+            <Questions/>*/}
             {/*<Contacts/>*/}
-            <div style={{backgroundColor: "blue", height: "300px", width: "90%", margin: "0 auto"}}></div>
-            <div style={{backgroundColor: "transparent", height: "300px", width: "90%", margin: "0 auto"}}></div>
-            <ArrowScroll/>
-            <Footer/>
+            {/*<div style={{backgroundColor: "blue", height: "300px", width: "90%", margin: "0 auto"}}></div>
+            <div style={{backgroundColor: "transparent", height: "300px", width: "90%", margin: "0 auto"}}></div>*/}
+            {/*<ArrowScroll/>
+            <Footer/>*/}
         </div>
     );
 }
