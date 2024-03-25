@@ -18,7 +18,7 @@ export const Slogan = () => {
     const roundedValues = counts.map(count => useTransform(count, Math.round));
 
     useEffect(() => {
-        const animations = counts.map((count, index) => animate(count, [250, 500, 24, 7][index], { duration: 0.8 }));
+        const animations = counts.map((count, index) => animate(count, [250, 500, 24, 7][index], { duration: 2 }));
         return () => animations.forEach(animation => animation.stop());
     }, [counts]);
 
@@ -33,7 +33,7 @@ export const Slogan = () => {
                 <motion.div
                     className="slogan_text"
                     initial={{opacity: 0, top: 0, x: 0}}
-                    animate={{opacity: inView ? 1 : 0, x: inView ? 0 : -4000}}
+                    animate={{opacity: inView ? 1 : 0, x: inView ? 0 : -2000}}
                     transition={{duration: 1}}
                 >
                     <div>
