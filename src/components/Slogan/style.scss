@@ -62,7 +62,7 @@
 .img_slogan {
   width: 700px;
   //width: 40vw;
-  height: auto;
+  //height: 100vh;
   margin-top: 75px;
 }
 
@@ -204,7 +204,7 @@
 @media(max-width: 1200px){
   .slogan{
     margin-top: 100px;
-    height: auto;
+    height: fit-content;
   }
   .slogan_image{
     margin-top: 15px;

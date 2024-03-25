@@ -32,8 +32,8 @@ export const Slogan = () => {
             <div className="img_and_text">
                 <motion.div
                     className="slogan_text"
-                    initial={{opacity: 0}}
-                    animate={{opacity: inView ? 1 : 0, y: inView ? 0 : 1000}}
+                    initial={{opacity: 0, top: 0, x: 0}}
+                    animate={{opacity: inView ? 1 : 0, x: inView ? 0 : -4000}}
                     transition={{duration: 1}}
                 >
                     <div>
