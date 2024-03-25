@@ -1,15 +1,15 @@
 .slider-wrapper{
-  width: 96%;
-  margin: 40px auto;
+  width: 100%;
+  //margin: 40px auto;
 }
 .collages{
-  margin: 200px 0 200px 0;
+  //margin: 200px 0 200px 0;
   .text_buttons{
     display: flex;
     flex-direction: row;
     align-items: end;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     .collages_text{
       p{
@@ -52,22 +52,66 @@
   margin: 0 auto !important;
 }
 
-@media(max-width: 1200px){
+.media_slider{
+  //margin-top: 100px;
+  //height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 576px) {
+  .collages {
+    max-width:540px;
+  }
+}
+@media (min-width: 768px) {
+  .collages {
+    max-width:720px;
+  }
+}
+@media (min-width: 992px) {
+  .collages {
+    max-width:960px;
+  }
+}
+@media (min-width: 1200px) {
+  .collages {
+    max-width:1140px;
+  }
+  .collage{
+    margin: 35px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1400px) {
+  .collages {
+    max-width:1320px;
+  }
+  .collage{
+    margin: 35px;
+    font-size: 17px;
+  }
+}
+/*@media(max-width: 1200px){
   .collage{
     font-size: 1.2vw;
     height: 275px;
+    margin: 35px;
   }
-}
-@media(max-width: 992px){
+}*/
+@media(max-width:1200px){
   .slider-wrapper{
     .collage{
-      height: 260px;
-      font-size: 1.5vw;
+      //height: 260px;
+      height: 280px;
+      //font-size: 1.5vw;
+      font-size: 15px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      margin: 4vw;
+      //margin: 4vw;
+      margin: 30px;
       &:hover{
         box-shadow: 0 0 20px #1FA84F;
       }
@@ -80,9 +124,28 @@
 @media(max-width: 768px){
   .slider-wrapper{
     .collage{
-      font-size: 2vw;
-      height: 32vw;
+      //font-size: 2vw;
+      font-size: 12px;
+      //height: 32vw;
+      height: 275px;
+      svg{
+        width: 50px;
+        height: 50px;
+      }
     }
+  }
+}
+@media(max-width: 576px){
+  .collages{
+    width: 90%;
+    .collage{
+      margin: 20px;
+      height: 275px;
+      font-size: 2vw;
+    }
+  }
+  .slick-dots{
+      bottom: -5px !important;
   }
 }
 @media(max-width: 480px){
@@ -111,7 +174,7 @@
   }
 }
 .slick-dots{
-  bottom: -35px !important;
+  bottom: 5px;
   li{
     margin: 0 1px;
     button:before{

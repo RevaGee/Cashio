@@ -58,7 +58,7 @@ export const Collages = () => {
         },
         responsive: [
             {
-                breakpoint: 992,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
@@ -118,94 +118,96 @@ export const Collages = () => {
 
 
     return (
-        <div className = 'collages'>
-            <motion.div
-                className = 'text_buttons'
-                ref={ref}
-                animate={{opacity: inView ? 1 : 0, x: inView ? 0 : -200}}
-                transition={{duration: 0.5}}
-            >
-                <div className = 'collages_text'>
-                    <p>ADAPT, UPGRADE, SUCCEED</p>
-                    <h1>HOW CAM CASHIO HELP GROWN YOUR BUSINESS?</h1>
-                </div>
-                <div className = 'collages_buttons'>
-                    <RightArrow />
-                    <LeftArrow />
-                </div>
-            </motion.div>
-            <motion.div
-                className='slider-wrapper'
-                ref={ref_2}
-                initial={{opacity: 0}}
-                animate={{opacity: inView_2 ? 1 : 0, y: inView_2 ? 0 : 200}}
-                transition={{duration: 0.5}}
-            >
-                <div className='slider-container'>
-                    <Slider ref={sliderRef} {...settings}>
-                        <Collage
-                            image={<Reports/>}
-                            title = {t('Reports & Insights')}
-                            description={t('text.Reports & Insights text')}
-                        />
-                        <Collage
-                            image={<CollageSvg/>}
-                            title={t('Real-Time Stats')}
-                            description={t('text.Real-Time Stats text')}
-                        />
-                        <Collage
-                            image={<Confidence/>}
-                            title={t("Confidence")}
-                            description={t("text.Confidence text")}
-                        />
-                        <Collage
-                            image={<Tracking/>}
-                            title={t("Tracking & Atribution")}
-                            description={t("text.Tracking & Atribution text")}
-                        />
-                        <Collage
-                            image={<Automize/>}
-                            title={t("Automation")}
-                            description={t("text.Automation text")}
-                        />
-                        <Collage
-                            image={<Integration/>}
-                            title={t("Integrations")}
-                            description={t("text.Integrations text")}
-                        />
-                        <Collage
-                            image={<Support/>}
-                            title={t("Теch support")}
-                            description={t("text.Теch support text")}
-                        />
-                        <Collage
-                            image={<Security/>}
-                            title={t("Anti-Fraud Protection")}
-                            description={t("text.Anti-Fraud Protection text")}
-                        />
-                        <Collage
-                            image={<MultipleUser/>}
-                            title={t("Workspaces & Multi-User Access")}
-                            description={t("text.Workspaces & Multi-User Access text")}
-                        />
-                        <Collage
-                            image={<Reporting/>}
-                            title={t("Multi-Dimensional Reporting")}
-                            description={t("text.Multi-Dimensional Reporting text")}
-                        />
-                        <Collage
-                            image={<Payout/>}
-                            title={t("Multi-Cost and Payout Tracking")}
-                            description={t("text.Multi-Cost and Payout Tracking text")}
-                        />
-                        <Collage
-                            image={<Redirect/>}
-                            title={t("Redirect Methods")}
-                            description={t("text.Redirect Methods text")}
-                        />
-                    </Slider>
-                </div>
-            </motion.div>
+        <div className = 'media_slider'>
+            <div className = 'collages'>
+                <motion.div
+                    className = 'text_buttons'
+                    ref={ref}
+                    animate={{opacity: inView ? 1 : 0, x: inView ? 0 : -200}}
+                    transition={{duration: 0.5}}
+                >
+                    <div className = 'collages_text'>
+                        <p>ADAPT, UPGRADE, SUCCEED</p>
+                        <h1>HOW CAM CASHIO HELP GROWN YOUR BUSINESS?</h1>
+                    </div>
+                    <div className = 'collages_buttons'>
+                        <RightArrow />
+                        <LeftArrow />
+                    </div>
+                </motion.div>
+                <motion.div
+                    className='slider-wrapper'
+                    ref={ref_2}
+                    initial={{opacity: 0}}
+                    animate={{opacity: inView_2 ? 1 : 0, y: inView_2 ? 0 : 200}}
+                    transition={{duration: 0.5}}
+                >
+                    <div className='slider-container'>
+                        <Slider ref={sliderRef} {...settings}>
+                            <Collage
+                                image={<Reports />}
+                                title = {t('Reports & Insights')}
+                                description={t('text.Reports & Insights text')}
+                            />
+                            <Collage
+                                image={<CollageSvg/>}
+                                title={t('Real-Time Stats')}
+                                description={t('text.Real-Time Stats text')}
+                            />
+                            <Collage
+                                image={<Confidence/>}
+                                title={t("Confidence")}
+                                description={t("text.Confidence text")}
+                            />
+                            <Collage
+                                image={<Tracking/>}
+                                title={t("Tracking & Atribution")}
+                                description={t("text.Tracking & Atribution text")}
+                            />
+                            <Collage
+                                image={<Automize/>}
+                                title={t("Automation")}
+                                description={t("text.Automation text")}
+                            />
+                            <Collage
+                                image={<Integration/>}
+                                title={t("Integrations")}
+                                description={t("text.Integrations text")}
+                            />
+                            <Collage
+                                image={<Support/>}
+                                title={t("Теch support")}
+                                description={t("text.Теch support text")}
+                            />
+                            <Collage
+                                image={<Security/>}
+                                title={t("Anti-Fraud Protection")}
+                                description={t("text.Anti-Fraud Protection text")}
+                            />
+                            <Collage
+                                image={<MultipleUser/>}
+                                title={t("Workspaces & Multi-User Access")}
+                                description={t("text.Workspaces & Multi-User Access text")}
+                            />
+                            <Collage
+                                image={<Reporting/>}
+                                title={t("Multi-Dimensional Reporting")}
+                                description={t("text.Multi-Dimensional Reporting text")}
+                            />
+                            <Collage
+                                image={<Payout/>}
+                                title={t("Multi-Cost and Payout Tracking")}
+                                description={t("text.Multi-Cost and Payout Tracking text")}
+                            />
+                            <Collage
+                                image={<Redirect/>}
+                                title={t("Redirect Methods")}
+                                description={t("text.Redirect Methods text")}
+                            />
+                        </Slider>
+                    </div>
+                </motion.div>
+            </div>
         </div>
     );
 };
