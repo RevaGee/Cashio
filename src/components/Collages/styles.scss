@@ -3,7 +3,7 @@
   //margin: 40px auto;
 }
 .collages{
-  //margin: 200px 0 200px 0;
+  margin: 200px 0 200px 0;
   .text_buttons{
     display: flex;
     flex-direction: row;
@@ -100,6 +100,9 @@
   }
 }*/
 @media(max-width:1200px){
+  .collages{
+    margin: 150px 0 150px 0;
+  }
   .slider-wrapper{
     .collage{
       //height: 260px;
@@ -165,7 +168,7 @@
     }
   }
   .collages{
-    margin: 150px 0 150px 0 !important;
+    margin: 100px 0 100px 0 !important;
   }
 }
 @media(max-width: 380px){
