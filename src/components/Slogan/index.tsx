@@ -1,8 +1,8 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ImgSlogan from "../../images/Imgslogan.png"
 import {useTranslation} from "react-i18next";
 import '../Slogan/style.scss'
-import { motion } from "framer-motion";
+import {animate, motion, useMotionValue, useTransform} from "framer-motion";
 import {useInView} from "react-intersection-observer";
 
 export const Slogan = () => {
@@ -11,6 +11,17 @@ export const Slogan = () => {
         triggerOnce: true,
         threshold: 0.1,
     });
+    // Disable ESLint for the following lines
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const counts = [250, 500, 24, 7].map(initialValue => useMotionValue(0));
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const roundedValues = counts.map(count => useTransform(count, Math.round));
+
+    useEffect(() => {
+        const animations = counts.map((count, index) => animate(count, [250, 500, 24, 7][index], { duration: 0.8 }));
+        return () => animations.forEach(animation => animation.stop());
+    }, [counts]);
+
 
     const handleTelegramLink = () => {
         window.open('https://t.me/zheka_revor', '_blank');
@@ -38,9 +49,25 @@ export const Slogan = () => {
                             {t('Get a free demo')}
                         </button>
                         <div className="info_text">
-                            <div className = "digits"><h1>250K+</h1><p>{t('anderDigits.anderDigits1')}</p></div>
-                            <div className = "digits digits_margin"><h1>500+</h1><p>{t('anderDigits.anderDigits2')}</p></div>
-                            <div className = "digits"><h1>24/7</h1><p>{t('anderDigits.anderDigits3')}</p></div>
+                            <div className = "digits">
+                                <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
+                                    <motion.h1 className={roundedValues[0] ? 'rounded' : ''}>{roundedValues[0]}</motion.h1><h1>+</h1>
+                                </div>
+                                <p>{t('anderDigits.anderDigits1')}</p>
+                            </div>
+                            <div className="digits digits_margin">
+                                <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
+                                    <motion.h1 className={roundedValues[1] ? 'rounded' : ''}>{roundedValues[1]}</motion.h1><h1>+</h1>
+                                </div>
+                                <p>{t('anderDigits.anderDigits2')}</p>
+                            </div>
+                            <div className = "digits">
+                                <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
+                                    <motion.h1 className={roundedValues[2] ? 'rounded' : ''}>{roundedValues[2]}</motion.h1>
+                                    <h1>/</h1>
+                                    <motion.h1 className={roundedValues[3] ? 'rounded' : ''}>{roundedValues[3]}</motion.h1>
+                                </div>
+                                <p>{t('anderDigits.anderDigits3')}</p></div>
                         </div>
                     </div>
                 </motion.div>
