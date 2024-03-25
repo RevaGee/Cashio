@@ -1,78 +1,89 @@
 .faq {
-  .heading{
-    width: 90%;
-    margin: 0 auto;
-    h4{
-      color: #1FA84F;
-      font-size: 20px;
-      width: 50%;
-    }
-    h1{
-      font-size: 45px;
-      color: var(--text_color);
-      width: 50%;
-      margin: 0.5rem 0 0.5rem 0;
-    }
-    p{
-      color: var(--text_color);
-      font-size: 16px;
-      width: 50%;
-      line-height: 32px;
-    }
-  }
-  .questions {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .faq_media {
+    width: 100%;
+    .heading {
+      width: 100%;
+      margin: 0 auto;
 
-    .left_content {
-      .logo_faq {
-        display: flex;
-        width: 35vw;
-        height: auto;
+      h4 {
+        color: #1FA84F;
+        font-size: 20px;
+        width: 50%;
+      }
+
+      h1 {
+        font-size: 45px;
+        color: var(--text_color);
+        width: 50%;
+        margin: 0.5rem 0 0.5rem 0;
+      }
+
+      p {
+        color: var(--text_color);
+        font-size: 16px;
+        width: 50%;
+        line-height: 32px;
       }
     }
 
-    .right_content {
+    .questions {
+      display: flex;
+      justify-content: space-between;
       width: 100%;
+      margin: 0 auto;
 
-      .box {
-        padding: 20px;
+      .left_content {
+        .logo_faq {
+          display: flex;
+          width: 35vw;
+          height: auto;
+        }
+      }
 
-        .question_content {
-          cursor: pointer;
-          margin-bottom: 15px;
-          background-color: var(--boxColor);
+      .right_content {
+        width: 100%;
+
+        .box {
           padding: 20px;
-          border-radius: 5px;
-          .question {
-            width: 100%;
-            display: flex;
+
+          .question_content {
             cursor: pointer;
-            justify-content: space-between;
-            color: var(--text_color);
+            margin-bottom: 15px;
+            background-color: var(--boxColor);
+            padding: 20px;
             border-radius: 5px;
 
-            p {
-              margin: 0;
-              font-weight: bold;
-              font-size: 20px;
-            }
-
-            &_svg {
-              width: 24px;
-              height: 24px;
-              margin: 0 1.5rem 0 1.5rem;
-            }
-          }
-
-          .answer {
-            margin-top: 0;
-
-            p {
+            .question {
+              width: 100%;
+              display: flex;
+              cursor: pointer;
+              justify-content: space-between;
               color: var(--text_color);
-              margin: 10px 0 5px 0;
+              border-radius: 5px;
+
+              p {
+                margin: 0;
+                font-weight: bold;
+                font-size: 20px;
+              }
+
+              &_svg {
+                width: 24px;
+                height: 24px;
+                margin: 0 1.5rem 0 1.5rem;
+              }
+            }
+
+            .answer {
+              margin-top: 0;
+
+              p {
+                color: var(--text_color);
+                margin: 10px 0 5px 0;
+              }
             }
           }
         }
@@ -80,7 +91,52 @@
     }
   }
 }
+@media (min-width: 576px) {
+  .faq_media {
+    max-width:540px;
+  }
+}
 
+@media (min-width: 768px) {
+  .faq_media {
+    max-width:720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .faq_media {
+    max-width:960px;
+  }
+  .logo_faq{
+    width: 430px !important;
+  }
+  .question_content{
+    padding: 15px !important;
+    .question{
+      p{
+        font-size: 16px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .faq_media {
+    max-width:1140px;
+  }
+  .logo_faq{
+    width: 500px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .faq_media {
+    max-width:1320px;
+  }
+  .question_content{
+    padding: 20px;
+  }
+}
 @media(max-width: 992px){
   .heading{
     h4{
@@ -99,6 +155,11 @@
     .logo_faq{
       width: 100% !important;
     }
+  }
+}
+@media(max-width: 576px){
+  .faq_media{
+    width: 90% !important;
   }
 }
 @media(max-width: 480px){
