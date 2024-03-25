@@ -19,6 +19,17 @@ import './styles.scss';
 import {useTranslation} from "react-i18next";
 import {useInView} from "react-intersection-observer";
 import { motion } from "framer-motion";
+import {
+    faChartBar,
+    faChartPie,
+    faChartSimple,
+    faEye,
+    faGear,
+    faHeadset, faMoneyCheckDollar,
+    faRecycle, faReplyAll, faShieldHalved, faUserGroup,
+    faUserSecret
+} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export const Collages = () => {
     const [showRightButton, setShowRightButton] = useState(true);
@@ -145,62 +156,62 @@ export const Collages = () => {
                     <div className='slider-container'>
                         <Slider ref={sliderRef} {...settings}>
                             <Collage
-                                image={<Reports />}
+                                image={faChartPie}
                                 title = {t('Reports & Insights')}
                                 description={t('text.Reports & Insights text')}
                             />
                             <Collage
-                                image={<CollageSvg/>}
+                                image={faUserSecret}
                                 title={t('Real-Time Stats')}
                                 description={t('text.Real-Time Stats text')}
                             />
                             <Collage
-                                image={<Confidence/>}
+                                image={faGear}
                                 title={t("Confidence")}
                                 description={t("text.Confidence text")}
                             />
                             <Collage
-                                image={<Tracking/>}
+                                image={faChartSimple}
                                 title={t("Tracking & Atribution")}
                                 description={t("text.Tracking & Atribution text")}
                             />
                             <Collage
-                                image={<Automize/>}
+                                image={faEye}
                                 title={t("Automation")}
                                 description={t("text.Automation text")}
                             />
                             <Collage
-                                image={<Integration/>}
+                                image={faRecycle}
                                 title={t("Integrations")}
                                 description={t("text.Integrations text")}
                             />
                             <Collage
-                                image={<Support/>}
+                                image={faHeadset}
                                 title={t("Теch support")}
                                 description={t("text.Теch support text")}
                             />
                             <Collage
-                                image={<Security/>}
+                                image={faUserGroup}
                                 title={t("Anti-Fraud Protection")}
                                 description={t("text.Anti-Fraud Protection text")}
                             />
                             <Collage
-                                image={<MultipleUser/>}
+                                image={faMoneyCheckDollar}
                                 title={t("Workspaces & Multi-User Access")}
                                 description={t("text.Workspaces & Multi-User Access text")}
                             />
                             <Collage
-                                image={<Reporting/>}
+                                image={faShieldHalved}
                                 title={t("Multi-Dimensional Reporting")}
                                 description={t("text.Multi-Dimensional Reporting text")}
                             />
                             <Collage
-                                image={<Payout/>}
+                                image={faChartBar}
                                 title={t("Multi-Cost and Payout Tracking")}
                                 description={t("text.Multi-Cost and Payout Tracking text")}
                             />
                             <Collage
-                                image={<Redirect/>}
+                                image={faReplyAll}
                                 title={t("Redirect Methods")}
                                 description={t("text.Redirect Methods text")}
                             />
