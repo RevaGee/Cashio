@@ -3,7 +3,7 @@
   //margin: 40px auto;
 }
 .collages{
-  margin: 200px 0 200px 0;
+  margin: 0 0 100px 0;
   .text_buttons{
     display: flex;
     flex-direction: row;
@@ -101,7 +101,7 @@
 }*/
 @media(max-width:1200px){
   .collages{
-    margin: 150px 0 150px 0;
+    margin: 0 0 50px 0;
   }
   .slider-wrapper{
     .collage{
@@ -141,6 +141,7 @@
 @media(max-width: 576px){
   .collages{
     width: 90%;
+    margin: 0 0 30px 0 !important;
     .collage{
       margin: 20px;
       height: 275px;
@@ -166,9 +167,6 @@
     h1{
       font-size: 40px !important;
     }
-  }
-  .collages{
-    margin: 100px 0 100px 0 !important;
   }
 }
 @media(max-width: 380px){
