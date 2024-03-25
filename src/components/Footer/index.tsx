@@ -18,7 +18,6 @@ export const Footer = () => {
     //     }
     // };
 
-    // @ts-ignore
     return (
         <div className="footer">
             <div className="footer__content">
@@ -30,11 +29,13 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div className="footer_end_content">
-                    <div className="footer__copyright">
-                        <p>Copyright ©CASHIO 2024 · All Rights Reserved</p>
-                    </div>
-                    <div className="modal_prv_content">
-                        <p>Privacy Policy</p>
+                    <div className = 'footer_media'>
+                        <div className="footer__copyright">
+                            <p>Copyright ©CASHIO 2024 · All Rights Reserved</p>
+                        </div>
+                        <div className="modal_prv_content">
+                            <p>Privacy Policy</p>
+                        </div>
                     </div>
                 </div>
             </div>

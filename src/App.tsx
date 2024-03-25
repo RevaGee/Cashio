@@ -19,10 +19,8 @@ function App() {
             <Collages/>
             <Questions/>
             {/*<Contacts/>*/}
-            {/*<div style={{backgroundColor: "blue", height: "300px", width: "90%", margin: "0 auto"}}></div>
-            <div style={{backgroundColor: "transparent", height: "300px", width: "90%", margin: "0 auto"}}></div>*/}
-            {/*<ArrowScroll/>
-            <Footer/>*/}
+            <ArrowScroll/>
+            <Footer/>
         </div>
     );
 }

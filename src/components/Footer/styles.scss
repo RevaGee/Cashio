@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--header_color);
 
 
   &__content {
@@ -12,7 +13,6 @@
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(10px);
-    background-color: var(--header_color);
     box-sizing: border-box;
     justify-content: space-between;
     transition: 0.3s ease;
@@ -31,14 +31,6 @@
 .logo_footer img {
   width: 100px;
 }
-
-.footer__borders {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  border-top: 0.5px solid #ccc;
-  border-bottom: 0.5px solid #ccc;
-}
 .footer_start_content{
   width: 100%;
   display: flex;
@@ -48,32 +40,33 @@
   border-bottom: 1px solid gray;
 }
 .footer_end_content{
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: fit-content;
-  padding: 0 5%;
+  //padding: 0 5%;
 }
-
+.footer_media{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 .footer__text p {
   font-size: 1em;
   margin-top: 10%;
-  //color: #D8D8D8;
   color: var(--text_color);
 }
 .footer__copyright p {
   font-size: 1em;
   display: flex;
   margin-top: 20px;
-  //padding: 5%;
-  //margin-bottom: 10%;
   color: var(--text_color);
 }
 .modal_prv_content{
   color: var(--text_color);
-  p{
-    //cursor: pointer;
-  }
 }
 .modal {
   position: fixed;
@@ -92,13 +85,46 @@
   padding: 20px;
   border-radius: 5px;
 }
-@media(max-width: 480px){
+@media (min-width: 576px) {
+  .footer_media {
+    max-width:540px
+  }
+}
+
+@media (min-width: 768px) {
+  .footer_media {
+    max-width:720px
+  }
+}
+
+@media (min-width: 992px) {
+  .footer_media {
+    max-width:960px
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer_media {
+    max-width:1140px
+  }
+}
+
+@media (min-width: 1400px) {
+  .footer_media {
+    max-width:1320px
+  }
+}
+
+@media(max-width: 576px){
+  .footer_media{
+    width: 90%;
+  }
   .footer_start_content{
     p{
       font-size: 16px;
     }
   }
-  .footer_end_content{
+  .footer_media{
     flex-direction: column;
     p{
       font-size: 16px;
