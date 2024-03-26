@@ -38,6 +38,11 @@
   height: 300px;
   margin: 3.5vw;
   cursor: pointer;
+  svg{
+    width: 74px;
+    height: 74px !important;
+    color: #1FA84F;
+  }
 
   &:hover{
     background-color: var(--header_color);
@@ -51,7 +56,6 @@
 .slick_slide{
   margin: 0 auto !important;
 }
-
 .media_slider{
   //margin-top: 100px;
   //height: 100vh;
@@ -132,8 +136,8 @@
       //height: 32vw;
       height: 275px;
       svg{
-        width: 50px;
-        height: 50px;
+        width: 50px !important;
+        height: 50px !important;
       }
     }
   }
