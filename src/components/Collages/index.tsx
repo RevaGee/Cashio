@@ -3,18 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Collage } from "./Collage";
-import { CollageSvg } from "../../images/icons/Stats";
-import { Security } from "../../images/icons/Security";
-import { Reports } from "../../images/icons/Reports";
-import { Tracking } from "../../images/icons/Tracking";
-import { Automize } from "../../images/icons/Automize";
-import { Integration } from "../../images/icons/Integration";
-import { Support } from "../../images/icons/Support";
-import { Confidence } from "../../images/icons/Confidence";
-import { MultipleUser } from "../../images/icons/MultipleUser";
-import { Reporting } from "../../images/icons/Reporting";
-import { Payout } from "../../images/icons/Payout";
-import { Redirect } from "../../images/icons/Redirect";
 import './styles.scss';
 import {useTranslation} from "react-i18next";
 import {useInView} from "react-intersection-observer";
@@ -161,22 +149,22 @@ export const Collages = () => {
                                 description={t('text.Reports & Insights text')}
                             />
                             <Collage
-                                image={faUserSecret}
+                                image={faChartSimple}
                                 title={t('Real-Time Stats')}
                                 description={t('text.Real-Time Stats text')}
                             />
                             <Collage
-                                image={faGear}
+                                image={faUserSecret}
                                 title={t("Confidence")}
                                 description={t("text.Confidence text")}
                             />
                             <Collage
-                                image={faChartSimple}
+                                image={faEye}
                                 title={t("Tracking & Atribution")}
                                 description={t("text.Tracking & Atribution text")}
                             />
                             <Collage
-                                image={faEye}
+                                image={faGear}
                                 title={t("Automation")}
                                 description={t("text.Automation text")}
                             />
@@ -191,22 +179,22 @@ export const Collages = () => {
                                 description={t("text.Теch support text")}
                             />
                             <Collage
-                                image={faUserGroup}
+                                image={faShieldHalved}
                                 title={t("Anti-Fraud Protection")}
                                 description={t("text.Anti-Fraud Protection text")}
                             />
                             <Collage
-                                image={faMoneyCheckDollar}
+                                image={faUserGroup}
                                 title={t("Workspaces & Multi-User Access")}
                                 description={t("text.Workspaces & Multi-User Access text")}
                             />
                             <Collage
-                                image={faShieldHalved}
+                                image={faChartBar}
                                 title={t("Multi-Dimensional Reporting")}
                                 description={t("text.Multi-Dimensional Reporting text")}
                             />
                             <Collage
-                                image={faChartBar}
+                                image={faMoneyCheckDollar}
                                 title={t("Multi-Cost and Payout Tracking")}
                                 description={t("text.Multi-Cost and Payout Tracking text")}
                             />
