@@ -18,7 +18,7 @@ function App() {
             <Slogan/>
             <Collages/>
             <Questions/>
-            {/*<Contacts/>*/}
+            <Contacts/>
             <ArrowScroll/>
             <Footer/>
         </div>

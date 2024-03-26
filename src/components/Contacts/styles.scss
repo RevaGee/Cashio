@@ -1,23 +1,32 @@
 .contacts {
   display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin: 80px auto;
+  justify-content: center;
+  width: 100%;
+  margin: 200px 0 500px 0;
+  &_media{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
 }
 
 .left_position {
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
   position: relative;
-  margin-top: 100px;
+  //margin-top: 100px;
 }
 
 .overlay_box {
-  position: absolute;
+  //position: absolute;
   background-color: var(--boxColor);
   padding: 10px;
   width: 450px;
-  height: 250px;
+  height: fit-content;
   z-index: 1;
-  margin-left: 150px;
+  //margin-left: 150px;
   box-shadow: 0 0 32px #1FA84F;
   border-radius: 1vw;
 }
@@ -29,7 +38,8 @@
   margin-bottom: 50px;
 
   .head_head {
-    font-size: 15px;
+    font-size: 20px;
+    color: #1FA84F;
   }
 
   .head_description {
@@ -42,15 +52,20 @@
 .under_text {
   color: var(--text_color);
   padding: 10px;
+  svg{
+    width: 74px !important;
+    height: 74px !important;
+    color: #1FA84F;
+  }
 
 
   .under_head {
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
   }
 
   .under_description {
-    font-size: 17px;
+    font-size: 20px;
   }
 }
 
@@ -82,7 +97,7 @@
   &::before{
     background: var(--header_color);
     content: "";
-    position: absolute;
+    //position: absolute;
     top: 50%;
     left: 50%;
     z-index: -1;
@@ -96,14 +111,49 @@
   }
 }
 
-
-.right_position {
-  position: relative;
-}
 .image_placeholder {
   border-radius: 2vw;
-  width: 55vw;
-  height: 55vw;
+  height: 850px;
+  position: absolute;
+  top: 0;
+  right: 0;
   z-index: -1;
   background: -webkit-linear-gradient(90deg, hsla(141, 69%, 39%, 1) 0%, hsla(181, 89%, 25%, 1) 100%);
+}
+@media (min-width: 576px) {
+  .contacts_media {
+    max-width:540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contacts_media {
+    max-width:720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .contacts_media {
+    max-width:960px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .contacts_media {
+    max-width:1140px;
+  }
+  .image_placeholder{
+    width: 740px;
+  }
+
+}
+
+@media (min-width: 1400px) {
+  .contacts_media {
+    max-width:1320px;
+  }
+  .image_placeholder{
+    width: 850px;
+  }
 }

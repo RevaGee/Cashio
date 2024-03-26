@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles.scss";
 import {useTranslation} from "react-i18next";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faHeadset} from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -14,31 +16,32 @@ export const Contacts = () => {
 
     return (
         <div className='contacts'>
-            <div className='left_position'>
-                <div className='head_text'>
-                    <div className='head_head'>
-                        <p>{t('contacts.WE’RE JUST A MESSAGE AWAY')}</p>
+            <div className = 'contacts_media'>
+                <div className='left_position'>
+                    <div className='head_text'>
+                        <div className='head_head'>
+                            <p>{t('contacts.WE’RE JUST A MESSAGE AWAY')}</p>
+                        </div>
+                        <div className='head_description'>
+                            <h1>{t('contacts.Contact Us')}</h1>
+                        </div>
                     </div>
-                    <div className='head_description'>
-                        <h1>{t('contacts.Contact Us')}</h1>
+                    <div className='overlay_box'>
+                        <div className='under_text'>
+                            <FontAwesomeIcon icon={faHeadset}/>
+                            <div className='under_head'>
+                                <p>{t('contacts.Reach out to our team')}</p>
+                            </div>
+                            <div className='under_description'>
+                                <p> {t('contacts.We’re here to answer your questions and provide assistance')}.</p>
+                            </div>
+                            <button className='demo_contacts' onClick={handleTelegramLink}>
+                                {t('Get a free demo')}
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div className='overlay_box'>
-                    <div className='under_text'>
-                        <div className='under_head'>
-                            <p>{t('contacts.Reach out to our team')}</p>
-                        </div>
-                        <div className='under_description'>
-                            <p> {t('contacts.We’re here to answer your questions and provide assistance')}.</p>
-                        </div>
-                        <button className='demo_contacts' onClick={handleTelegramLink}>
-                            {t('Get a free demo')}
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div className='right_position'>
-                <div className='image_placeholder'></div>
+                <div className='image_placeholder'/>
             </div>
         </div>
     );
