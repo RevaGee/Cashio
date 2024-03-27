@@ -8,6 +8,7 @@ import {Collages} from "./components/Collages";
 import {Questions} from "./components/Questions";
 import {Contacts} from "./components/Contacts";
 import './index.css'
+import {Pricing} from "./components/Pricing";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Questions/>
             <Contacts/>
             <ArrowScroll/>
+            <Pricing/>
             <Footer/>
         </div>
     );
