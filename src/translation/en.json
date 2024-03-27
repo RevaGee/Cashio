@@ -55,13 +55,21 @@
     "answer4": "No. The responsibility for usage is yours."
   },
   "heading": {
-    "heading1":"FAQ",
-    "heading2":"FREQUENTLY ASKED QUESTIONS",
-    "heading3":"As A Matter Of Fact The Unification Of The Coherent Software Provides \n A Strict Control Over The Accomplishment Of Intended Estimation"
+    "heading1": "FAQ",
+    "heading2": "FREQUENTLY ASKED QUESTIONS",
+    "heading3": "As A Matter Of Fact The Unification Of The Coherent Software Provides \n A Strict Control Over The Accomplishment Of Intended Estimation"
   },
   "anderDigits": {
-    "anderDigits1":"Automated processes",
-    "anderDigits2":"Full financial reports",
-    "anderDigits3":"Live support"
+    "anderDigits1": "Automated processes",
+    "anderDigits2": "Full financial reports",
+    "anderDigits3": "Live support"
+  },
+  "pricing": {
+    "month1": "1 month ",
+    "month3": "3 month ",
+    "month6": "6 month ",
+    "billed1": "Billed every 1 months ",
+    "billed3": "Billed every 3 months ",
+    "billed6": "Billed every 6 months "
   }
 }
