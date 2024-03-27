@@ -18,7 +18,7 @@ export const Pricing = () => {
                 <div className='month'>
                     <p> {t('pricing.month1')}</p>
                 </div>
-                <div className='under_description'>
+                <div className='under_description_pricing'>
                     <p> {t('pricing.billed1')}</p>
                 </div>
                 <button className='demo_contacts_pricing' onClick={handleTelegramLink}>
@@ -32,7 +32,7 @@ export const Pricing = () => {
                 <div className='month'>
                     <p> {t('pricing.month3')}</p>
                 </div>
-                <div className='under_description'>
+                <div className='under_description_pricing'>
                     <p> {t('pricing.billed3')}</p>
                 </div>
                 <button className='demo_contacts_pricing' onClick={handleTelegramLink}>
@@ -46,7 +46,7 @@ export const Pricing = () => {
                 <div className='month'>
                     <p> {t('pricing.month6')}</p>
                 </div>
-                <div className='under_description'>
+                <div className='under_description_pricing'>
                     <p> {t('pricing.billed6')}</p>
                 </div>
                 <button className='demo_contacts_pricing' onClick={handleTelegramLink}>
