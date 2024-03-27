@@ -39,8 +39,8 @@
   margin: 3.5vw;
   cursor: pointer;
   svg{
-    width: 74px;
-    height: 74px !important;
+    width: 60px;
+    height: 60px !important;
     color: #1FA84F;
   }
 
@@ -72,10 +72,16 @@
   .collages {
     max-width:720px;
   }
+  .collage{
+    height: 360px !important;
+  }
 }
 @media (min-width: 992px) {
   .collages {
     max-width:960px;
+  }
+  .collage{
+    height: 280px !important;
   }
 }
 @media (min-width: 1200px) {
@@ -85,6 +91,7 @@
   .collage{
     margin: 35px;
     font-size: 16px;
+    height: 350px !important;
   }
 }
 @media (min-width: 1400px) {
@@ -93,7 +100,9 @@
   }
   .collage{
     margin: 35px;
-    font-size: 17px;
+    height: 365px !important;
+    //font-size: 17px;
+    font-size: 18px;
   }
 }
 /*@media(max-width: 1200px){
@@ -112,7 +121,7 @@
       //height: 260px;
       height: 280px;
       //font-size: 1.5vw;
-      font-size: 15px;
+      font-size: 16px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -129,10 +138,26 @@
   }
 }
 @media(max-width: 768px){
+  .collages_text{
+    h1{
+      font-size: 6vw !important;
+    }
+    p{
+      font-size: 4vw !important;
+    }
+  }
   .slider-wrapper{
     .collage{
       //font-size: 2vw;
-      font-size: 12px;
+      width: 210px;
+      margin: 25px;
+      h1{
+        font-size: 20px;
+      }
+      p{
+        margin: 0;
+        font-size: 14px;
+      }
       //height: 32vw;
       height: 275px;
       svg{
@@ -149,7 +174,13 @@
     .collage{
       margin: 20px;
       height: 275px;
-      font-size: 2vw;
+      width: fit-content;
+      h1{
+        font-size: 4vw;
+      }
+      p{
+        font-size: 2.3vw;
+      }
     }
   }
   .slick-dots{
@@ -159,9 +190,15 @@
 @media(max-width: 480px){
   .collage{
     margin: 30px auto !important;
-    width: 290px ;
-    height: 300px !important;
-    font-size: 15px !important;
+    width: 280px !important;
+    height: 260px !important;
+    padding: 20px;
+    h1{
+      font-size: 20px !important;
+    }
+    p{
+      font-size: 14px !important;
+    }
     border-radius: 40px;
   }
   .right_arrow, .left_arrow{
@@ -169,13 +206,13 @@
   }
   .collages_text{
     h1{
-      font-size: 40px !important;
+     //font-size: 40px !important;
     }
   }
 }
 @media(max-width: 380px){
   .collage{
-    width: 260px !important;
+    width: 240px !important;
   }
 }
 .slick-dots{

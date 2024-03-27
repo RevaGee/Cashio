@@ -26,7 +26,7 @@ export const Collages = () => {
     const {t} = useTranslation();
     const [ref, inView] = useInView({
         triggerOnce: true,
-        threshold: 0.5,
+        threshold: 0.1,
     });
     const [ref_2, inView_2] = useInView({
         triggerOnce: true,
