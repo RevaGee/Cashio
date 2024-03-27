@@ -19,7 +19,7 @@ function App() {
             <Slogan/>
             <Collages/>
             <Questions/>
-            {/*<Contacts/>*/}
+            <Contacts/>
             {/*<Pricing/>*/}
             <ArrowScroll/>
             <Footer/>
