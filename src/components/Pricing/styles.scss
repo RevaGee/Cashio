@@ -1,0 +1,20 @@
+.pricing_content {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 80px auto;
+  flex-direction: row;
+}
+
+.overlays_box {
+  background-color: var(--boxColor);
+  padding: 10px;
+  width: 450px;
+  margin-left: 150px;
+  box-shadow: 0 0 32px #1FA84F;
+  border-radius: 1vw;
+  display: flex;
+}
+.box {
+  margin-right: 20px; /* Задає відступ між блоками */
+}
