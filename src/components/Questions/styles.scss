@@ -186,6 +186,7 @@
     }
     P{
       font-size: 4vw !important;
+      line-height: 50px !important;
     }
   }
 }
@@ -206,7 +207,11 @@
       margin: 0 0 0 10px !important;
     }
     p{
-      font-size: 4vw !important;
+      font-size: 4vw !important;}
+  }
+  .heading{
+    p{
+      line-height: 35px !important;
     }
   }
   .answer {
