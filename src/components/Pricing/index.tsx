@@ -26,13 +26,13 @@ export const Pricing = () => {
                 </button>
             </div>
             <div className='overlays_box_3'>
-                <div className='under_head_pricing'>
+                <div className='under_head_pricing_3'>
                     <h1>$1700</h1>
                 </div>
-                <div className='month'>
+                <div className='month_3'>
                     <p> {t('pricing.month3')}</p>
                 </div>
-                <div className='under_description_pricing'>
+                <div className='under_description_pricing_3'>
                     <p> {t('pricing.billed3')}</p>
                 </div>
                 <button className='demo_contacts_pricing' onClick={handleTelegramLink}>

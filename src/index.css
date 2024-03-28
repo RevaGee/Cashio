@@ -6,9 +6,11 @@
 	--body_background: #151515;
 	--body_color: #1E1E1E;
 	--text_color: #bcbcbc;
+	--text_color_pricing: #000;
 	--header_color: rgb(30, 30, 30);
 	--burger_color: #ebebeb;
 	--logo_color: invert(0);
+	--black_color_pricing: #FFFFFF;
 	--buttton_text_color: #000000;
 	--boxColor: #1e1e1e;
 }
@@ -17,9 +19,11 @@
 	--body_background: #F8F6F4;
 	--body_color: rgb(240, 240, 240);
 	--text_color: #606060;
+	--text_color_pricing: #FFFF;
 	--header_color: rgb(239, 240, 239);
 	--burger_color: #292836;
 	--logo_color: invert(0);
+	--black_color_pricing: #000000;
 	--buttton_text_color: #FFFFFF;
 	--boxColor: #eff0ef;
 }

@@ -4,8 +4,8 @@
   align-items: center;
   margin: 100px;
   padding: 1vw;
-
 }
+
 .overlays_box {
   display: flex;
   padding: 2vw;
@@ -28,11 +28,37 @@
   flex-direction: column;
   height: 380px;
   width: 320px;
-  background-color: var(--boxColor);
+  background-color: var(--black_color_pricing);
   box-shadow: 0 0 22px #1FA84F;
   border-radius: 3vw;
 }
 
+.under_head_pricing_3{
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin: 0;
+  color: var(--text_color_pricing);
+}
+.month_3{
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  color: var(--text_color_pricing);
+}
+.under_description_pricing_3 {
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  display: flex;
+  font-size: 22px;
+  font-weight: inherit;
+  border-bottom: 1px solid gray;
+  margin: 2vh;
+  color: var(--text_color_pricing);
+}
 
 .under_head_pricing {
   align-items: center;
@@ -48,7 +74,7 @@
   font-size: 22px;
   font-weight: bold;
   margin: 0;
-  color: var(--text_color);;
+  color: var(--text_color);
 }
 
 .under_description_pricing {
