@@ -223,6 +223,9 @@
   .slogan_image{
     margin-top: 15px;
     height: auto;
+    .img_slogan{
+      width: 100%;
+    }
   }
   .demo_slogan:hover::before{
     height: 1600% !important;
