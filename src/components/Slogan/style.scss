@@ -189,7 +189,9 @@
     height: calc(100lvh - 110px);
   }
   .img_slogan{
-    width: 530px;
+    //width: 530px;
+    width: calc(100lvh - 110px);
+    height: inherit;
   }
   .slogan{
     margin: 100px 0 100px 0;
