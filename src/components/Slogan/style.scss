@@ -5,7 +5,7 @@
   //justify-content: left;
   //flex-direction: column;
   //width: 90%;
-  //height: 100vh;
+  height: calc(100lvh - 110px);
   //min-height: 100vh;
   //width: 100%;
   //margin: 100px auto;
@@ -19,14 +19,16 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  //position: relative;
 }
 
 .slogan_text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  //align-self: center;
   //margin-top: 5px;
-  margin-top: 75px;
+  //margin-top: 75px;/
   //height: calc(100vh - 80px);
   /*text-align: left;
   margin-bottom: inherit;*/
@@ -38,7 +40,8 @@
 
 .slogan_head_text {
   display: flex;
-  font-size: 60px;
+  //font-size: 60px;
+  font-size: 55px;
   //font-size: 4vw;
   font-weight: bold;
   color: var(--text_color);
@@ -53,7 +56,8 @@
 }
 
 .signature {
-  font-size: 30px;
+  //font-size: 30px;
+  font-size: 16px;
   margin: 15px 0;
   //font-size: 2vw;
   color: var(--text_color);
@@ -61,14 +65,11 @@
 
 .img_slogan {
   width: 700px;
-  //width: 40vw;
-  //height: 100vh;
-  margin-top: 75px;
+  //margin-top: 75px;//
 }
 
 .demo_slogan {
   background: #1FA84F;
-  //width: fit-content;
   height: 48px;
   color: var(--buttton_text_color);
   cursor: pointer;
@@ -78,12 +79,9 @@
   font-weight: 600;
   display: flex;
   align-items: center;
-  //flex-direction: row;
   padding: 8px 25px;
   position: relative;
-  overflow: hidden;
-  //justify-content: center;
-  //text-align: center;
+  //overflow: hidden;
   letter-spacing: .5px;
   outline: none;
   transition: 0.8s all ease;
@@ -129,8 +127,8 @@
     color: var(--text_color);
     display: flex;
     justify-content: space-between;
-    //width: 90%;
-    width: 110%;
+    width: 95%;
+    //width: 110%;
     //font-size: 1.0vw;
     font-size: 16px;
 
@@ -176,8 +174,8 @@
     max-width:960px;
   }
   .img_slogan{
-    margin-top: 75px;
-    width: 100%;
+    //margin-top: 75px;
+    //width: 100%;
   }
 }
 
@@ -187,7 +185,11 @@
   }
   .slogan_image{
     //height: 600px;
-    height: 725px;
+    //height: 725px;
+    height: calc(100lvh - 110px);
+  }
+  .img_slogan{
+    width: 530px;
   }
 }
 
@@ -195,9 +197,13 @@
   .img_and_text {
     max-width:1320px;
   }
+  .slogan_image{
+    height: 630px;
+  }
   .img_slogan{
     //width: 750px;
-    width: 680px;
+    width: 640px;
+    height: 640px;
   }
 }
 
