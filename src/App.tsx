@@ -20,7 +20,7 @@ function App() {
             <Collages/>
             <Questions/>
             <Contacts/>
-            {/*<Pricing/>*/}
+            <Pricing/>
             <ArrowScroll/>
             <Footer/>
         </div>
