@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-between;
   .pricing_top_btn{
+    cursor: pointer;
     padding: 0 25px 0 25px;
     font-size: 16px;
     height: 40px;
@@ -43,6 +44,7 @@
 }
 
 .overlays_box {
+  cursor: pointer;
   display: flex;
   padding: 2vw;
   align-content: center;
@@ -59,6 +61,7 @@
 }
 
 .overlays_box_3 {
+  cursor: pointer;
   display: flex;
   padding: 3vw;
   align-items: center;
