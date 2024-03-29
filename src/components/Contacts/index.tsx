@@ -25,7 +25,7 @@ export const Contacts = () => {
     });
     const [ref_block, inView_block] = useInView({
         triggerOnce: true,
-        threshold: 0.1,
+        threshold: 0.5,
     });
 
     return (
@@ -50,7 +50,7 @@ export const Contacts = () => {
                         ref={ref}
                         className='overlay_box'
                         initial={{opacity: 0, x: 0}}
-                        animate={{opacity: inView ? 1 : 0, x: inView ? 0 : -200}}
+                        animate={{opacity: inView ? 1 : 0, x: inView ? 0 : 200}}
                         transition={{duration: 1}}
                     >
                         <div className='under_text'>
@@ -71,7 +71,7 @@ export const Contacts = () => {
                     ref={ref_block}
                     className='image_placeholder'
                     initial={{opacity: 0, x: 0}}
-                    animate={{opacity: inView_block ? 1 : 0, x: inView_block ? 0 : 200}}
+                    animate={{opacity: inView_block ? 1 : 0, x: inView_block ? 0 : -100}}
                     transition={{duration: 1}}
                 />
             </div>

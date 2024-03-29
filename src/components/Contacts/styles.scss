@@ -3,6 +3,7 @@
   justify-content: center;
   width: 100%;
   margin: 0 0 300px 0;
+  overflow: hidden;
   &_media{
     width: 100%;
     display: flex;
@@ -88,8 +89,9 @@
   border: none;
   font-size: 20px;
   font-weight: 600;
-  //display: flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   padding: 8px 25px;
   position: relative;
   overflow: hidden;
@@ -105,7 +107,7 @@
   &::before{
     background: var(--header_color);
     content: "";
-    //position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     z-index: -1;
@@ -115,16 +117,16 @@
     transform: translate(-50%, -50%) rotate(45deg);
   }
   &:hover::before{
-    height: 720%;
+    height: 850%;
   }
 }
 
 .image_placeholder {
   border-radius: 2vw;
   height: 760px;
-  position: absolute;
+  /*position: absolute;
   top: 0;
-  right: 0;
+  right: 0;*/
   z-index: -1;
   background: -webkit-linear-gradient(170deg, hsla(141, 69%, 39%, 1) 0%, hsla(181, 89%, 25%, 1) 100%);
 }
@@ -147,11 +149,15 @@
 }
 
 @media (min-width: 1200px) {
+  .left_position{
+    margin-right: -60px;
+  }
   .contacts_media {
     max-width:1140px;
   }
   .image_placeholder{
-    width: 670px;
+    width: 660px;
+    //width: 100%;
   }
 }
 
@@ -229,6 +235,7 @@
     margin-bottom: 0;
     .overlay_box{
       align-self: center;
+      border-radius: 40px;
     }
   }
   .under_head{
