@@ -9,6 +9,7 @@ import {Questions} from "./components/Questions";
 import {Contacts} from "./components/Contacts";
 import './index.css'
 import {Pricing} from "./components/Pricing";
+import {AboutUs} from "./components/AboutUs";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Questions/>
             <Contacts/>
             <Pricing/>
+            <AboutUs/>
             <ArrowScroll/>
             <Footer/>
         </div>
