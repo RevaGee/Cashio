@@ -22,9 +22,8 @@
   align-items: center;
   flex-direction: column;
   background-color: var(--boxColor);
-  border: 1px solid #1FA84F;
   border-radius: 3vw;
-  height: 350px;
+  //height: 350px;
   transition: 0.3s ease;
   &:hover{
     transform: translateY(15px);
@@ -39,9 +38,8 @@
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  height: 380px;
+  //height: 380px;
   background-color: var(--black_color_pricing);
-  //border: 4px solid #1FA84F;
   border-radius: 3vw;
   transition: 0.3s ease;
   &:hover{
@@ -234,10 +232,10 @@
     .pricing_media {
       max-width:1140px;
       .overlays_box{
-        width: 260px;
+        width: 290px;
       }
       .overlays_box_3{
-        width: 290px;
+        width: 300px;
       }
     }
   }
