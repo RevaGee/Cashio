@@ -1,6 +1,7 @@
 import React from "react";
 import './styles.scss'
 import {useTranslation} from "react-i18next";
+import Arrow from '../../images/icons/output-onlinegiftools.gif'
 
 export const Pricing = () => {
     const {t} = useTranslation()
@@ -12,10 +13,15 @@ export const Pricing = () => {
     return (
         <div className = 'pricing'>
             <div className = 'pricing_media'>
-                <div className = 'pricing_text'>
-                    <h4>AFFORDABLE SOLUTION, UNMATCHED VALUE</h4>
-                    <h1>CHOOSE YOUR PLAN</h1>
-                    <p>Transparent pricing plans with no surprise fees</p>
+                <div className='pricing_top'>
+                    <div className='pricing_text'>
+                        <h4>AFFORDABLE SOLUTION, UNMATCHED VALUE</h4>
+                        <h1>CHOOSE YOUR PLAN</h1>
+                        <p>Transparent pricing plans with no surprise fees</p>
+                    </div>
+                    <button className = 'pricing_top_btn' onClick={handleTelegramLink}>
+                        14day free trial<img className='gif' src={Arrow} alt=''/>
+                    </button>
                 </div>
                 <div className='pricing_content'>
                     <div className='overlays_box'>

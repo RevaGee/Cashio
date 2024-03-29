@@ -6,6 +6,27 @@
     width: 100%;
   }
 }
+.pricing_top{
+  display: flex;
+  justify-content: space-between;
+  .pricing_top_btn{
+    height: 40px;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    align-self: end;
+    font-size: 20px;
+    background-color: #ffcb43;
+    background-image: linear-gradient(319deg, #ffcb43 0%, #ff6425 37%, #ff0016 100%);
+    border: none;
+    color: white;
+    .gif{
+      width: 40px;
+    }
+  }
+}
 .pricing_content {
   display: flex;
   justify-content: space-between;
