@@ -10,6 +10,8 @@
   display: flex;
   justify-content: space-between;
   .pricing_top_btn{
+    padding: 0 25px 0 25px;
+    font-size: 16px;
     height: 40px;
     width: 250px;
     display: flex;
@@ -17,9 +19,9 @@
     align-items: center;
     border-radius: 25px;
     align-self: end;
-    font-size: 20px;
-    background-color: #ffcb43;
-    background-image: linear-gradient(319deg, #ffcb43 0%, #ff6425 37%, #ff0016 100%);
+    //font-size: 20px;
+    font-weight: 600;
+    background-image: linear-gradient(319deg, #9370DB -1%, #6A5ACD 37%, #483D8B 100%);
     border: none;
     color: white;
     .gif{
