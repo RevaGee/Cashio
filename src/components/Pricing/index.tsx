@@ -29,7 +29,7 @@ export const Pricing = () => {
                             <p> {t('pricing.billed1')}</p>
                         </div>
                         <button className='demo_contacts_pricing' onClick={handleTelegramLink}>
-                            {t('Get a free demo')}
+                            {t('Get started')}
                         </button>
                     </div>
                     <div className='overlays_box_3'>
@@ -42,8 +42,8 @@ export const Pricing = () => {
                         <div className='under_description_pricing_3'>
                             <p> {t('pricing.billed3')}</p>
                         </div>
-                        <button className='demo_contacts_pricing' onClick={handleTelegramLink}>
-                            {t('Get a free demo')}
+                        <button className='demo_contacts_pricing_main' onClick={handleTelegramLink}>
+                            {t('Get started')}
                         </button>
                     </div>
                     <div className='overlays_box'>
@@ -57,7 +57,7 @@ export const Pricing = () => {
                             <p> {t('pricing.billed6')}</p>
                         </div>
                         <button className='demo_contacts_pricing' onClick={handleTelegramLink}>
-                            {t('Get a free demo')}
+                            {t('Get started')}
                         </button>
                     </div>
                 </div>
