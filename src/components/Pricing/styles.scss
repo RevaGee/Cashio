@@ -24,6 +24,10 @@
     background-image: linear-gradient(319deg, #9370DB -1%, #6A5ACD 37%, #483D8B 100%);
     border: none;
     color: white;
+    transition: 0.5s ease;
+    &:hover{
+      box-shadow: 0 0 22px #6A5ACD;
+    }
     .gif{
       width: 40px;
     }
