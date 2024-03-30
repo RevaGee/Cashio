@@ -225,9 +225,13 @@
   .contacts{
     align-items: center;
     justify-content: center;
+    margin: 0 0 30px 0;
   }
 }
 @media(max-width: 480px) {
+  .contacts{
+    height: 550px;
+  }
   .image_placeholder{
     display: none;
   }

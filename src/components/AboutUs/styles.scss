@@ -66,6 +66,9 @@
   }
 }
 @media(max-width: 1200px){
+  .about_us{
+    margin-bottom: 50px;
+  }
   .about_us_media{
     flex-direction: column-reverse !important;
     .about_us_img{
@@ -98,6 +101,9 @@
   }
 }
 @media(max-width: 480px){
+  .about_us{
+    margin-bottom: 30px;
+  }
   .about_us_text{
     p{
       line-height: 35px !important;
