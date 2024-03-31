@@ -5,8 +5,7 @@ import {LogoFooter} from '../../images/icons/iconizer-CASHIO_logo_green';
 import DarkMode from '../DarkMode/DarkMode';
 import {useTranslation} from 'react-i18next';
 import i18n from '../../translation/i18n';
-import "smoothscroll-polyfill";
-import {Questions} from "../Questions";
+
 
 export const Header = () => {
     const ref = useRef(null);
