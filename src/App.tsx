@@ -19,10 +19,10 @@ function App() {
             {/*<ParticlesComponent/>*/}
             <Slogan/>
             <Collages/>
-            <Questions/>
-            <Contacts/>
-            <Pricing/>
             <AboutUs/>
+            <Pricing/>
+            <Contacts/>
+            <Questions/>
             <ArrowScroll/>
             <Footer/>
         </div>

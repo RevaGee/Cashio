@@ -32,7 +32,7 @@ export const Questions = () => {
     };
 
     return (
-        <div className='faq'>
+        <div className='faq' id="Questions">
             <div className = 'faq_media'>
                 <motion.div
                     ref={ref}

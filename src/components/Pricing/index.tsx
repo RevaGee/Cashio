@@ -34,7 +34,7 @@ export const Pricing = () => {
     };
 
     return (
-        <div className = 'pricing'>
+        <div className = 'pricing' id="Pricing">
             <div className = 'pricing_media'>
                 <div className='pricing_top'>
                     <motion.div

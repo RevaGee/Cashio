@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './styles.scss';
-import { ArrowUp } from '../../images/icons/ArrowUp';
-import { LogoFooter } from '../../images/icons/iconizer-CASHIO_logo_green';
+import {ArrowUp} from '../../images/icons/ArrowUp';
+import {LogoFooter} from '../../images/icons/iconizer-CASHIO_logo_green';
 import DarkMode from '../DarkMode/DarkMode';
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next';
 import i18n from '../../translation/i18n';
+import "smoothscroll-polyfill";
+import {Questions} from "../Questions";
 
 export const Header = () => {
+    const ref = useRef(null);
     const [open, setOpen] = useState(false);
     const [languages, setLanguages] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState(
@@ -16,7 +19,7 @@ export const Header = () => {
         localStorage.getItem('darkMode') === 'true'
     );
 
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     const [showScroll, setShowScroll] = useState(false);
     const checkScrollTop = () => {
         if (!showScroll && window.pageYOffset > 50) {
@@ -36,7 +39,7 @@ export const Header = () => {
         localStorage.setItem('darkMode', darkMode.toString()); // Convert to string before saving
     }, [darkMode]);
 
-    const handleLanguageChange = (language:string) => {
+    const handleLanguageChange = (language: string) => {
         setSelectedLanguage(language);
         i18n.changeLanguage(language);
         localStorage.setItem('language', language);
@@ -58,6 +61,13 @@ export const Header = () => {
         setDarkMode(!darkMode);
     };
 
+    const scrollToSection = (e: React.SyntheticEvent, sectionId: string) => {
+        e.preventDefault();
+        const id = sectionId.replace('#', '');
+        const element = document.getElementById(id);
+        element?.scrollIntoView({ behavior: "smooth" });
+    }
+
     return (
         <div
             className={open ? 'mobile_header' : 'header'}
@@ -68,25 +78,29 @@ export const Header = () => {
             <div className="media">
                 <div className="left_side">
                     <div className="logo">
-                        <LogoFooter />
+                        <LogoFooter/>
                     </div>
                     <div className="nav_block">
                         <nav className={open ? 'show_menu' : 'navigation'}>
                             <ul className="nav__links">
                                 <li>
-                                    <a href="#">{t('Features')}</a>
+                                    <a href="#Slogan" onClick={(e) => scrollToSection(e,'Slogan')}>{t('Features')}</a>
                                 </li>
                                 <li>
-                                    <a href="#">{t('Why Us')}</a>
+                                    <a href="#Collages" onClick={(e) => scrollToSection(e,'Collages')}>{t('Why Us')}</a>
                                 </li>
                                 <li>
-                                    <a href="#">{t('About Us')}</a>
+                                    <a href="#AboutUs" onClick={(e) => scrollToSection(e,'AboutUs')}>{t('About Us')}</a>
                                 </li>
                                 <li>
-                                    <a href="#">{t('Pricing')}</a>
+                                    <a href="#Pricing" onClick={(e) => scrollToSection(e,'Pricing')}>{t('Pricing')}</a>
                                 </li>
                                 <li>
-                                    <a href="#">{t('Contacts')}</a>
+                                    <a href="#contacts" onClick={(e) => scrollToSection(e,'contact')}>{t('Contacts')}</a>
+                                </li>
+                                <li>
+
+                                    <a href="#Questions" onClick={(e) => scrollToSection(e, 'Questions')}>{t('Questions')}</a>
                                 </li>
                             </ul>
                         </nav>
@@ -100,14 +114,14 @@ export const Header = () => {
                                     {selectedLanguage.toUpperCase()}
                                     <span
                                         className="material-icons dropdown-icon"
-                                        style={languages ? { transform: 'rotate(180deg)' } : {}}
+                                        style={languages ? {transform: 'rotate(180deg)'} : {}}
                                     >
-                    <ArrowUp />
+                    <ArrowUp/>
                   </span>
                                 </a>
                                 <ul
                                     className="drop-down"
-                                    style={languages ? { display: 'block', justifyContent: 'center' } : {}}
+                                    style={languages ? {display: 'block', justifyContent: 'center'} : {}}
                                 >
                                     <li
                                         onClick={() => {
@@ -142,9 +156,9 @@ export const Header = () => {
                     <button className="demo" onClick={handleTelegramLink}>
                         {t('Get a free demo')}
                     </button>
-                    <DarkMode darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+                    <DarkMode darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
                     <label className="burger">
-                        <input type="checkbox" name="" />
+                        <input type="checkbox" name=""/>
                         <div className="bar" onClick={handleClick}>
                             <span className="top"></span>
                             <span className="middle"></span>

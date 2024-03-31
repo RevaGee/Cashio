@@ -29,8 +29,8 @@ export const Contacts = () => {
     });
 
     return (
-        <div className='contacts'>
-            <div className = 'contacts_media'>
+        <div className='contacts' ref={ref} id="contact">
+            <div className = 'contacts_media' >
                 <div className='left_position'>
                     <motion.div
                         ref={ref_text}

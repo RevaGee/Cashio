@@ -12,7 +12,7 @@ export const AboutUs = () => {
         threshold: 0.1,
     });
     return(
-        <div className = 'about_us'>
+        <div className = 'about_us' id="AboutUs">
             <div className = 'about_us_media'>
                 <motion.div
                     ref={ref_about_img}

@@ -117,8 +117,8 @@ export const Collages = () => {
 
 
     return (
-        <div className = 'media_slider'>
-            <div className = 'collages'>
+        <div className = 'media_slider' id="Collages">
+            <div className = 'collages' ref={ref} >
                 <motion.div
                     className = 'text_buttons'
                     ref={ref}
