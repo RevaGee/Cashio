@@ -108,7 +108,7 @@ export const Header = () => {
                                     <a href="#Questions" onClick={(e) => scrollToSection(e, 'Questions')}>{t('Questions')}</a>
                                 </li>
                                 <li>
-                                    <a href="#for_whom" onClick={(e) => scrollToSection(e, 'for_whom')}>{t('For Whom')}</a>
+                                    <a href="#for_whom" onClick={(e) => scrollToSection(e, 'for_whom')}>{t('ForWhom')}</a>
                                 </li>
                             </ul>
                         </nav>

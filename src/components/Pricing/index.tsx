@@ -44,9 +44,9 @@ export const Pricing = () => {
                         animate={{opacity: inView_pricing_text ? 1 : 0, x: inView_pricing_text ? 0 : -200}}
                         transition={{duration: 1}}
                     >
-                        <h4>AFFORDABLE SOLUTION, UNMATCHED VALUE</h4>
-                        <h1>CHOOSE YOUR PLAN</h1>
-                        <p>Transparent pricing plans with no surprise fees</p>
+                        <h4>{t('pricing.afford')}</h4>
+                        <h1>{t('pricing.plan')}</h1>
+                        <p>{t('pricing.transparent')}</p>
                     </motion.div>
                     <motion.button
                         ref={ref_pricing_sticker}
@@ -55,7 +55,7 @@ export const Pricing = () => {
                         animate={{opacity: inView_pricing_sticker ? 1 : 0, x: inView_pricing_sticker ? 0 : 200}}
                         transition={{duration: 1}}
                     >
-                        14day free trial<img className='gif' src={Arrow} alt=''/>
+                        {t('pricing.14days')}<img className='gif' src={Arrow} alt=''/>
                     </motion.button>
                 </div>
                 <div className='pricing_content'>
@@ -76,7 +76,7 @@ export const Pricing = () => {
                             <p> {t('pricing.billed1')}</p>
                         </div>
                         <button className='demo_contacts_pricing' onClick={handleTelegramLink}>
-                            {t('Get started')}
+                            {t('pricing.getStarted')}
                         </button>
                     </motion.div>
                     <motion.div
@@ -96,7 +96,7 @@ export const Pricing = () => {
                             <p> {t('pricing.billed3')}</p>
                         </div>
                         <button className='demo_contacts_pricing_main' onClick={handleTelegramLink}>
-                            {t('Get started')}
+                            {t('pricing.getStarted')}
                         </button>
                     </motion.div>
                     <motion.div
@@ -116,7 +116,7 @@ export const Pricing = () => {
                             <p> {t('pricing.billed6')}</p>
                         </div>
                         <button className='demo_contacts_pricing' onClick={handleTelegramLink}>
-                            {t('Get started')}
+                            {t('pricing.getStarted')}
                         </button>
                     </motion.div>
                 </div>

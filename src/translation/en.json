@@ -6,6 +6,8 @@
   "Pricing": "Pricing",
   "Contacts": "Contacts",
   "Get a free demo": "Get a free demo",
+  "ForWhom": "For Whom",
+  "Questions": "Questions",
   "Professionals": "A product created by professionals for professionals",
   "Making": "MAKING",
   "Money": "MONEY",
@@ -71,6 +73,22 @@
     "billed1": "Billed every 1 months ",
     "billed3": "Billed every 3 months ",
     "billed6": "Billed every 6 months ",
-    "Get started": "Get started"
+    "getStarted": "Get started",
+    "afford": "AFFORDABLE SOLUTION, UNMATCHED VALUE",
+    "plan": "CHOOSE YOUR PLAN",
+    "transparent": "Transparent pricing plans with no surprise fees",
+    "14days": "14 day free trial"
+  },
+  "ForWhomCaps":{
+    "forWhomHead": "FOR WHOM"
+  },
+  "AboutUs": {
+    "slogan": "BY PROFESSIONALS FOR PROFESSIONALS",
+    "us": "ABOUT US",
+    "CRM": "CRM created by the arbitration team (a product from professionals for professionals), taking into account all the pains of the media-buying team and affiliate network."
+  },
+  "Collages": {
+    "collageSlogan": "ADAPT, UPGRADE, SUCCEED",
+    "bigCollage": "HOW CAM CASHIO HELP GROWN YOUR BUSINESS?"
   }
 }
