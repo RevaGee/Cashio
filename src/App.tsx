@@ -10,13 +10,14 @@ import {Contacts} from "./components/Contacts";
 import './index.css'
 import {Pricing} from "./components/Pricing";
 import {AboutUs} from "./components/AboutUs";
+import {ForWhom} from "./components/ForWhom";
 
 
 function App() {
     return (
         <div style={{width: "100%", margin: "0 auto"}} className="App">
             <Header/>
-            <ParticlesComponent/>
+            {/*<ParticlesComponent/>*/}
             <Slogan/>
             <Collages/>
             <AboutUs/>
@@ -24,6 +25,7 @@ function App() {
             <Contacts/>
             <Questions/>
             <ArrowScroll/>
+            <ForWhom/>
             <Footer/>
         </div>
     );

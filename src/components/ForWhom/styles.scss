@@ -1,0 +1,137 @@
+.for_whom{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 100px;
+  &_media{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    .for_whom_text{
+      h1{
+        color: var(--text_color);
+      }
+    }
+    .for_whom_blocks{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .block{
+        width: 240px;
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 25px;
+        padding: 28px;
+        .arrow_block{
+          margin-top: 30px;
+        }
+
+        .block_img{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .img_bg{
+            box-shadow: 0 2px 0 #ebebeb;
+            //padding: 10px;
+            border-radius: 50px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFFFFF;
+            img{
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+        h4{
+          font-size: 30px;
+          color: var(--text_color);
+        }
+        background-color: var(--header_color);
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .for_whom_media {
+    max-width:540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .for_whom_media {
+    max-width:720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .for_whom_media {
+    max-width:960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .for_whom_media {
+    max-width:1140px;
+    .block{
+      width: 200px !important;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .for_whom_media {
+    max-width:1320px;
+    .block{
+      width: 240px !important;
+    }
+  }
+}
+@media(max-width: 1200px){
+  .for_whom_blocks{
+    display: grid !important;
+    grid-template-columns: 50% 50%;
+    grid-gap: 30px;
+  }
+  .block{
+    align-self: center;
+    width: 390px !important;
+  }
+}
+@media(max-width: 992px){
+  .block{
+    width: 280px !important;
+  }
+}
+@media(max-width: 768px){
+  .for_whom_blocks{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+    display: flex !important;
+  }
+  .for_whom_text{
+    h1{
+      font-size: 6vw;
+    }
+  }
+}
+@media(max-width: 576px){
+  .for_whom_media{
+    width: 90%;
+  }
+  .for_whom_blocks{
+    h4{
+      font-size: 4vw !important;
+    }
+  }
+}
+@media(max-width: 380px){
+  .block{
+    width: 240px !important;
+  }
+}
