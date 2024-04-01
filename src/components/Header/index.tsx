@@ -68,7 +68,7 @@ export const Header = () => {
             const topOffset = 100;
             const topPos = element.getBoundingClientRect().top + window.pageYOffset - topOffset;
             window.scrollTo({ top: topPos, behavior: 'smooth' });
-            // setOpen(false)
+            setOpen(false)
         }
     }
 
@@ -107,9 +107,9 @@ export const Header = () => {
                                 <li>
                                     <a href="#Questions" onClick={(e) => scrollToSection(e, 'Questions')}>{t('Questions')}</a>
                                 </li>
-                                <li>
-                                    <a href="#for_whom" onClick={(e) => scrollToSection(e, 'for_whom')}>{t('ForWhom')}</a>
-                                </li>
+                                {/*<li>*/}
+                                {/*    <a href="#for_whom" onClick={(e) => scrollToSection(e, 'for_whom')}>{t('ForWhom')}</a>*/}
+                                {/*</li>*/}
                             </ul>
                         </nav>
                     </div>
