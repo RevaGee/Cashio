@@ -5,6 +5,7 @@ import Arrow from '../../images/icons/output-onlinegiftools.gif'
 import {useInView} from "react-intersection-observer";
 import { motion } from "framer-motion";
 
+
 export const Pricing = () => {
     const {t} = useTranslation()
 
@@ -55,7 +56,7 @@ export const Pricing = () => {
                         animate={{opacity: inView_pricing_sticker ? 1 : 0, x: inView_pricing_sticker ? 0 : 200}}
                         transition={{duration: 1}}
                     >
-                        {t('pricing.14days')}<img className='gif' src={Arrow} alt=''/>
+                        {t('pricing.14days')}<img src={Arrow} alt='' className='gif' />
                     </motion.button>
                 </div>
                 <div className='pricing_content'>
