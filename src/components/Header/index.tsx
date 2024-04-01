@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './styles.scss';
 import {ArrowUp} from '../../images/icons/ArrowUp';
 import {LogoFooter} from '../../images/icons/iconizer-CASHIO_logo_green';
@@ -8,7 +8,6 @@ import i18n from '../../translation/i18n';
 
 
 export const Header = () => {
-    const ref = useRef(null);
     const [open, setOpen] = useState(false);
     const [languages, setLanguages] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState(
@@ -68,8 +67,8 @@ export const Header = () => {
         if (element) {
             const topOffset = 100; // задаем смещение вверх на 10px
             const topPos = element.getBoundingClientRect().top + window.pageYOffset - topOffset;
-
             window.scrollTo({ top: topPos, behavior: 'smooth' });
+            setOpen(false)
         }
     }
 
@@ -106,8 +105,10 @@ export const Header = () => {
                                     <a href="#contacts" onClick={(e) => scrollToSection(e,'contact')}>{t('Contacts')}</a>
                                 </li>
                                 <li>
-
                                     <a href="#Questions" onClick={(e) => scrollToSection(e, 'Questions')}>{t('Questions')}</a>
+                                </li>
+                                <li>
+                                    <a href="#for_whom" onClick={(e) => scrollToSection(e, 'for_whom')}>{t('For Whom')}</a>
                                 </li>
                             </ul>
                         </nav>

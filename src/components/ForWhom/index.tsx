@@ -41,7 +41,7 @@ export const ForWhom = () => {
         threshold: 0.1,
     });
     return(
-        <div className = 'for_whom'>
+        <div className = 'for_whom' id ="for_whom">
             <div className = 'for_whom_media'>
                 <motion.div
                     ref={ref_for_whom_text}
