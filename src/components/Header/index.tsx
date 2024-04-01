@@ -35,7 +35,7 @@ export const Header = () => {
     }, [showScroll]);
 
     useEffect(() => {
-        localStorage.setItem('darkMode', darkMode.toString()); // Convert to string before saving
+        localStorage.setItem('darkMode', darkMode.toString());
     }, [darkMode]);
 
     const handleLanguageChange = (language: string) => {
@@ -64,8 +64,16 @@ export const Header = () => {
         e.preventDefault();
         const id = sectionId.replace('#', '');
         const element = document.getElementById(id);
-        element?.scrollIntoView({ behavior: "smooth" });
+
+        if (element) {
+            const topOffset = 100; // задаем смещение вверх на 10px
+            const topPos = element.getBoundingClientRect().top + window.pageYOffset - topOffset;
+
+            window.scrollTo({ top: topPos, behavior: 'smooth' });
+        }
     }
+
+
 
     return (
         <div
