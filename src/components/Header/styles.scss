@@ -441,9 +441,10 @@ input[type='checkbox']:checked ~ .bar .middle {
 	}
 	.nav__links{
 		li{
-			padding: 0 20px !important;
+			//padding: 0 20px !important;
+			padding: 0 10px !important;
 			a{
-				font-size: 16px;
+				font-size: 13px !important;
 			}
 		}
 	}
@@ -458,7 +459,7 @@ input[type='checkbox']:checked ~ .bar .middle {
 		li{
 			padding: 0 30px;
 			a{
-				font-size: 18px;
+				font-size: 15px !important;
 			}
 		}
 	}
