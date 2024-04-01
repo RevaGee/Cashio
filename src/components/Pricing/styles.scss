@@ -1,22 +1,25 @@
-.pricing{
+.pricing {
   display: flex;
   justify-content: center;
   align-self: center;
   margin-bottom: 100px;
   overflow: hidden;
-  &_media{
+
+  &_media {
     width: 100%;
   }
 }
-.pricing_top{
+
+.pricing_top {
   display: flex;
   justify-content: space-between;
-  .pricing_top_btn{
+
+  .pricing_top_btn {
     cursor: pointer;
     padding: 0 25px 0 25px;
     font-size: 16px;
     height: 40px;
-    width: 250px;
+    width: 270px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,18 +29,20 @@
     font-weight: 600;
     //background-image: linear-gradient(319deg, #9370DB -1%, #6A5ACD 37%, #483D8B 100%);
     background-image: linear-gradient(90deg, rgb(34, 100, 23) 3%, rgb(11, 115, 53) 26%, rgb(7, 171, 1) 100%);
-
     border: none;
     color: white;
     transition: box-shadow 0.5s ease;
-    &:hover{
+
+    &:hover {
       box-shadow: 0 0 22px #0B7335FF;
     }
-    .gif{
+
+    .gif {
       width: 40px;
     }
   }
 }
+
 .pricing_content {
   display: flex;
   justify-content: space-between;
@@ -58,7 +63,8 @@
   border-radius: 3vw;
   //height: 350px;
   transition: transform, box-shadow 0.3s ease;
-  &:hover{
+
+  &:hover {
     transform: translateY(-15px);
     box-shadow: 0 0 22px #1FA84F;
   }
@@ -76,20 +82,22 @@
   background-color: var(--black_color_pricing);
   border-radius: 3vw;
   transition: transform, box-shadow 0.3s ease;
-  &:hover{
+
+  &:hover {
     transform: translateY(-15px);
     box-shadow: 0 0 22px #1FA84F;
   }
 }
 
-.under_head_pricing_3{
+.under_head_pricing_3 {
   align-items: center;
   justify-content: center;
   font-size: 22px;
   margin: 0;
   color: var(--text_color_pricing);
 }
-.month_3{
+
+.month_3 {
   align-items: center;
   justify-content: center;
   font-size: 21px;
@@ -97,6 +105,7 @@
   margin: 0;
   color: var(--text_color_pricing);
 }
+
 .under_description_pricing_3 {
   align-items: center;
   justify-content: center;
@@ -139,7 +148,7 @@
 }
 
 
-.demo_contacts_pricing{
+.demo_contacts_pricing {
   background: #1FA84F;
   height: 48px;
   width: 100%;
@@ -161,13 +170,15 @@
   outline: none;
   transition: 0.8s all ease;
   z-index: 1;
-  &:hover{
+
+  &:hover {
     color: var(--text_color);
     background: #EFF0EF;
     border: 1px solid #1FA84F;
   }
 }
-.demo_contacts_pricing::before{
+
+.demo_contacts_pricing::before {
   background: var(--header_color);
   content: "";
   position: absolute;
@@ -179,11 +190,12 @@
   height: 0;
   transform: translate(-50%, -50%) rotate(45deg);
 }
-.demo_contacts_pricing:hover::before{
+
+.demo_contacts_pricing:hover::before {
   height: 550%;
 }
 
-.demo_contacts_pricing_main{
+.demo_contacts_pricing_main {
   background: #1FA84F;
   height: 48px;
   width: 100%;
@@ -205,13 +217,15 @@
   outline: none;
   transition: 0.8s all ease;
   z-index: 1;
-  &:hover{
+
+  &:hover {
     color: var(--text_color);
     background: #EFF0EF;
     border: 1px solid #1FA84F;
   }
 }
-.demo_contacts_pricing_main::before{
+
+.demo_contacts_pricing_main::before {
   background: var(--header_color);
   content: "";
   position: absolute;
@@ -223,33 +237,37 @@
   height: 0;
   transform: translate(-50%, -50%) rotate(45deg);
 }
-.demo_contacts_pricing_main:hover::before{
+
+.demo_contacts_pricing_main:hover::before {
   height: 550%;
 }
 
-.pricing_text{
-  h4{
+.pricing_text {
+  h4 {
     color: #1FA84F;
     font-size: 20px;
   }
-  h1{
+
+  h1 {
     color: var(--text_color);
     font-size: 45px;
   }
-  p{
+
+  p {
     color: var(--text_color);
     font-size: 16px;
   }
 }
+
 @media (min-width: 576px) {
   .pricing_media {
-    max-width:540px;
+    max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
   .pricing_media {
-    max-width:720px;
+    max-width: 720px;
   }
 }
 
@@ -260,14 +278,17 @@
 }
 
 @media (min-width: 1200px) {
-  .pricing{
+  .pricing {
     margin-bottom: 50px;
+
     .pricing_media {
-      max-width:1140px;
-      .overlays_box{
+      max-width: 1140px;
+
+      .overlays_box {
         width: 290px;
       }
-      .overlays_box_3{
+
+      .overlays_box_3 {
         width: 300px;
       }
     }
@@ -275,24 +296,30 @@
 }
 
 @media (min-width: 1400px) {
-  .pricing{
+  .pricing {
     margin-bottom: 100px;
+
     .pricing_media {
-      max-width:1320px;
-      .pricing_content{
+      max-width: 1320px;
+
+      .pricing_content {
         flex-direction: row;
-        .overlays_box{
+
+        .overlays_box {
           width: 310px;
           transition: transform, box-shadow 0.3s ease;
-          &:hover{
+
+          &:hover {
             transform: translateY(-20px);
             box-shadow: 0 0 22px #1FA84F;
           }
         }
-        .overlays_box_3{
+
+        .overlays_box_3 {
           width: 340px;
           transition: transform, box-shadow 0.3s ease;
-          &:hover{
+
+          &:hover {
             transform: translateY(-20px);
             box-shadow: 0 0 22px #1FA84F;
           }
@@ -302,24 +329,29 @@
   }
 }
 
-@media(max-width: 1200px){
-  .pricing{
+@media(max-width: 1200px) {
+  .pricing {
     margin-bottom: 50px;
+
     .pricing_media {
-      .pricing_content{
+      .pricing_content {
         padding: 0;
         flex-direction: column;
-        .overlays_box{
+
+        .overlays_box {
           width: 95%;
           margin-bottom: 50px;
-          &:hover{
+
+          &:hover {
             transform: scale(1.05);
           }
         }
-        .overlays_box_3{
+
+        .overlays_box_3 {
           width: 95%;
           margin-bottom: 50px;
-          &:hover{
+
+          &:hover {
             transform: scale(1.05);
           }
         }
@@ -327,40 +359,46 @@
     }
   }
 }
-@media(max-width: 768px){
-  .pricing_top{
+
+@media(max-width: 768px) {
+  .pricing_top {
     flex-direction: column;
-    .pricing_top_btn{
+
+    .pricing_top_btn {
       align-self: center;
     }
   }
-  .pricing_text{
-    h1{
+  .pricing_text {
+    h1 {
       font-size: 6vw;
     }
-    h4{
+
+    h4 {
       font-size: 4vw;
     }
-    p{
+
+    p {
       font-size: 4vw;
     }
   }
-  .overlays_box{
+  .overlays_box {
     height: 380px;
     margin-bottom: 30px !important;
   }
-  .overlays_box_3{
+  .overlays_box_3 {
     height: 410px;
     margin-bottom: 30px !important;
   }
 }
-@media(max-width: 576px){
-  .pricing_media{
+
+@media(max-width: 576px) {
+  .pricing_media {
     width: 90%;
   }
 }
-@media(max-width: 480px){
-  .pricing{
+
+@media(max-width: 480px) {
+  .pricing {
     margin-bottom: 30px;
   }
 }
