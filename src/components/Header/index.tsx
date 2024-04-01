@@ -65,10 +65,10 @@ export const Header = () => {
         const element = document.getElementById(id);
 
         if (element) {
-            const topOffset = 100; // задаем смещение вверх на 10px
+            const topOffset = 100;
             const topPos = element.getBoundingClientRect().top + window.pageYOffset - topOffset;
             window.scrollTo({ top: topPos, behavior: 'smooth' });
-            setOpen(false)
+            // setOpen(false)
         }
     }
 
