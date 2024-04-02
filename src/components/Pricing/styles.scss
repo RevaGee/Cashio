@@ -408,5 +408,11 @@
 @media(max-width: 480px) {
   .pricing {
     margin-bottom: 30px;
+    .demo_contacts_pricing_main{
+      width: 90% !important;
+    }
+    .demo_contacts_pricing{
+      width: 90% !important;
+    }
   }
 }
