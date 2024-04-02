@@ -11,14 +11,16 @@ import './index.css'
 import {Pricing} from "./components/Pricing";
 import {AboutUs} from "./components/AboutUs";
 import {ForWhom} from "./components/ForWhom";
+import {Crm} from "./components/Crm";
 
 
 function App() {
     return (
         <div style={{width: "100%", margin: "0 auto"}} className="App">
             <Header/>
-            {/*<ParticlesComponent/>*/}
+            <ParticlesComponent/>
             <Slogan/>
+            <Crm/>
             <Collages/>
             <AboutUs/>
             <Pricing/>
