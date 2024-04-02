@@ -10,6 +10,7 @@ import i18n from '../../translation/i18n';
 export const Header = () => {
     const [open, setOpen] = useState(false);
     const [languages, setLanguages] = useState(false);
+    const [isChecked, setIsChecked] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState(
         localStorage.getItem('language') || 'en'
     );
@@ -49,6 +50,7 @@ export const Header = () => {
 
     const handleClick = () => {
         setOpen(!open);
+        setIsChecked(true)
     };
 
     const handleLanguageClick = () => {
@@ -68,11 +70,10 @@ export const Header = () => {
             const topOffset = 100;
             const topPos = element.getBoundingClientRect().top + window.pageYOffset - topOffset;
             window.scrollTo({ top: topPos, behavior: 'smooth' });
-            setOpen(false)
         }
+        setIsChecked(false);
+        setOpen(!open);
     }
-
-
 
     return (
         <div
@@ -166,7 +167,7 @@ export const Header = () => {
                     </button>
                     <DarkMode darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
                     <label className="burger">
-                        <input type="checkbox" name=""/>
+                        <input type="checkbox" checked={isChecked} name=""/>
                         <div className="bar" onClick={handleClick}>
                             <span className="top"></span>
                             <span className="middle"></span>
