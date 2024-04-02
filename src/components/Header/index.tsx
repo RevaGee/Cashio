@@ -38,6 +38,7 @@ export const Header = () => {
         localStorage.setItem('darkMode', darkMode.toString());
     }, [darkMode]);
 
+
     const handleLanguageChange = (language: string) => {
         setSelectedLanguage(language);
         i18n.changeLanguage(language);
@@ -50,7 +51,10 @@ export const Header = () => {
 
     const handleClick = () => {
         setOpen(!open);
-        setIsChecked(true)
+        if(!open){
+            setIsChecked(true)
+        }
+
     };
 
     const handleLanguageClick = () => {
@@ -70,9 +74,10 @@ export const Header = () => {
             const topOffset = 100;
             const topPos = element.getBoundingClientRect().top + window.pageYOffset - topOffset;
             window.scrollTo({ top: topPos, behavior: 'smooth' });
+            setOpen(false)
         }
         setIsChecked(false);
-        setOpen(!open);
+
     }
 
     return (
