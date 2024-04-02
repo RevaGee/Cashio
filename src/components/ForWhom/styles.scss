@@ -21,7 +21,8 @@
         display: flex;
         flex-direction: column-reverse;
         border-radius: 25px;
-        padding: 28px;
+        //padding: 28px;
+        padding: 28px 40px 28px 40px;
         .arrow_block{
           margin-top: 30px;
         }
@@ -47,7 +48,7 @@
           }
         }
         h4{
-          font-size: 30px;
+          font-size: 26px;
           color: var(--text_color);
         }
         background-color: var(--header_color);
