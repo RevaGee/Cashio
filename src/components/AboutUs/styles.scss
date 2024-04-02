@@ -106,11 +106,13 @@
   }
 }
 @media(max-width: 576px){
+  .about_us_mac,
   .about_us_media{
     width: 90% !important;
   }
 }
 @media(max-width: 480px){
+  .about_us_mac,
   .about_us{
     margin-bottom: 30px;
   }
