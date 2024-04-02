@@ -5,6 +5,14 @@
     --body_color: rgb(240, 240, 240);
     --text_color: black;
 }
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--black_color_pricing);
+    border-radius: 5px;
+}
 
 [data-theme='dark'] {
     transition: 0.3s ease-out;
