@@ -3,7 +3,7 @@ import React from "react";
 import './styles.scss'
 import {useInView} from "react-intersection-observer";
 import {useTranslation} from "react-i18next";
-import Mac from '../../images/icons/MacBook Pro 16.png'
+import Mac from '../../images/icons/Group 1.png'
 
 export const AboutUs = () => {
     const {t} = useTranslation();
