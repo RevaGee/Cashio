@@ -79,7 +79,7 @@
   .for_whom_media {
     max-width:1140px;
     .block{
-      width: 200px !important;
+      width: 180px !important;
     }
   }
 }
@@ -88,7 +88,7 @@
   .for_whom_media {
     max-width:1320px;
     .block{
-      width: 240px !important;
+      width: 200px !important;
     }
   }
 }
@@ -101,6 +101,10 @@
   .block{
     align-self: center;
     width: 390px !important;
+    align-items: center;
+    .block_img{
+      width: 250px;
+    }
   }
 }
 @media(max-width: 992px){
