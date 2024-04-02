@@ -12,6 +12,7 @@
     align-items: center;
     .about_us_img{
       border-radius: 2vw;
+      align-items: center;
       width: 60%;
       height: 760px;
       background-color: #08e1ae;
@@ -33,6 +34,14 @@
         font-size: 16px;
         line-height: 32px;
       }
+    }
+    .about_us_img{
+      display:flex;
+      align-self: center
+    }
+    .about_us_mac{
+      z-index: 2;
+      height: 120%;
     }
   }
 }

@@ -3,6 +3,7 @@ import React from "react";
 import './styles.scss'
 import {useInView} from "react-intersection-observer";
 import {useTranslation} from "react-i18next";
+import Mac from '../../images/icons/MacBook Pro 16.png'
 
 export const AboutUs = () => {
     const {t} = useTranslation();
@@ -23,20 +24,23 @@ export const AboutUs = () => {
                     className='about_us_img'
                     initial={{opacity: 0, x: 0}}
                     animate={{opacity: inView_about_img ? 1 : 0, x: inView_about_img ? 0 : -150}}
-                    transition={{duration: 1}}
-                />
-                <motion.div
-                    ref={ref_about_text}
-                    className='about_us_text'
-                    initial={{opacity: 0, x: 0}}
-                    animate={{opacity: inView_about_text ? 1 : 0, x: inView_about_text ? 0 : 200}}
-                    transition={{duration: 1}}
-                >
-                    <h4>{t('AboutUs.slogan')}</h4>
-                    <h1>{t('AboutUs.us')}</h1>
-                    <p>{t('AboutUs.CRM')}</p>
+                    transition={{duration: 1}}>
+                    <img src={Mac} alt="MacBook Pro 16" className='about_us_mac'/>
                 </motion.div>
+
+
+                    <motion.div
+                        ref={ref_about_text}
+                        className='about_us_text'
+                        initial={{opacity: 0, x: 0}}
+                        animate={{opacity: inView_about_text ? 1 : 0, x: inView_about_text ? 0 : 200}}
+                        transition={{duration: 1}}
+                    >
+                        <h4>{t('AboutUs.slogan')}</h4>
+                        <h1>{t('AboutUs.us')}</h1>
+                        <p>{t('AboutUs.CRM')}</p>
+                    </motion.div>
             </div>
         </div>
-    );
+);
 }

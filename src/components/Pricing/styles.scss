@@ -319,6 +319,8 @@
         .overlays_box_3 {
           width: 340px;
           transition: transform, box-shadow 0.3s ease;
+          border-radius: 40px;
+
 
           &:hover {
             transform: translateY(-20px);
@@ -342,6 +344,9 @@
         .overlays_box {
           width: 95%;
           margin-bottom: 50px;
+          border-radius: 40px;
+
+
 
           &:hover {
             transform: scale(1.05);
@@ -351,6 +356,8 @@
         .overlays_box_3 {
           width: 95%;
           margin-bottom: 50px;
+          border-radius: 40px;
+
 
           &:hover {
             transform: scale(1.05);
