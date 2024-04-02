@@ -15,7 +15,6 @@ import Linkedin from '../../images/icons/Linkedin.png'
 import {HeartSvg} from '../../images/icons/HeartSvg'
 import {PokerTipSvg} from '../../images/icons/PokerTipSvg'
 import {CartSvg} from '../../images/icons/CartSvg'
-import {ArrowRight} from "../../images/icons/ArrowRight";
 import {BitcoinSvg} from "../../images/icons/BitcoinSvg";
 import { motion } from "framer-motion";
 import {useInView} from "react-intersection-observer";

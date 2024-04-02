@@ -113,6 +113,15 @@
     align-items: center;
     flex-direction: column !important;
     display: flex !important;
+    .block{
+      width: 65vw !important;
+      h4{
+        align-self: center;
+      }
+      svg{
+        align-self: center;
+      }
+    }
   }
   .for_whom_text{
     h1{
