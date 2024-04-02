@@ -1,6 +1,6 @@
 import React from "react";
 import './styles.scss'
-import CRM from '../../images/icons/Crm.png'
+import CRM from '../../images/icons/Crm_1.png'
 export const Crm = () => {
     return(
         <div className = 'crm'>
