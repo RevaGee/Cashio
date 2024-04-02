@@ -126,8 +126,8 @@ export const Collages = () => {
                     transition={{duration: 0.5}}
                 >
                     <div className = 'collages_text'>
-                        <p>ADAPT, UPGRADE, SUCCEED</p>
-                        <h1>HOW CAM CASHIO HELP GROWN YOUR BUSINESS?</h1>
+                        <p>{t('Collages.collageSlogan')}</p>
+                        <h1>{t('Collages.bigCollage')}</h1>
                     </div>
                     <div className = 'collages_buttons'>
                         <RightArrow />

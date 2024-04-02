@@ -550,7 +550,7 @@ input[type='checkbox']:checked ~ .bar .middle {
 	}
 
 	.mobile_header{
-		height: 400px;
+		height: 500px;
 		.right_side{
 			width: 40%;
 			.language{
@@ -607,7 +607,7 @@ input[type='checkbox']:checked ~ .bar .middle {
 }
 @media (max-width: 768px) {
 	.mobile_header{
-		height: 400px;
+		height: 500px;
 	}
 	.show_menu {
 		transition: 0.3s ease;

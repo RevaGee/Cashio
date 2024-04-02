@@ -19,7 +19,10 @@ import {ArrowRight} from "../../images/icons/ArrowRight";
 import {BitcoinSvg} from "../../images/icons/BitcoinSvg";
 import { motion } from "framer-motion";
 import {useInView} from "react-intersection-observer";
+import {useTranslation} from "react-i18next";
 export const ForWhom = () => {
+    const {t} = useTranslation()
+
     const [ref_for_whom_text, inView_for_whom_text] = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -41,7 +44,7 @@ export const ForWhom = () => {
         threshold: 0.1,
     });
     return(
-        <div className = 'for_whom'>
+        <div className = 'for_whom' id ="for_whom">
             <div className = 'for_whom_media'>
                 <motion.div
                     ref={ref_for_whom_text}
@@ -50,7 +53,7 @@ export const ForWhom = () => {
                     animate={{opacity: inView_for_whom_text ? 1 : 0, x: inView_for_whom_text ? 0 : -200}}
                     transition={{duration: 1}}
                 >
-                    <h1>FOR WHOM</h1>
+                    <h1>{t('ForWhomCaps.forWhomHead')}</h1>
                 </motion.div>
                 <div className='for_whom_blocks'>
                     <motion.div
