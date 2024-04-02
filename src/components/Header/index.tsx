@@ -53,6 +53,8 @@ export const Header = () => {
         setOpen(!open);
         if(!open){
             setIsChecked(true)
+        }else {
+            setIsChecked(false)
         }
 
     };
