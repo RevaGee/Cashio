@@ -98,7 +98,7 @@
 			height: 52px;
 			margin-left: 10px;
 			cursor: pointer;
-			position: fixed;
+			//position: fixed;
 			border-radius: 10px;
 			border: none;
 			font-size: 20px;
@@ -453,7 +453,6 @@ input[type='checkbox']:checked ~ .bar .middle {
 			}
 		}
 	}
-
 }
 
 @media (min-width: 1400px) {
