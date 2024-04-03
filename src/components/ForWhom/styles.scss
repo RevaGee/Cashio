@@ -1,8 +1,12 @@
+/**{
+  box-sizing: border-box;
+}*/
 .for_whom{
   display: flex;
   justify-content: center;
   align-self: center;
   margin-bottom: 100px;
+  width: 100%;
   &_media{
     display: flex;
     width: 100%;
@@ -94,14 +98,17 @@
 }
 @media(max-width: 1200px){
   .for_whom_blocks{
-    display: grid !important;
+    padding: 20px;
+    /*display: grid !important;
     grid-template-columns: 50% 50%;
-    grid-gap: 30px;
+    grid-gap: 30px;*/
+    flex-wrap: wrap;
   }
   .block{
     align-self: center;
-    width: 390px !important;
+    width: 35% !important;
     align-items: center;
+    margin-bottom: 35px;
     .block_img{
       width: 250px;
     }
@@ -109,7 +116,7 @@
 }
 @media(max-width: 992px){
   .block{
-    width: 280px !important;
+    //width: 280px !important;
   }
 }
 @media(max-width: 768px){
@@ -118,8 +125,10 @@
     align-items: center;
     flex-direction: column !important;
     display: flex !important;
+    padding: 20px;
     .block{
-      width: 65vw !important;
+      padding: 28px 0 28px 0 !important;
+      width: 100% !important;
       h4{
         align-self: center;
       }
