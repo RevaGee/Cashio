@@ -525,7 +525,7 @@ input[type='checkbox']:checked ~ .bar .middle {
 			li {
 				padding: 0 1.5vw;
 				&:first-child{
-					margin-top: 1vw;
+					margin-top: 3vw;
 				}
 
 				&:last-child {
@@ -640,5 +640,14 @@ input[type='checkbox']:checked ~ .bar .middle {
 @media(max-width: 576px){
 	.media{
 		width: 90%;
+	}
+}
+@media(max-width: 480px){
+	.mobile_header{
+		.right_side{
+			.demo{
+				font-size: 18px;
+			}
+		}
 	}
 }
