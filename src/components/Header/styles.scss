@@ -602,9 +602,9 @@ input[type='checkbox']:checked ~ .bar .middle {
 	}
 	.mobile_header{
 		.demo{
-			position: absolute;
+			position: absolute !important;
 			left: 15px;
-			bottom: 150px;
+			bottom: 15px;
 		}
 		.dark_mode_label{
 			position: fixed;
