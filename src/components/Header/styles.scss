@@ -76,7 +76,7 @@
 	}
 	.right_side {
 		//position: fixed;
-		position: relative;
+		//position: relative;
 		display: flex;
 		align-items: center;
 		//right: 5%;
@@ -98,7 +98,7 @@
 			height: 52px;
 			margin-left: 10px;
 			cursor: pointer;
-			//position: fixed;
+			position: fixed;
 			border-radius: 10px;
 			border: none;
 			font-size: 20px;
@@ -602,7 +602,7 @@ input[type='checkbox']:checked ~ .bar .middle {
 	}
 	.mobile_header{
 		.demo{
-			position: fixed;
+			position: absolute;
 			left: 15px;
 			bottom: 15px;
 		}
