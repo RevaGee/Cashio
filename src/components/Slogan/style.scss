@@ -114,7 +114,6 @@
   color: var(--text_color);
   justify-content: space-between;
   align-items: center;
-
 }
 
 
@@ -131,6 +130,7 @@
     //width: 110%;
     //font-size: 1.0vw;
     font-size: 16px;
+    margin-bottom: 20px;
 
     .digits_margin {
       margin: 50px 10px 0 10px;
@@ -138,7 +138,7 @@
 
     .digits {
       //margin-top: 50px;
-      margin-top: 1.5vw;
+      margin-top: 3.5vw;
       display: flex;
       flex-direction: column;
       text-align: center;
