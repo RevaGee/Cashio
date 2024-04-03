@@ -86,7 +86,7 @@
 			display: none;
 			//position: fixed;
 			position: absolute;
-			right: 0;
+			right: 25px;
 			//top: 37px
 		}
 		.language{
@@ -607,7 +607,7 @@ input[type='checkbox']:checked ~ .bar .middle {
 			bottom: 15px;
 		}
 		.dark_mode_label{
-			position: fixed;
+			position: absolute;
 			right: 15px;
 			bottom: 15px;
 		}
