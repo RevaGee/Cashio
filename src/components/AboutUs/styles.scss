@@ -114,6 +114,11 @@
 @media(max-width: 480px){
   .about_us{
     margin-bottom: 30px;
+    &_media{
+      .about_us_img{
+        height: 100vw !important;
+      }
+    }
   }
   .about_us_text{
     p{
@@ -121,6 +126,7 @@
     }
   }
   .about_us_mac{
-    height: 55vh !important;
+    //height: 55vh !important;
+    width: 90% !important;
   }
 }
