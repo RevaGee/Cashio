@@ -112,7 +112,6 @@
   }
 }
 @media(max-width: 480px){
-  .about_us_mac,
   .about_us{
     margin-bottom: 30px;
   }
@@ -120,5 +119,8 @@
     p{
       line-height: 35px !important;
     }
+  }
+  .about_us_mac{
+    height: 55vh !important;
   }
 }
