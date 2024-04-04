@@ -13,7 +13,7 @@ export const Contacts = () => {
     const {t} = useTranslation();
 
     const handleTelegramLink = () => {
-        window.open('https://t.me/zheka_revor', '_blank');
+        window.open('https://t.me/quantumop', '_blank');
     };
     const [ref, inView] = useInView({
         triggerOnce: true,

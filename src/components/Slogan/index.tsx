@@ -24,7 +24,7 @@ export const Slogan = () => {
 
 
     const handleTelegramLink = () => {
-        window.open('https://t.me/zheka_revor', '_blank');
+        window.open('https://t.me/quantumop', '_blank');
     };
 
     return (
