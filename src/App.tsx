@@ -19,7 +19,7 @@ function App() {
     return (
         <div>
                 <Header/>
-                <ParticlesComponent/>
+                {/*<ParticlesComponent/>*/}
                 <Slogan/>
                 {/*<Crm/>*/}
                 <Collages/>
