@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './styles.scss'
 import '../../index.css'
+import { ContainerScroll } from "../ui/container-scroll-animation";
 import CRM_black from '../../images/icons/Crm_black.png'
 import CRM_grey from '../../images/icons/Crm_grey.png'
 
@@ -26,11 +27,15 @@ export const Crm = () => {
     return (
         <div className='crm'>
             <div className='crm_media'>
-                <h1>Optimize <span>non-stop</span><br/>Check your profits
-                    <span className='text_ml'>in a minute</span></h1>
-                { windowWidth < 768 ? (
-                    darkMode ? (
-                        <img src={CRM_grey_small} alt=''/>
+                <ContainerScroll 
+                    titleComponent={
+                        <h1>Optimize <span>non-stop</span><br/>Check your profits
+                            <span className='text_ml'>in a minute</span></h1>
+                    }
+                >
+                    {windowWidth < 768 ? (
+                        darkMode ? (
+                            <img src={CRM_grey_small} alt=''/>
                     ) : (
                         <img src={CRM_black_small} alt=''/>
                     )
@@ -41,6 +46,7 @@ export const Crm = () => {
                         <img src={CRM_black} alt=''/>
                     )
                 )}
+                </ContainerScroll>
             </div>
         </div>
     );
