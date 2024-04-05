@@ -3,7 +3,7 @@
   justify-content: center;
   display: flex;
   margin-bottom: 100px;
-  overflow: hidden;
+  //overflow: hidden;
   &_media{
     position: relative;
     //padding: 30px;
@@ -94,3 +94,21 @@
     width: 90%;
   }
 }
+
+
+/*@media(min-width: 768px) {
+  .lol{
+    display: block;
+  }
+  .lol_small{
+    display: none;
+  }
+}
+@media(max-width: 768px){
+  .lol{
+    display: none;
+  }
+  .lol_small{
+    display: block;
+  }
+}*/
