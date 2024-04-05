@@ -8,12 +8,15 @@ import CRM_grey from '../../images/icons/Crm_grey.png'
 import CRM_black_small from '../../images/icons/Crm_black_small.png'
 import CRM_grey_small from '../../images/icons/CRM_grey_small.png'
 
-import { useTheme } from "../DarkMode";
 
 export const Crm = () => {
-    const { darkMode } = useTheme();
 const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+    const [darkMode, setDarkMode] = useState(
+        localStorage.getItem('darkMode') === 'true'
+    );
+    useEffect(() => {
+        localStorage.setItem("darkMode", darkMode.toString());
+    }, [darkMode]);
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
