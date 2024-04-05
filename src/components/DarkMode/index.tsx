@@ -1,9 +1,8 @@
-import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 interface ThemeContextProps {
     darkMode: boolean;
     toggleDarkMode: () => void;
-    setDarkMode: (mode:boolean) => void;
 }
 
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
@@ -23,23 +22,12 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     };
 
     useEffect(() => {
-        const handleStorageChange = (event: StorageEvent) => {
-            if (event.key === 'darkMode') {
-                setDarkMode(event.newValue === 'true');
-            }
-        };
-
-        window.addEventListener('storage', handleStorageChange);
-
-        return () => {
-            window.removeEventListener('storage', handleStorageChange);
-        };
-    }, []);
+        document.body.classList.toggle('dark', darkMode);
+    }, [darkMode]);
 
     const themeContextValue: ThemeContextProps = {
         darkMode,
         toggleDarkMode,
-        setDarkMode
     };
 
     return (
