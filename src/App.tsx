@@ -21,7 +21,7 @@ function App() {
                 <Header/>
                 <ParticlesComponent/>
                 <Slogan/>
-                <Crm/>
+                {/*<Crm/>*/}
                 <Collages/>
                 <AboutUs/>
                 <Pricing/>
