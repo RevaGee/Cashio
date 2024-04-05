@@ -75,9 +75,9 @@ const ParticlesComponent = () => {
                     },
                     value: 120,
                 },
-                opacity: {
+                /*opacity: {
                     value: 1.0,
-                },
+                },*/
                 shape: {
                     type: "circle",
                 },
