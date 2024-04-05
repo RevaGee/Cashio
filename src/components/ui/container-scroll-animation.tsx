@@ -32,7 +32,7 @@ export const ContainerScroll = ({
 
     const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
     const scale = useTransform(scrollYProgress, [0, 1], scaleDimensions());
-    const translate = useTransform(scrollYProgress, [0, 1], [0, -1]);
+    const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
     return (
         <div
@@ -83,9 +83,9 @@ export const Card = ({
                 rotateX: rotate,
                 scale,
             }}
-            className="max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full p-2 md:p-6 rounded-[30px]"
+            className="max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full border-4 border-[#6C6C6C] p-2 md:p-6 bg-[#222222] rounded-[30px] shadow-2xl"
         >
-            <div className=" h-full w-full  overflow-hidden rounded-2xl md:rounded-2xl md:p-4 ">
+            <div className=" h-full w-full  overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 md:rounded-2xl md:p-4 ">
                 {children}
             </div>
         </motion.div>

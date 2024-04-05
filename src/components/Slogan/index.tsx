@@ -4,6 +4,7 @@ import {useTranslation} from "react-i18next";
 import '../Slogan/style.scss'
 import {animate, motion, useMotionValue, useTransform} from "framer-motion";
 import {useInView} from "react-intersection-observer";
+import { CardBody, CardContainer, CardItem } from "../ui_3d/3d-card";
 
 export const Slogan = () => {
     const {t} = useTranslation();
@@ -83,7 +84,11 @@ export const Slogan = () => {
                     animate={{opacity: inView ? 1 : 0, x: inView ? 0 : 200}}
                     transition={{duration: 1}}
                 >
-                    <img src={ImgSlogan} alt="" className="img_slogan"/>
+                    <CardContainer>
+                        <CardItem translateZ="100" className="w-full mt-4">
+                            <img src={ImgSlogan} alt="" className="img_slogan"/>
+                        </CardItem>
+                    </CardContainer>
                 </motion.div>
             </div>
         </div>
