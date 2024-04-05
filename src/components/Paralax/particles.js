@@ -43,7 +43,15 @@ const ParticlesComponent = () => {
                         "enable": true,
                     }
                 },
-
+                modes: {
+                    push: {
+                        distance: 200,
+                        duration: 15,
+                    },
+                    grab: {
+                        distance: 150,
+                    },
+                },
             },
             particles: {
                 color: {

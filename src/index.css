@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-:root {
-    --body_background: white;
-    --body_color: rgb(240, 240, 240);
-    --text_color: black;
-}
 body::-webkit-scrollbar {
     width: 0.5em;
 }
@@ -17,7 +12,6 @@ body::-webkit-scrollbar-thumb {
 [data-theme='dark'] {
     transition: 0.3s ease-out;
     --body_background: #151515;
-    --body_color: #1E1E1E;
     --text_color: #bcbcbc;
     --text_color_pricing: #000;
     --header_color: rgb(30, 30, 30);
@@ -31,7 +25,6 @@ body::-webkit-scrollbar-thumb {
 [data-theme='light'], :root {
     transition: 0.3s ease-out;
     --body_background: #F8F6F4;
-    --body_color: rgb(240, 240, 240);
     --text_color: #606060;
     --text_color_pricing: #FFFF;
     --header_color: rgb(239, 240, 239);
