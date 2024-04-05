@@ -295,6 +295,16 @@
     font-size: 4vw;
     padding: 0 3vw
   }
+  .info_text{
+    .digits{
+      h1{
+        font-size: 5vw !important;
+      }
+      p{
+        font-size: 3vw !important;
+      }
+    }
+  }
 }
 
 @media(max-width: 360px){
