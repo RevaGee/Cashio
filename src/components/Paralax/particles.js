@@ -23,6 +23,11 @@ const ParticlesComponent = () => {
 
     const options = useMemo(
         () => ({
+            background: {
+                color: {
+                    value: "inherit",
+                },
+            },
             fpsLimit: 120,
             interactivity: {
                 "events": {
@@ -38,15 +43,7 @@ const ParticlesComponent = () => {
                         "enable": true,
                     }
                 },
-                modes: {
-                    push: {
-                        distance: 200,
-                        duration: 15,
-                    },
-                    grab: {
-                        distance: 150,
-                    },
-                },
+
             },
             particles: {
                 color: {
@@ -56,7 +53,7 @@ const ParticlesComponent = () => {
                     color: "#616161",
                     distance: 150,
                     enable: true,
-                    //opacity: 0.3,
+                    opacity: 0.3,
                     width: 1,
                 },
                 move: {
@@ -75,9 +72,9 @@ const ParticlesComponent = () => {
                     },
                     value: 120,
                 },
-                /*opacity: {
+                opacity: {
                     value: 1.0,
-                },*/
+                },
                 shape: {
                     type: "circle",
                 },
