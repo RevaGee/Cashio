@@ -85,9 +85,6 @@ export const Header = () => {
     return (
         <div
             className={open ? 'mobile_header' : 'header'}
-            style={{
-                backgroundColor: showScroll ? `var(--header_color)` : 'transparent',
-            }}
         >
             <div className="media">
                 <div className="left_side">
