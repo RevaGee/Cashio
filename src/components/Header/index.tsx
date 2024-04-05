@@ -9,28 +9,34 @@ import {useTheme} from "../DarkMode";
 
 
 export const Header = () => {
-    const { darkMode, toggleDarkMode } = useTheme();
+    const { darkMode, setDarkMode } = useTheme();
     const [open, setOpen] = useState(false);
-    const [isChecked, setIsChecked] = useState(false);
     const [languages, setLanguages] = useState(false);
+    const [isChecked, setIsChecked] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState(
         localStorage.getItem('language') || 'en'
     );
 
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     const [showScroll, setShowScroll] = useState(false);
+    const checkScrollTop = () => {
+        if (!showScroll && window.pageYOffset > 50) {
+            setShowScroll(true);
+        } else if (showScroll && window.pageYOffset <= 50) {
+            setShowScroll(false);
+        }
+    };
+    useEffect(() => {
+        window.addEventListener('scroll', checkScrollTop);
+        return () => {
+            window.removeEventListener('scroll', checkScrollTop);
+        };
+    }, [showScroll]);
 
     useEffect(() => {
-        const handleScroll = () => {
-            setShowScroll(window.scrollY > 50);
-        };
+        localStorage.setItem('darkMode', darkMode.toString());
+    }, [darkMode]);
 
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
     const handleLanguageChange = (language: string) => {
         setSelectedLanguage(language);
@@ -49,10 +55,16 @@ export const Header = () => {
         }else {
             setIsChecked(false)
         }
+
     };
 
     const handleLanguageClick = () => {
         setLanguages(!languages);
+    };
+
+    const toggleDarkMode = () => {
+        const newDarkMode = !darkMode;
+        setDarkMode(newDarkMode);
     };
 
     const scrollToSection = (e: React.SyntheticEvent, sectionId: string) => {
@@ -64,9 +76,12 @@ export const Header = () => {
             const topOffset = 100;
             const topPos = element.getBoundingClientRect().top + window.pageYOffset - topOffset;
             window.scrollTo({ top: topPos, behavior: 'smooth' });
-            setOpen(false);
+            setOpen(false)
         }
+        setIsChecked(false);
+
     }
+
     return (
         <div
             className={open ? 'mobile_header' : 'header'}
