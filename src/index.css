@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb {
     transition: 0.3s ease-out;
     --body_background: #F8F6F4;
     --body_color: rgb(240, 240, 240);
-    --text_color: red;
+    --text_color: #606060;
     --text_color_pricing: #FFFF;
     --header_color: rgb(239, 240, 239);
     --burger_color: #292836;
