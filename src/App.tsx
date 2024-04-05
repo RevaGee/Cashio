@@ -18,7 +18,6 @@ import {ThemeProvider} from "./components/DarkMode";
 function App() {
     return (
         <ThemeProvider>
-            <div style={{width: "100%", margin: "0 auto"}} className="App">
                 <Header/>
                 <ParticlesComponent/>
                 <Slogan/>
@@ -31,7 +30,6 @@ function App() {
                 <ArrowScroll/>
                 <ForWhom/>
                 <Footer/>
-            </div>
         </ThemeProvider>
     )
         ;
