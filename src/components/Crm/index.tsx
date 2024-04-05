@@ -3,13 +3,10 @@ import './styles.scss'
 import '../../index.css'
 import CRM_black from '../../images/icons/Crm_black.png'
 import CRM_grey from '../../images/icons/Crm_grey.png'
+import {useTheme} from "../DarkMode";
 export const Crm = () => {
-    const [darkMode, setDarkMode] = useState(
-        localStorage.getItem('darkMode') === 'true'
-    );
-   /* useEffect(() => {
-        localStorage.setItem('darkMode', darkMode.toString());
-    }, [darkMode]);*/
+    const { darkMode } = useTheme();
+
     return (
         <div className='crm'>
             <div className='crm_media'>

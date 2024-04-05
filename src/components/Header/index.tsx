@@ -5,17 +5,16 @@ import {LogoFooter} from '../../images/icons/iconizer-CASHIO_logo_green';
 import DarkMode from '../DarkMode/DarkMode';
 import {useTranslation} from 'react-i18next';
 import i18n from '../../translation/i18n';
+import {useTheme} from "../DarkMode";
 
 
 export const Header = () => {
+    const { darkMode, setDarkMode } = useTheme();
     const [open, setOpen] = useState(false);
     const [languages, setLanguages] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState(
         localStorage.getItem('language') || 'en'
-    );
-    const [darkMode, setDarkMode] = useState(
-        localStorage.getItem('darkMode') === 'true'
     );
 
     const {t} = useTranslation();
@@ -64,7 +63,8 @@ export const Header = () => {
     };
 
     const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
+        const newDarkMode = !darkMode;
+        setDarkMode(newDarkMode);
     };
 
     const scrollToSection = (e: React.SyntheticEvent, sectionId: string) => {
