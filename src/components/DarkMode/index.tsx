@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import App from "../../App";
 
 interface ThemeContextProps {
     darkMode: boolean;
@@ -43,7 +44,9 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     };
 
     return (
-        <ThemeContext.Provider value={themeContextValue}/>
+        <ThemeContext.Provider value={themeContextValue}>
+            <App/>
+        </ThemeContext.Provider>
     );
 };
 

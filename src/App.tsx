@@ -17,7 +17,7 @@ import {ThemeProvider} from "./components/DarkMode";
 
 function App() {
     return (
-        <ThemeProvider>
+        <div>
                 <Header/>
                 <ParticlesComponent/>
                 <Slogan/>
@@ -30,7 +30,7 @@ function App() {
                 <ArrowScroll/>
                 <ForWhom/>
                 <Footer/>
-        </ThemeProvider>
+    </div>
     )
         ;
 }
