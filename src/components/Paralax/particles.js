@@ -1,27 +1,31 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
-import './styles.scss';
+import './styles.scss'
+
+
 
 const ParticlesComponent = () => {
-    const [init, setInit] = useState(false);
-    const [options, setOptions] = useState({});
 
+    const [init, setInit] = useState(false);
     useEffect(() => {
-        const initializeParticles = async () => {
-            await initParticlesEngine(async (engine) => {
-                await loadSlim(engine);
-            });
+        initParticlesEngine(async (engine) => {
+            await loadSlim(engine);
+        }).then(() => {
             setInit(true);
-        };
-        initializeParticles();
+        });
     }, []);
 
-    useEffect(() => {
-        setOptions({
+    const particlesLoaded = (container) => {
+        console.log(container);
+    };
+
+
+    const options = useMemo(
+        () => ({
             background: {
                 color: {
-                    value: "inherit",
+                    value: "transparent",
                 },
             },
             fpsLimit: 120,
@@ -77,7 +81,7 @@ const ParticlesComponent = () => {
                     value: 120,
                 },
                 opacity: {
-                    value: 1,
+                    value: 1.0,
                 },
                 shape: {
                     type: "circle",
@@ -87,14 +91,12 @@ const ParticlesComponent = () => {
                 },
             },
             detectRetina: true,
-        });
-    }, []);
+        }),
+        [],
+    );
 
-    const particlesLoaded = (container) => {
-        console.log(container);
-    };
 
-    return <Particles id="particles" init={particlesLoaded} options={options} />;
+    return <Particles id="particles" init={particlesLoaded} options={options}/>;
 };
 
 export default ParticlesComponent;
