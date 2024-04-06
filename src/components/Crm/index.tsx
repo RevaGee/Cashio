@@ -99,7 +99,7 @@ export const Crm = () => {
                                 src={second} alt=''
                                 style={{alignSelf: 'end', marginBottom: '5%'}}
                                 initial={{opacity: 0, x: 0, y: 0}}
-                                animate={{opacity: inView_crm_2 ? 1 : 0, x: inView_crm_2 ? 0 : 130}}
+                                animate={{opacity: inView_crm_2 ? 1 : 0, x: inView_crm_2 ? 0 : 130, y: inView_crm_2 ? 0 : -100}}
                                 transition={{duration: 1}}
                             />
                             <motion.img
