@@ -12,7 +12,6 @@ import {Pricing} from "./components/Pricing";
 import {AboutUs} from "./components/AboutUs";
 import {ForWhom} from "./components/ForWhom";
 import {Crm} from "./components/Crm";
-import {ThemeProvider} from "./components/DarkMode";
 
 
 function App() {
