@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
 import './styles.scss'
 import '../../index.css'
-import { ContainerScroll } from "../ui/container-scroll-animation";
-import CRM_black from '../../images/icons/Crm_black.png'
-import CRM_grey from '../../images/icons/Crm_grey.png'
+import first from '../../images/1.png'
+import second from '../../images/2.png'
+import third from '../../images/3.png'
+import fourth from '../../images/30.png'
+import fifth from '../../images/60.png'
 
-import CRM_black_small from '../../images/icons/Crm_black_small.png'
-import CRM_grey_small from '../../images/icons/CRM_grey_small.png'
-
-import { useTheme } from "../DarkMode";
 
 export const Crm = () => {
-    const { darkMode } = useTheme();
-const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [darkMode, setDarkMode] = useState(
+        localStorage.getItem('darkMode') === 'true'
+    );
+    useEffect(() => {
+        localStorage.setItem("darkMode", darkMode.toString());
+    }, [darkMode]);
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
@@ -27,31 +29,22 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     return (
         <div className='crm'>
             <div className='crm_media'>
-                <ContainerScroll
-                    titleComponent={
-                        <h1>Optimize <span>non-stop</span><br/>Check your profits
-                            <span className='text_ml'>in a minute</span></h1>
-                    }
-                >
-                    {/*{windowWidth < 768 ? (
-                        darkMode ? (
-                            <img src={CRM_grey_small} alt=''/>
-                    ) : (
-                        <img src={CRM_black_small} alt=''/>
-                    )
-                ) : (
-                    darkMode ? (
-                        <img src={CRM_grey} alt=''/>
-                    ) : (
-                        <img src={CRM_black} alt=''/>
-                    )
-                )}*/}
-                    <img className = 'lol_small' src={CRM_grey_small} alt='' style={windowWidth < 768 ? (darkMode ? {display: 'flex'} : {display: 'none'}):{display: 'none'}}/>
-                    <img className = 'lol_small' src={CRM_black_small} alt='' style={windowWidth < 768 ? (darkMode ? {display: 'none'} : {display: 'flex'}):{display: 'none'}}/>
-                    <img className = 'lol' src={CRM_grey} alt='' style={windowWidth > 768 ? (darkMode ? {display: 'flex'} : {display: 'none'}):{display: 'none'}}/>
-                    <img className = 'lol' src={CRM_black} alt='' style={windowWidth > 768 ? (darkMode ? {display: 'none'} : {display: 'flex'}):{display: 'none'}}/>
-
-                </ContainerScroll>
+                <h1>Optimize <span>non-stop</span><br/>Check your profits
+                    <span className='text_ml'>in a minute</span>
+                </h1>
+                <div className='crm_collage'>
+                    <div className='top_collage'>
+                        <img className = 'collage_bar' src={first} alt=''/>
+                        <div className='right_top'>
+                            <img src={second} alt='' style={{alignSelf: 'end', marginBottom: '5%'}}/>
+                            <img src={third} alt='' style={{alignSelf: 'end'}}/>
+                        </div>
+                    </div>
+                    <div className='bottom_collage'>
+                        <img src={fourth} alt='' style={{marginRight: '5%', width: '60%'}}/>
+                        <img src={fifth} alt='' style={{width: '35%'}}/>
+                    </div>
+                </div>
             </div>
         </div>
     );
