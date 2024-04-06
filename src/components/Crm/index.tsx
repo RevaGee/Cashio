@@ -9,9 +9,11 @@ import fifth from '../../images/60.png'
 import fifthPhone from '../../images/4.png'
 import { motion } from "framer-motion";
 import {useInView} from "react-intersection-observer";
+import {useTranslation} from "react-i18next";
 
 
 export const Crm = () => {
+    const {t} = useTranslation();
     const [width, setWindowWidth] = useState(window.innerWidth);
     const [darkMode, setDarkMode] = useState(
         localStorage.getItem('darkMode') === 'true'
@@ -66,7 +68,7 @@ export const Crm = () => {
                     animate={{opacity: inView_crm_text ? 1 : 0, x: inView_crm_text ? (width < 768 ? 0 : 0) : -130}}
                     transition={{duration: 1}}
                 >
-                    Optimize <span>non-stop</span><br/>Check your profits<span className='text_ml'>in a minute</span>
+                    {t('CRM.optimize')} <span>{t('CRM.non-stop')}</span><br/>{t('CRM.check')}<span className='text_ml'>{t('CRM.inAMinute')}</span>
                 </motion.h1>
                 <div className='crm_collage'>
                     <div className='top_collage'>

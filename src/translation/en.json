@@ -90,5 +90,11 @@
   "Collages": {
     "collageSlogan": "ADAPT, UPGRADE, SUCCEED",
     "bigCollage": "HOW CAN CASHIO HELP GROWN YOUR BUSINESS?"
+  },
+  "CRM": {
+    "optimize": "Optimize",
+    "non-stop": "non-stop",
+    "check": "Check your profits",
+    "inAMinute": " in a minute"
   }
 }
