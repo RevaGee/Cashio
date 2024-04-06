@@ -7,13 +7,12 @@ import third from '../../images/3.png'
 import fourth from '../../images/30.png'
 import fifth from '../../images/60.png'
 import fifthPhone from '../../images/4.png'
-import {ContainerScroll} from "../ui/container-scroll-animation";
 import { motion } from "framer-motion";
 import {useInView} from "react-intersection-observer";
 
 
 export const Crm = () => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [width, setWindowWidth] = useState(window.innerWidth);
     const [darkMode, setDarkMode] = useState(
         localStorage.getItem('darkMode') === 'true'
     );
@@ -57,20 +56,6 @@ export const Crm = () => {
         triggerOnce: true,
         threshold: 0.5,
     });
-    const [width, setWidth] = useState(window.innerWidth);
-
-    const handleResize = () => {
-        setWidth(window.innerWidth);
-    };
-
-    useEffect(() => {
-        window.addEventListener('resize', handleResize);
-
-        // Cleanup function to remove the event listener when the component unmounts
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
 
     return (
         <div className='crm'>
@@ -99,7 +84,7 @@ export const Crm = () => {
                                 src={second} alt=''
                                 style={{alignSelf: 'end', marginBottom: '5%'}}
                                 initial={{opacity: 0, x: 0, y: 0}}
-                                animate={{opacity: inView_crm_2 ? 1 : 0, x: inView_crm_2 ? 0 : 130, y: inView_crm_2 ? 0 : -100}}
+                                animate={{opacity: inView_crm_2 ? 1 : 0, x: width < 768 ? (inView_crm_2 ? 0 : -130) : (inView_crm_2 ? 0 : 130), y: width < 768 ? (inView_crm_2 ? 0 : 0) : 0}}
                                 transition={{duration: 1}}
                             />
                             <motion.img
@@ -118,7 +103,7 @@ export const Crm = () => {
                             src={fourth} alt=''
                             style={{marginRight: '5%', width: '60%'}}
                             initial={{opacity: 0, y: 0, x: 0}}
-                            animate={{opacity: inView_crm_4 ? 1 : 0, y: inView_crm_4 ? 0 : 130, x: inView_crm_4 ? 0 : -130}}
+                            animate={{opacity: inView_crm_4 ? 1 : 0, x: inView_crm_4 ? 0 : -130, y: width < 768 ? (inView_crm_4 ? 0 : 0) : (inView_crm_4 ? 0 : 130)}}
                             transition={{duration: 1}}
                         />
                         <motion.img
