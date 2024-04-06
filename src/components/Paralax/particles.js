@@ -1,28 +1,24 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
-import './styles.scss'
-
-
+import './styles.scss';
 
 const ParticlesComponent = () => {
-
     const [init, setInit] = useState(false);
+    const [options, setOptions] = useState({});
+
     useEffect(() => {
-        initParticlesEngine(async (engine) => {
-            await loadSlim(engine);
-        }).then(() => {
+        const initializeParticles = async () => {
+            await initParticlesEngine(async (engine) => {
+                await loadSlim(engine);
+            });
             setInit(true);
-        });
+        };
+        initializeParticles();
     }, []);
 
-    const particlesLoaded = (container) => {
-        console.log(container);
-    };
-
-
-    const options = useMemo(
-        () => ({
+    useEffect(() => {
+        setOptions({
             background: {
                 color: {
                     value: "inherit",
@@ -78,10 +74,10 @@ const ParticlesComponent = () => {
                     density: {
                         enable: true,
                     },
-                    value: 60,
+                    value: 120,
                 },
                 opacity: {
-                    value: 1.0,
+                    value: 1,
                 },
                 shape: {
                     type: "circle",
@@ -90,13 +86,15 @@ const ParticlesComponent = () => {
                     value: { min: 1, max: 3 },
                 },
             },
-            detectRetina: true,
-        }),
-        [],
-    );
+            //detectRetina: true,
+        });
+    }, []);
 
+    const particlesLoaded = (container) => {
+        console.log(container);
+    };
 
-    return <Particles id="particles" init={particlesLoaded} options={options}/>;
+    return <Particles id="particles" init={particlesLoaded} options={options} />;
 };
 
 export default ParticlesComponent;
