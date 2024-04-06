@@ -46,15 +46,15 @@ export const Crm = () => {
     });
     const [ref_crm_4, inView_crm_4] = useInView({
         triggerOnce: true,
-        threshold: 0.5,
+        threshold: 0.3,
     });
     const [ref_crm_5, inView_crm_5] = useInView({
         triggerOnce: true,
-        threshold: 0.5,
+        threshold: 0.3,
     });
     const [ref_crm_6, inView_crm_6] = useInView({
         triggerOnce: true,
-        threshold: 0.5,
+        threshold: 0.3,
     });
 
     return (
@@ -75,7 +75,7 @@ export const Crm = () => {
                             className = 'collage_bar'
                             src={first} alt=''
                             initial={{opacity: 0, x: 0}}
-                            animate={{opacity: inView_crm_1 ? 1 : 0, x: inView_crm_1 ? 0 : -130}}
+                            animate={{opacity: inView_crm_1 ? 1 : 0, x: inView_crm_1 ? 0 : -100}}
                             transition={{duration: 1}}
                         />
                         <div className='right_top'>
@@ -84,7 +84,7 @@ export const Crm = () => {
                                 src={second} alt=''
                                 style={{alignSelf: 'end', marginBottom: '5%'}}
                                 initial={{opacity: 0, x: 0, y: 0}}
-                                animate={{opacity: inView_crm_2 ? 1 : 0, x: width < 768 ? (inView_crm_2 ? 0 : -130) : (inView_crm_2 ? 0 : 130), y: width < 768 ? (inView_crm_2 ? 0 : 0) : 0}}
+                                animate={{opacity: inView_crm_2 ? 1 : 0, x: width < 768 ? (inView_crm_2 ? 0 : -100) : (inView_crm_2 ? 0 : 100), y: width < 768 ? (inView_crm_2 ? 0 : 0) : 0}}
                                 transition={{duration: 1}}
                             />
                             <motion.img
