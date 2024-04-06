@@ -12,6 +12,7 @@ body::-webkit-scrollbar-thumb {
 [data-theme='dark'] {
     transition: 0.3s ease-out;
     --body_background: #151515;
+    --collage_shadow: #F8F6F4;
     --text_color: #bcbcbc;
     --text_color_pricing: #000;
     --header_color: rgb(30, 30, 30);
@@ -25,6 +26,7 @@ body::-webkit-scrollbar-thumb {
 [data-theme='light'], :root {
     transition: 0.3s ease-out;
     --body_background: #F8F6F4;
+    --collage_shadow: #151515;
     --text_color: #606060;
     --text_color_pricing: #FFFF;
     --header_color: rgb(239, 240, 239);
