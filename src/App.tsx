@@ -18,18 +18,18 @@ function App() {
     return (
         <div>
             <ParticlesComponent/>
-            <Header/>
-            <Slogan/>
-            <Crm/>
-            <Collages/>
-            <AboutUs/>
-            <Pricing/>
-            <Contacts/>
-            <Questions/>
-            <ArrowScroll/>
-            <ForWhom/>
-            <Footer/>
-        </div>
+                <Header/>
+                <Slogan/>
+                <Crm/>
+                <Collages/>
+                <AboutUs/>
+                <Pricing/>
+                <Contacts/>
+                <Questions/>
+                <ArrowScroll/>
+                <ForWhom/>
+                <Footer/>
+    </div>
     )
         ;
 }

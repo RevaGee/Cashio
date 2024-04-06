@@ -58,7 +58,11 @@ const ParticlesComponent = () => {
         console.log(container);
     };
 
-    return <Particles id="particles" init={particlesLoaded} options={options} />;
+    return (
+        <div className="particles-container"> {/* Додано клас particles-container */}
+            <Particles id="particles" init={particlesLoaded} options={options} />
+        </div>
+    );
 };
 
 export default ParticlesComponent;
