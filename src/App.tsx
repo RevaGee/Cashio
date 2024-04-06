@@ -17,19 +17,19 @@ import {Crm} from "./components/Crm";
 function App() {
     return (
         <div>
-                <Header/>
-                <ParticlesComponent/>
-                <Slogan/>
-                <Crm/>
-                <Collages/>
-                <AboutUs/>
-                <Pricing/>
-                <Contacts/>
-                <Questions/>
-                <ArrowScroll/>
-                <ForWhom/>
-                <Footer/>
-    </div>
+            <ParticlesComponent/>
+            <Header/>
+            <Slogan/>
+            <Crm/>
+            <Collages/>
+            <AboutUs/>
+            <Pricing/>
+            <Contacts/>
+            <Questions/>
+            <ArrowScroll/>
+            <ForWhom/>
+            <Footer/>
+        </div>
     )
         ;
 }
