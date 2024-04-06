@@ -36,6 +36,7 @@ export const Header = () => {
 
     useEffect(() => {
         localStorage.setItem('darkMode', darkMode.toString());
+        window.dispatchEvent(new Event('resetDarkMode'));
     }, [darkMode]);
 
 
@@ -64,7 +65,8 @@ export const Header = () => {
     };
 
     const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
+        const newDarkMode = !darkMode;
+        setDarkMode(newDarkMode);
     };
 
     const scrollToSection = (e: React.SyntheticEvent, sectionId: string) => {

@@ -16,22 +16,21 @@ import {Crm} from "./components/Crm";
 
 function App() {
     return (
-        <div>
+        <div style={{width: "100%", margin: "0 auto"}} className="App">
+            <Header/>
             <ParticlesComponent/>
-                <Header/>
-                <Slogan/>
-                <Crm/>
-                <Collages/>
-                <AboutUs/>
-                <Pricing/>
-                <Contacts/>
-                <Questions/>
-                <ArrowScroll/>
-                <ForWhom/>
-                <Footer/>
-    </div>
-    )
-        ;
+            <Slogan/>
+            <Crm/>
+            <Collages/>
+            <AboutUs/>
+            <Pricing/>
+            <Contacts/>
+            <Questions/>
+            <ArrowScroll/>
+            <ForWhom/>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;
