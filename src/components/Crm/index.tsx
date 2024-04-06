@@ -6,6 +6,7 @@ import second from '../../images/2.png'
 import third from '../../images/3.png'
 import fourth from '../../images/30.png'
 import fifth from '../../images/60.png'
+import fifthPhone from '../../images/4.png'
 
 
 export const Crm = () => {
@@ -42,7 +43,8 @@ export const Crm = () => {
                     </div>
                     <div className='bottom_collage'>
                         <img src={fourth} alt='' style={{marginRight: '5%', width: '60%'}}/>
-                        <img src={fifth} alt='' style={{width: '35%'}}/>
+                        <img className = 'fifth' src={fifth} alt='' style={{width: '35%'}}/>
+                        <img className = 'fifth_phone' src={fifthPhone} alt=''/>
                     </div>
                 </div>
             </div>
