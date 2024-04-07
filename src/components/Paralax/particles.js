@@ -21,7 +21,7 @@ const ParticlesComponent = () => {
             setOptions({
                 background: {
                     color: {
-                        value: "inherit",
+                        value: "red",
                     },
                 },
                 fpsLimit: 120,
