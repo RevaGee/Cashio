@@ -5,7 +5,6 @@ import {LogoFooter} from '../../images/icons/iconizer-CASHIO_logo_green';
 import DarkMode from '../DarkMode/DarkMode';
 import {useTranslation} from 'react-i18next';
 import i18n from '../../translation/i18n';
-import ParticlesComponent from "../Paralax/particles";
 
 
 export const Header = () => {
@@ -91,7 +90,6 @@ export const Header = () => {
                 backgroundColor: showScroll ? `var(--header_color)` : 'transparent',
             }}
         >
-            <ParticlesComponent/>
             <div className="media">
                 <div className="left_side">
                     <div className="logo">

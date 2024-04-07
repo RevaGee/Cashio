@@ -12,6 +12,7 @@ import { AboutUs } from "./components/AboutUs";
 import { ForWhom } from "./components/ForWhom";
 import { Crm } from "./components/Crm";
 import ParticlesComponent from "./components/Paralax/particles";
+import {Background} from "./components/Background";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
     return (
 
         <div style={{width: "100%", margin: "0 auto"}} className="App">
+            <Background/>
             <Header/>
             <Slogan/>
             <Crm/>
