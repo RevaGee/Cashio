@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-:root {
-    --body_background: white;
-    --body_color: rgb(240, 240, 240);
-    --text_color: black;
-}
-
 body::-webkit-scrollbar {
     width: 0.5em;
 }
@@ -17,11 +11,11 @@ body::-webkit-scrollbar-thumb {
 
 [data-theme='dark'] {
     transition: 0.3s ease-out;
-    --body_background: red;
+    --body_background: #151515;
     --collage_shadow: #F8F6F4;
-    --text_color: red;
+    --text_color: #bcbcbc;
     --text_color_pricing: #000;
-    --header_color:red;
+    --header_color: rgb(30, 30, 30);
     --burger_color: #ebebeb;
     --logo_color: invert(0);
     --black_color_pricing: #FFFFFF;
@@ -32,15 +26,15 @@ body::-webkit-scrollbar-thumb {
 [data-theme='light'], :root {
     transition: 0.3s ease-out;
     --body_background: #F8F6F4;
-    --collage_shadow: red;
-    --text_color: red;
+    --collage_shadow: #151515;
+    --text_color: #606060;
     --text_color_pricing: #FFFF;
     --header_color: rgb(239, 240, 239);
-    --burger_color: red;
+    --burger_color: #292836;
     --logo_color: invert(0);
-    --black_color_pricing: red;
+    --black_color_pricing: #404040;
     --buttton_text_color: #FFFFFF;
-    --boxColor: #eff0ef;
+    --boxColor: red;
 }
 
 body {
