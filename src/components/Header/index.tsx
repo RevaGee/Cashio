@@ -5,6 +5,7 @@ import {LogoFooter} from '../../images/icons/iconizer-CASHIO_logo_green';
 import DarkMode from '../DarkMode/DarkMode';
 import {useTranslation} from 'react-i18next';
 import i18n from '../../translation/i18n';
+import ParticlesComponent from "../Paralax/particles";
 
 
 export const Header = () => {
@@ -84,6 +85,7 @@ export const Header = () => {
     }
 
     return (
+
         <div
             className={open ? 'mobile_header' : 'header'}
             style={{
@@ -92,6 +94,9 @@ export const Header = () => {
         >
             <div className="media">
                 <div className="left_side">
+                    <div style={{width: "100%", height: "0", position: "absolute"}}>
+                        <ParticlesComponent/>
+                    </div>
                     <div className="logo">
                         <LogoFooter/>
                     </div>
@@ -99,25 +104,30 @@ export const Header = () => {
                         <nav className={open ? 'show_menu' : 'navigation'}>
                             <ul className="nav__links">
                                 <li>
-                                    <a href="#Slogan" onClick={(e) => scrollToSection(e,'Slogan')}>{t('Features')}</a>
+                                    <a href="#Slogan" onClick={(e) => scrollToSection(e, 'Slogan')}>{t('Features')}</a>
                                 </li>
                                 <li>
-                                    <a href="#Collages" onClick={(e) => scrollToSection(e,'Collages')}>{t('Why Us')}</a>
+                                    <a href="#Collages"
+                                       onClick={(e) => scrollToSection(e, 'Collages')}>{t('Why Us')}</a>
                                 </li>
                                 <li>
-                                    <a href="#AboutUs" onClick={(e) => scrollToSection(e,'AboutUs')}>{t('About Us')}</a>
+                                    <a href="#AboutUs"
+                                       onClick={(e) => scrollToSection(e, 'AboutUs')}>{t('About Us')}</a>
                                 </li>
                                 <li>
-                                    <a href="#Pricing" onClick={(e) => scrollToSection(e,'Pricing')}>{t('Pricing')}</a>
+                                    <a href="#Pricing" onClick={(e) => scrollToSection(e, 'Pricing')}>{t('Pricing')}</a>
                                 </li>
                                 <li>
-                                    <a href="#contacts" onClick={(e) => scrollToSection(e,'contact')}>{t('Contacts')}</a>
+                                    <a href="#contacts"
+                                       onClick={(e) => scrollToSection(e, 'contact')}>{t('Contacts')}</a>
                                 </li>
                                 <li>
-                                    <a href="#Questions" onClick={(e) => scrollToSection(e, 'Questions')}>{t('Questions')}</a>
+                                    <a href="#Questions"
+                                       onClick={(e) => scrollToSection(e, 'Questions')}>{t('Questions')}</a>
                                 </li>
                                 <li>
-                                    <a href="#for_whom" onClick={(e) => scrollToSection(e, 'for_whom')}>{t('ForWhom')}</a>
+                                    <a href="#for_whom"
+                                       onClick={(e) => scrollToSection(e, 'for_whom')}>{t('ForWhom')}</a>
                                 </li>
                             </ul>
                         </nav>
@@ -125,7 +135,7 @@ export const Header = () => {
                 </div>
                 <div className="right_side">
                     <div className="language">
-                        <ul className="nav-links">
+                    <ul className="nav-links">
                             <li className="nav-link services" onClick={handleLanguageClick}>
                                 <a>
                                     {selectedLanguage.toUpperCase()}
