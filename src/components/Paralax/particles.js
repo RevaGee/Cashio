@@ -8,9 +8,9 @@ const ParticlesComponent = () => {
         const [options, setOptions] = useState({});
 
         useEffect(() => {
-            const initializeParticles = async () => {
-                await initParticlesEngine(async (engine) => {
-                    await loadSlim(engine);
+            const initializeParticles =  () => {
+                 initParticlesEngine( (engine) => {
+                     loadSlim(engine);
                 });
                 setInit(true);
             };
@@ -94,7 +94,7 @@ const ParticlesComponent = () => {
             console.log(container);
         };
 
-        return <Particles id="particles" init={particlesLoaded} options={options}/>;
+        return <Particles className='particles' options={options}/>;
 };
 export default ParticlesComponent;
 
