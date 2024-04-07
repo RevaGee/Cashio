@@ -3,7 +3,7 @@ import ParticlesComponent from "./Paralax/particles";
 
 export const Background = () => {
     return(
-        <div style={{width: "100%", height: "0", position:"absolute", zIndex: "-10"}}>
+        <div style={{width: "0", height: "0", position:"absolute", zIndex: "-10", top: '0'}}>
             <ParticlesComponent/>
         </div>
     )
