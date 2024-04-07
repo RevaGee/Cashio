@@ -4,7 +4,6 @@ import {useTranslation} from "react-i18next";
 import '../Slogan/style.scss'
 import {animate, motion, useMotionValue, useTransform} from "framer-motion";
 import {useInView} from "react-intersection-observer";
-import ParticlesComponent from "../Paralax/particles";
 
 export const Slogan = () => {
     const {t} = useTranslation();
@@ -30,7 +29,6 @@ export const Slogan = () => {
 
     return (
         <div className="slogan" ref={ref} id="Slogan">
-            <ParticlesComponent/>
             <div className="img_and_text">
                 <motion.div
                     className="slogan_text"

@@ -1,100 +1,101 @@
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { useEffect, useState } from "react";
-import { loadSlim } from "@tsparticles/slim";
+import Particles, {initParticlesEngine} from "@tsparticles/react";
+import {useEffect, useState} from "react";
+import {loadSlim} from "@tsparticles/slim";
 import './styles.scss';
 
 const ParticlesComponent = () => {
-    const [init, setInit] = useState(false);
-    const [options, setOptions] = useState({});
+        const [init, setInit] = useState(false);
+        const [options, setOptions] = useState({});
 
-    useEffect(() => {
-        const initializeParticles = async () => {
-            await initParticlesEngine(async (engine) => {
-                await loadSlim(engine);
-            });
-            setInit(true);
-        };
-        initializeParticles();
-    }, []);
+        useEffect(() => {
+            const initializeParticles = async () => {
+                await initParticlesEngine(async (engine) => {
+                    await loadSlim(engine);
+                });
+                setInit(true);
+            };
+            initializeParticles();
+        }, []);
 
-    useEffect(() => {
-        setOptions({
-            background: {
-                color: {
-                    value: "inherit",
+        useEffect(() => {
+            setOptions({
+                background: {
+                    color: {
+                        value: "inherit",
+                    },
                 },
-            },
-            fpsLimit: 120,
-            interactivity: {
-                "events": {
-                    "onHover": {
-                        "enable": true,
-                        "mode": "grab"
+                fpsLimit: 120,
+                interactivity: {
+                    "events": {
+                        "onHover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onClick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": {
+                            "enable": true,
+                        }
                     },
-                    "onClick": {
-                        "enable": true,
-                        "mode": "push"
+                    modes: {
+                        push: {
+                            distance: 200,
+                            duration: 15,
+                        },
+                        grab: {
+                            distance: 150,
+                        },
                     },
-                    "resize":{
-                        "enable": true,
-                    }
                 },
-                modes: {
-                    push: {
-                        distance: 200,
-                        duration: 15,
+                particles: {
+                    color: {
+                        value: "#616161",
                     },
-                    grab: {
+                    links: {
+                        color: "#616161",
                         distance: 150,
-                    },
-                },
-            },
-            particles: {
-                color: {
-                    value: "#616161",
-                },
-                links: {
-                    color: "#616161",
-                    distance: 150,
-                    enable: true,
-                    opacity: 0.3,
-                    width: 1,
-                },
-                move: {
-                    direction: "none",
-                    enable: true,
-                    outModes: {
-                        default: "bounce",
-                    },
-                    random: true,
-                    speed: 1,
-                    straight: false,
-                },
-                number: {
-                    density: {
                         enable: true,
+                        opacity: 0.3,
+                        width: 1,
                     },
-                    value: 120,
+                    move: {
+                        direction: "none",
+                        enable: true,
+                        outModes: {
+                            default: "bounce",
+                        },
+                        random: true,
+                        speed: 1,
+                        straight: false,
+                    },
+                    number: {
+                        density: {
+                            enable: true,
+                        },
+                        value: 120,
+                    },
+                    opacity: {
+                        value: 1,
+                    },
+                    shape: {
+                        type: "circle",
+                    },
+                    size: {
+                        value: {min: 1, max: 3},
+                    },
                 },
-                opacity: {
-                    value: 1,
-                },
-                shape: {
-                    type: "circle",
-                },
-                size: {
-                    value: { min: 1, max: 3 },
-                },
-            },
-            detectRetina: true,
-        });
-    }, []);
+                detectRetina: true,
+            });
+        }, []);
 
-    const particlesLoaded = (container) => {
-        console.log(container);
-    };
+        const particlesLoaded = (container) => {
+            console.log(container);
+        };
 
-    return <Particles id="particles" init={particlesLoaded} options={options} />;
+        return <Particles id="particles" init={particlesLoaded} options={options}/>;
 };
-
 export default ParticlesComponent;
+
+
