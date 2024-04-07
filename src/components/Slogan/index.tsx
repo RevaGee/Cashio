@@ -30,13 +30,12 @@ export const Slogan = () => {
 
     return (
         <div className="slogan" ref={ref} id="Slogan">
-            <ParticlesComponent/>
             <div className="img_and_text">
-                <motion.div
+                <div
                     className="slogan_text"
-                    initial={{opacity: 0, top: 0, x: 0}}
-                    animate={{opacity: inView ? 1 : 0, x: inView ? 0 : -2000}}
-                    transition={{duration: 1}}
+                    // initial={{opacity: 0, top: 0, x: 0}}
+                    // animate={{opacity: inView ? 1 : 0, x: inView ? 0 : -2000}}
+                    // transition={{duration: 1}}
                 >
                     <div>
                         <div className="slogan_head_text">
@@ -78,15 +77,15 @@ export const Slogan = () => {
                                 <p>{t('anderDigits.anderDigits3')}</p></div>
                         </div>
                     </div>
-                </motion.div>
-                <motion.div
+                </div>
+                <div
                     className="slogan_image"
-                    initial={{opacity: 0, x: 200}}
-                    animate={{opacity: inView ? 1 : 0, x: inView ? 0 : 200}}
-                    transition={{duration: 1}}
+                    // initial={{opacity: 0, x: 200}}
+                    // animate={{opacity: inView ? 1 : 0, x: inView ? 0 : 200}}
+                    // transition={{duration: 1}}
                 >
                     <img src={ImgSlogan} alt="" className="img_slogan"/>
-                </motion.div>
+                </div>
             </div>
         </div>
     );
