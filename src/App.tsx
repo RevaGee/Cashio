@@ -12,27 +12,25 @@ import {Pricing} from "./components/Pricing";
 import {AboutUs} from "./components/AboutUs";
 import {ForWhom} from "./components/ForWhom";
 import {Crm} from "./components/Crm";
-import {ThemeProvider} from "./components/DarkMode";
 
 
 function App() {
     return (
-        <div>
-                <Header/>
-                <ParticlesComponent/>
-                <Slogan/>
-                <Crm/>
-                <Collages/>
-                <AboutUs/>
-                <Pricing/>
-                <Contacts/>
-                <Questions/>
-                <ArrowScroll/>
-                <ForWhom/>
-                <Footer/>
-    </div>
-    )
-        ;
+        <div style={{width: "100%", margin: "0 auto"}} className="App">
+            <Header/>
+            <ParticlesComponent/>
+            <Slogan/>
+            <Crm/>
+            <Collages/>
+            <AboutUs/>
+            <Pricing/>
+            <Contacts/>
+            <Questions/>
+            <ArrowScroll/>
+            <ForWhom/>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;
