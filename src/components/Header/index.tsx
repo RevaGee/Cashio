@@ -5,7 +5,6 @@ import {LogoFooter} from '../../images/icons/iconizer-CASHIO_logo_green';
 import DarkMode from '../DarkMode/DarkMode';
 import {useTranslation} from 'react-i18next';
 import i18n from '../../translation/i18n';
-import {BackgroundBeams} from "../ui/background-beams";
 
 
 export const Header = () => {
