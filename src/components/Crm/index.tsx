@@ -10,6 +10,7 @@ import fifthPhone from '../../images/4.png'
 import { motion } from "framer-motion";
 import {useInView} from "react-intersection-observer";
 import {useTranslation} from "react-i18next";
+import {BackgroundBeams} from "../ui/background-beams";
 
 
 export const Crm = () => {

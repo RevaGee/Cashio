@@ -5,6 +5,7 @@ import '../Slogan/style.scss'
 import {animate, motion, useMotionValue, useTransform} from "framer-motion";
 import {useInView} from "react-intersection-observer";
 import ParticlesComponent from "../Paralax/particles";
+import {BackgroundBeams} from "../ui/background-beams";
 
 export const Slogan = () => {
     const {t} = useTranslation();
@@ -29,8 +30,10 @@ export const Slogan = () => {
     };
 
     return (
+
         <div className="slogan" ref={ref} id="Slogan">
-            <ParticlesComponent/>
+            {/*<ParticlesComponent/>*/}
+            <BackgroundBeams/>
             <div className="img_and_text">
                 <motion.div
                     className="slogan_text"
