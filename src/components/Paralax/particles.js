@@ -29,30 +29,6 @@ const ParticlesComponent = () => {
                 },
             },
             fpsLimit: 120,
-            interactivity: {
-                "events": {
-                    "onHover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onClick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize":{
-                        "enable": true,
-                    }
-                },
-                modes: {
-                    push: {
-                        distance: 200,
-                        duration: 15,
-                    },
-                    grab: {
-                        distance: 150,
-                    },
-                },
-            },
             particles: {
                 color: {
                     value: "#616161",

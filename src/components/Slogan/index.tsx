@@ -30,7 +30,7 @@ export const Slogan = () => {
 
     return (
         <div className="slogan" ref={ref} id="Slogan">
-            {/*<ParticlesComponent/>*/}
+            <ParticlesComponent/>
             <div className="img_and_text">
                 <motion.div
                     className="slogan_text"
