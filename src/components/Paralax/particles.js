@@ -8,9 +8,9 @@ const ParticlesComponent = () => {
         const [options, setOptions] = useState({});
 
         useEffect(() => {
-            const initializeParticles = async () => {
-                await initParticlesEngine(async (engine) => {
-                    await loadSlim(engine);
+            const initializeParticles =  () => {
+                 initParticlesEngine( (engine) => {
+                     loadSlim(engine);
                 });
                 setInit(true);
             };
