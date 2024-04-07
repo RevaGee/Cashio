@@ -65,8 +65,7 @@ export const Header = () => {
     };
 
     const toggleDarkMode = () => {
-        const newDarkMode = !darkMode;
-        setDarkMode(newDarkMode);
+        setDarkMode(!darkMode);
     };
 
     const scrollToSection = (e: React.SyntheticEvent, sectionId: string) => {
