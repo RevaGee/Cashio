@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.scss"
 import {LogoFooter} from "../../images/icons/iconizer-CASHIO_logo_green";
+import ParticlesComponent from "../Paralax/particles";
 
 
 export const Footer = () => {
@@ -20,6 +21,7 @@ export const Footer = () => {
 
     return (
         <div className="footer">
+            <ParticlesComponent/>
             <div className="footer__content">
                 <div className="footer_start_content">
                     <div className="logo_footer"><LogoFooter /></div>
