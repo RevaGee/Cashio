@@ -15,12 +15,11 @@ body::-webkit-scrollbar-thumb {
     --collage_shadow: #F8F6F4;
     --text_color: #bcbcbc;
     --text_color_pricing: #000;
-    --header_color: rgb(30, 30, 30);
+    --header_color: red;
     --burger_color: #ebebeb;
-    --logo_color: invert(0);
     --black_color_pricing: #FFFFFF;
     --buttton_text_color: #000000;
-    --boxColor: red;
+    --boxColor: #1e1e1e;
 }
 
 [data-theme='light'], :root {
@@ -29,12 +28,11 @@ body::-webkit-scrollbar-thumb {
     --collage_shadow: #151515;
     --text_color: #606060;
     --text_color_pricing: #FFFF;
-    --header_color: rgb(239, 240, 239);
+    --header_color: red;
     --burger_color: #292836;
-    --logo_color: invert(0);
     --black_color_pricing: #404040;
     --buttton_text_color: #FFFFFF;
-    --boxColor: red;
+    --boxColor: #eff0ef;
 }
 
 body {
