@@ -3,6 +3,7 @@
   justify-content: center;
   display: flex;
   margin-bottom: 100px;
+  overflow: hidden;
   &_media{
     position: relative;
     width: 100%;
@@ -72,9 +73,6 @@
   }
 }
 @media(max-width: 992px){
-  .crm{
-    overflow: hidden;
-  }
   .crm_media{
     h1{
       font-size: 25px !important;
