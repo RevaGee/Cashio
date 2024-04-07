@@ -29,7 +29,6 @@ export const Slogan = () => {
     };
 
     return (
-
         <div className="slogan" ref={ref} id="Slogan">
             <div className="img_and_text">
                 <motion.div
