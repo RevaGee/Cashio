@@ -284,21 +284,21 @@
 
 .drop-down {
 	position: absolute;
-	background: rgb(240, 240, 240);
+	//background: rgb(240, 240, 240);
 	color: black;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 	border-radius: 0.5rem;
 	font-size: 14px;
 	display: none;
-	border: 1px solid #e2dfdf;
+	//border: 1px solid #e2dfdf;
 	padding: 18px 24px 18px;
 	margin-left: -25px;
 	margin-top: 10px;
 	line-height: 1.888em;
 
 	li:hover {
-		background: #e0e0e0;
-		color: #7a7a7a;
+		//background: #e0e0e0;
+		//color: #7a7a7a;
 		border-radius: 0.5rem;
 	}
 }
