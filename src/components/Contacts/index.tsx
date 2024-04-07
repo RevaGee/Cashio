@@ -13,7 +13,7 @@ export const Contacts = () => {
     const {t} = useTranslation();
 
     const handleTelegramLink = () => {
-        window.open('https://t.me/quantumop', '_blank');
+        window.open('https://t.me/Cashio_Mngr', '_blank');
     };
     const [ref, inView] = useInView({
         triggerOnce: true,

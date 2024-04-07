@@ -47,7 +47,7 @@ export const Header = () => {
     };
 
     const handleTelegramLink = () => {
-        window.open('https://t.me/quantumop', '_blank');
+        window.open('https://t.me/Cashio_Mngr', '_blank');
     };
 
     const handleClick = () => {
