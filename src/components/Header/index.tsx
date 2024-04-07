@@ -91,6 +91,7 @@ export const Header = () => {
                 backgroundColor: showScroll ? `var(--header_color)` : 'transparent',
             }}
         >
+            <ParticlesComponent/>
             <div className="media">
                 <div className="left_side">
                     <div className="logo">

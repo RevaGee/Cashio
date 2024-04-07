@@ -94,7 +94,7 @@ const ParticlesComponent = () => {
             console.log(container);
         };
 
-        return <Particles className='particles' options={options}/>;
+        return <Particles className='particles' options={options} style={{zIndex: -5}} />;
 };
 export default ParticlesComponent;
 
