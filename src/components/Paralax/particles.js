@@ -66,7 +66,7 @@ const ParticlesComponent = () => {
                         outModes: {
                             default: "bounce",
                         },
-                        random: true,
+                        random: false,
                         speed: 1,
                         straight: false,
                     },
