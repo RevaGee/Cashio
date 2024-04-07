@@ -28,7 +28,7 @@ const ParticlesComponent = () => {
                     value: "transparent",
                 },
             },
-            fpsLimit: 120,
+            fpsLimit: 60,
             particles: {
                 color: {
                     value: "#616161",
@@ -54,7 +54,7 @@ const ParticlesComponent = () => {
                     density: {
                         enable: true,
                     },
-                    value: 120,
+                    value: 30,
                 },
                 opacity: {
                     value: 1.0,
