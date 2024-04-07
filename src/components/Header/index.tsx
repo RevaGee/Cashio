@@ -36,9 +36,7 @@ export const Header = () => {
 
     useEffect(() => {
         localStorage.setItem('darkMode', darkMode.toString());
-        window.dispatchEvent(new Event('resetDarkMode'));
     }, [darkMode]);
-
 
     const handleLanguageChange = (language: string) => {
         setSelectedLanguage(language);
@@ -47,17 +45,12 @@ export const Header = () => {
     };
 
     const handleTelegramLink = () => {
-        window.open('https://t.me/quantumop', '_blank');
+        window.open('https://t.me/zheka_revor', '_blank');
     };
 
     const handleClick = () => {
         setOpen(!open);
-        if(!open){
-            setIsChecked(true)
-        }else {
-            setIsChecked(false)
-        }
-
+        setIsChecked(true)
     };
 
     const handleLanguageClick = () => {
@@ -65,8 +58,7 @@ export const Header = () => {
     };
 
     const toggleDarkMode = () => {
-        const newDarkMode = !darkMode;
-        setDarkMode(newDarkMode);
+        setDarkMode(!darkMode);
     };
 
     const scrollToSection = (e: React.SyntheticEvent, sectionId: string) => {
@@ -78,10 +70,9 @@ export const Header = () => {
             const topOffset = 100;
             const topPos = element.getBoundingClientRect().top + window.pageYOffset - topOffset;
             window.scrollTo({ top: topPos, behavior: 'smooth' });
-            setOpen(false)
         }
         setIsChecked(false);
-
+        setOpen(!open);
     }
 
     return (
