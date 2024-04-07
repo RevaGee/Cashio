@@ -94,7 +94,7 @@ const ParticlesComponent = () => {
             console.log(container);
         };
 
-        return <Particles id="particles" init={particlesLoaded} options={options}/>;
+        return <Particles className='particles' options={options}/>;
 };
 export default ParticlesComponent;
 

@@ -3,6 +3,7 @@
   width: 100%;
   top: 0;
   display: flex;
+  z-index: -2;
   align-items: center;
   justify-content: center;
   background-color: var(--header_color);

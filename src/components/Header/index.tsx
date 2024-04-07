@@ -85,7 +85,6 @@ export const Header = () => {
     }
 
     return (
-
         <div
             className={open ? 'mobile_header' : 'header'}
             style={{
@@ -94,9 +93,6 @@ export const Header = () => {
         >
             <div className="media">
                 <div className="left_side">
-                    <div style={{width: "100%", height: "0", position: "absolute"}}>
-                        <ParticlesComponent/>
-                    </div>
                     <div className="logo">
                         <LogoFooter/>
                     </div>

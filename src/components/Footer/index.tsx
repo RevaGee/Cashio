@@ -21,7 +21,7 @@ export const Footer = () => {
 
     return (
         <div className="footer">
-            <ParticlesComponent/>
+            {/*<ParticlesComponent/>*/}
             <div className="footer__content">
                 <div className="footer_start_content">
                     <div className="logo_footer"><LogoFooter /></div>
