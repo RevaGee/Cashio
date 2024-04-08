@@ -167,14 +167,14 @@
   transition: 0.8s all ease;
   z-index: 1;
 
-  /*&:hover {
+  &:hover {
     color: var(--text_color);
     background: #EFF0EF;
     border: 1px solid #1FA84F;
-  }*/
+  }
 }
 
-/*.demo_contacts_pricing::before {
+.demo_contacts_pricing::before {
   background: var(--header_color);
   content: "";
   position: absolute;
@@ -189,7 +189,7 @@
 
 .demo_contacts_pricing:hover::before {
   height: 550%;
-}*/
+}
 
 .demo_contacts_pricing_main {
   background: #1FA84F;
@@ -213,14 +213,14 @@
   transition: 0.8s all ease;
   z-index: 1;
 
-  /*&:hover {
+  &:hover {
     color: var(--text_color);
     background: #EFF0EF;
     border: 1px solid #1FA84F;
-  }*/
+  }
 }
 
-/*.demo_contacts_pricing_main::before {
+.demo_contacts_pricing_main::before {
   background: var(--header_color);
   content: "";
   position: absolute;
@@ -235,7 +235,7 @@
 
 .demo_contacts_pricing_main:hover::before {
   height: 550%;
-}*/
+}
 
 .pricing_text {
   h4 {
