@@ -13,7 +13,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  margin: 100px 0 0 0;
+  margin: 100px 0 100px 0;
 }
 .img_and_text{
   width: 100%;
@@ -311,6 +311,11 @@
   }
 }
 
+@media(max-width: 480px){
+  .slogan{
+    margin: 100px 0 30px 0 !important;
+  }
+}
 @media(max-width: 360px){
   .demo_slogan{
     height: 40px;

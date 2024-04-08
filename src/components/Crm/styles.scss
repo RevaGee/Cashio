@@ -19,7 +19,7 @@
       color: #1FA84F;
     }
       h1{
-        margin: 30px 0 0 30px;
+        margin: 30px 30px 0 30px;
         width: fit-content;
         color: var(--text_color);
         z-index: 2;
@@ -66,6 +66,9 @@
 }
 
 @media(max-width: 1200px){
+  .crm{
+    margin-bottom: 50px;
+  }
   .crm_media{
     h1{
       font-size: 34px !important;
@@ -149,9 +152,8 @@
     }
   }
 }
-/*
 @media(max-width: 480px){
-  .slogan{
-    height: calc(100lvh - 90px);
+  .crm{
+    margin-bottom: 30px !important;
   }
-}*/
+}
