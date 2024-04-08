@@ -1,9 +1,8 @@
+import React, { useEffect } from 'react';
 import en from './en.json';
 import ru from './ru.json';
 import ua from './ua.json';
-
-import { initReactI18next } from 'react-i18next';
-import i18n from 'i18next';
+import { useTranslation } from 'react-i18next';
 import Cookies from 'js-cookie';
 
 const resources = {
@@ -18,22 +17,26 @@ const resources = {
     },
 };
 
-const savedLanguage = Cookies.get('language');
+const useSaveLanguageToCookies = (language) => {
+    useEffect(() => {
+        Cookies.set('language', language, { expires: 365 });
+    }, [language]);
+};
 
-i18n
-    .use(initReactI18next)
-    .init({
+const initializei18n = () => {
+    const { i18n } = useTranslation();
+
+    const savedLanguage = Cookies.get('language') || 'en';
+
+    i18n.init({
         resources,
-        lng: savedLanguage || 'en',
+        lng: savedLanguage,
         fallbackLng: 'en',
     });
 
-const saveLanguageToCookies = (language) => {
-    Cookies.set('language', language, { expires: 365 }); // Зберігаємо мову на рік
+    useSaveLanguageToCookies(i18n.language);
+
+    return i18n;
 };
 
-i18n.on('languageChanged', (lng) => {
-    saveLanguageToCookies(lng);
-});
-
-export default i18n;
+export default initializei18n();
