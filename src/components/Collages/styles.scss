@@ -190,7 +190,7 @@
 @media(max-width: 480px){
   .collage{
     margin: 30px auto !important;
-    //width: 280px !important;
+    width: 280px !important;
     height: 260px !important;
     padding: 20px;
     h1{
@@ -210,9 +210,9 @@
     }
   }
 }
-@media(max-width: 380px){
+/*@media(max-width: 380px){
   .collage{
-    //width: 240px !important;
+    width: 240px !important;
   }
 }
 .slick-dots{
@@ -229,7 +229,7 @@
       color: #1FA84F;
     }
   }
-}
+}*/
 
 .slick-prev, .slick-next{
   display: none !important;
