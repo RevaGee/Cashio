@@ -190,7 +190,7 @@
 }
 
 .demo_contacts_pricing_main {
-  background: #1FA84F;
+  /*background: #1FA84F;
   height: 55px;
   color: var(--buttton_text_color);
   cursor: pointer;
@@ -204,6 +204,23 @@
   position: relative;
   overflow: hidden;
   //justify-content: center;
+  letter-spacing: .5px;
+  outline: none;
+  transition: 0.8s all ease;
+  z-index: 1;*/
+  background: #1FA84F;
+  height: 48px;
+  color: var(--buttton_text_color);
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 8px 25px;
+  position: relative;
+  overflow: hidden;
   letter-spacing: .5px;
   outline: none;
   transition: 0.8s all ease;
