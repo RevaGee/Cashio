@@ -23,20 +23,22 @@ const useSaveLanguageToCookies = (language) => {
     }, [language]);
 };
 
-const initializei18n = () => {
+const InitializeI18n = () => {
     const { i18n } = useTranslation();
 
     const savedLanguage = Cookies.get('language') || 'en';
 
-    i18n.init({
-        resources,
-        lng: savedLanguage,
-        fallbackLng: 'en',
-    });
+    useEffect(() => {
+        i18n.init({
+            resources,
+            lng: savedLanguage,
+            fallbackLng: 'en',
+        });
+    }, [i18n, savedLanguage]);
 
-    useSaveLanguageToCookies(i18n.language);
+    useSaveLanguageToCookies(i18n.language); // Викликаємо хук безпосередньо тут
 
-    return i18n;
+    return null; // Функціональні компоненти повинні повертати JSX або null
 };
 
-export default initializei18n();
+export default InitializeI18n;
