@@ -402,11 +402,11 @@
 @media(max-width: 480px) {
   .pricing {
     margin-bottom: 30px;
-    .demo_contacts_pricing_main{
-      width: 100%;
-    }
-    .demo_contacts_pricing{
-      width: 100%;
-    }
+  }
+  .demo_contacts_pricing_main{
+    width: 90%;
+  }
+  .demo_contacts_pricing{
+    width: 90%;
   }
 }
