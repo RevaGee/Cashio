@@ -4,7 +4,6 @@ import ua from './ua.json';
 
 import { initReactI18next } from 'react-i18next';
 import i18n from 'i18next';
-import Cookies from 'js-cookie';
 
 const resources = {
     en: {
@@ -18,22 +17,23 @@ const resources = {
     },
 };
 
-const savedLanguage = Cookies.get('language');
+// Зчитуємо значення мови з localStorage
+const savedLanguage = localStorage.getItem('language');
 
 i18n
     .use(initReactI18next)
     .init({
         resources,
-        lng: savedLanguage || 'en',
+        lng: savedLanguage || 'en', // Використовуємо збережене значення мови або англійську, якщо немає збереженого значення
         fallbackLng: 'en',
     });
 
-const saveLanguageToCookies = (language) => {
-    Cookies.set('language', language, { expires: 365 }); // Зберігаємо мову на рік
-};
-
+// Прослуховуємо подію зміни мови і зберігаємо нове значення у localStorage
 i18n.on('languageChanged', (lng) => {
-    saveLanguageToCookies(lng);
+    localStorage.setItem('language', lng);
 });
+
+// Зберігаємо список доступних мов у localStorage
+localStorage.setItem('availableLanguages', JSON.stringify(Object.keys(resources)));
 
 export default i18n;
