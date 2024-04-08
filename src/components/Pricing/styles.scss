@@ -146,6 +146,7 @@
 
 
 .demo_contacts_pricing {
+  width: 60%;
   background: #1FA84F;
   height: 55px;
   color: var(--buttton_text_color);
@@ -192,6 +193,7 @@
 }
 
 .demo_contacts_pricing_main {
+  width: 60%;
   background: #1FA84F;
   height: 55px;
   color: var(--buttton_text_color);
@@ -404,9 +406,9 @@
     margin-bottom: 30px;
   }
   .demo_contacts_pricing_main{
-    width: 75vw;
+    width: 90%;
   }
   .demo_contacts_pricing{
-    width: 75vw;
+    width: 90%;
   }
 }
