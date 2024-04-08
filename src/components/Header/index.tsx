@@ -42,11 +42,12 @@ export const Header = () => {
 
 
     const handleLanguageChange = (language: string) => {
-        setSelectedLanguage(language);
-        i18n.changeLanguage(language);
         localStorage.setItem('language', language);
         window.location.reload();
+        setSelectedLanguage(language);
+        i18n.changeLanguage(language);
     };
+
 
     const handleTelegramLink = () => {
         window.open('https://t.me/Cashio_Mngr', '_blank');
