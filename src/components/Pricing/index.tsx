@@ -7,8 +7,7 @@ import { motion } from "framer-motion";
 
 
 export const Pricing = () => {
-    const {t} = useTranslation()
-
+    const {t} = useTranslation();
     const [ref_pricing_text, inView_pricing_text] = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -29,7 +28,6 @@ export const Pricing = () => {
         triggerOnce: true,
         threshold: 0.5,
     });
-
     const handleTelegramLink = () => {
         window.open('https://t.me/Cashio_Mngr', '_blank');
     };
@@ -116,7 +114,7 @@ export const Pricing = () => {
                         <div className='under_description_pricing'>
                             <p> {t('pricing.billed6')}</p>
                         </div>
-                        <button className='demo_contacts_pricing' onClick={handleTelegramLink}>
+                        <button className='knopka_abba' onClick={handleTelegramLink}>
                             {t('pricing.getStarted')}
                         </button>
                     </motion.div>
