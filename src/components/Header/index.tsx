@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import './styles.scss';
-import { ArrowUp } from '../../images/icons/ArrowUp';
-import { LogoFooter } from '../../images/icons/iconizer-CASHIO_logo_green';
+import {ArrowUp} from '../../images/icons/ArrowUp';
+import {LogoFooter} from '../../images/icons/iconizer-CASHIO_logo_green';
 import DarkMode from '../DarkMode/DarkMode';
-import { useTranslation } from 'react-i18next';
-import Cookies from 'js-cookie'; // Зміна імпорту
-import i18n from 'i18next';
+import {useTranslation} from 'react-i18next';
+import i18n from '../../translation/i18n';
+import ParticlesComponent from "../Paralax/particles";
 
 
 export const Header = () => {
@@ -13,13 +13,13 @@ export const Header = () => {
     const [languages, setLanguages] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState(
-        Cookies.get('language') || 'en' // Зміна отримання мови
+        localStorage.getItem('language') || 'en'
     );
     const [darkMode, setDarkMode] = useState(
-        Cookies.get('darkMode') === 'true' // Зміна отримання режиму темної теми
+        localStorage.getItem('darkMode') === 'true'
     );
 
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     const [showScroll, setShowScroll] = useState(false);
     const checkScrollTop = () => {
         if (!showScroll && window.pageYOffset > 50) {
@@ -36,14 +36,15 @@ export const Header = () => {
     }, [showScroll]);
 
     useEffect(() => {
-        Cookies.set('darkMode', darkMode.toString()); // Зміна збереження режиму темної теми
+        localStorage.setItem('darkMode', darkMode.toString());
         window.dispatchEvent(new Event('resetDarkMode'));
     }, [darkMode]);
+
 
     const handleLanguageChange = (language: string) => {
         setSelectedLanguage(language);
         i18n.changeLanguage(language);
-        Cookies.set('language', language); // Зміна збереження мови
+        localStorage.setItem('language', language);
     };
 
     const handleTelegramLink = () => {
@@ -52,11 +53,12 @@ export const Header = () => {
 
     const handleClick = () => {
         setOpen(!open);
-        if (!open) {
-            setIsChecked(true);
-        } else {
-            setIsChecked(false);
+        if(!open){
+            setIsChecked(true)
+        }else {
+            setIsChecked(false)
         }
+
     };
 
     const handleLanguageClick = () => {
@@ -76,10 +78,11 @@ export const Header = () => {
             const topOffset = 100;
             const topPos = element.getBoundingClientRect().top + window.pageYOffset - topOffset;
             window.scrollTo({ top: topPos, behavior: 'smooth' });
-            setOpen(false);
+            setOpen(false)
         }
         setIsChecked(false);
-    };
+
+    }
 
     return (
         <div
@@ -88,48 +91,40 @@ export const Header = () => {
                 backgroundColor: showScroll ? `var(--header_color)` : 'transparent',
             }}
         >
+            <ParticlesComponent/>
             <div className="media">
                 <div className="left_side">
                     <div className="logo">
-                        <LogoFooter />
+                        <LogoFooter/>
                     </div>
                     <div className="nav_block">
                         <nav className={open ? 'show_menu' : 'navigation'}>
                             <ul className="nav__links">
                                 <li>
-                                    <a href="#Slogan" onClick={(e) => scrollToSection(e, 'Slogan')}>
-                                        {t('Features')}
-                                    </a>
+                                    <a href="#Slogan" onClick={(e) => scrollToSection(e, 'Slogan')}>{t('Features')}</a>
                                 </li>
                                 <li>
-                                    <a href="#Collages" onClick={(e) => scrollToSection(e, 'Collages')}>
-                                        {t('Why Us')}
-                                    </a>
+                                    <a href="#Collages"
+                                       onClick={(e) => scrollToSection(e, 'Collages')}>{t('Why Us')}</a>
                                 </li>
                                 <li>
-                                    <a href="#AboutUs" onClick={(e) => scrollToSection(e, 'AboutUs')}>
-                                        {t('About Us')}
-                                    </a>
+                                    <a href="#AboutUs"
+                                       onClick={(e) => scrollToSection(e, 'AboutUs')}>{t('About Us')}</a>
                                 </li>
                                 <li>
-                                    <a href="#Pricing" onClick={(e) => scrollToSection(e, 'Pricing')}>
-                                        {t('Pricing')}
-                                    </a>
+                                    <a href="#Pricing" onClick={(e) => scrollToSection(e, 'Pricing')}>{t('Pricing')}</a>
                                 </li>
                                 <li>
-                                    <a href="#contacts" onClick={(e) => scrollToSection(e, 'contact')}>
-                                        {t('Contacts')}
-                                    </a>
+                                    <a href="#contacts"
+                                       onClick={(e) => scrollToSection(e, 'contact')}>{t('Contacts')}</a>
                                 </li>
                                 <li>
-                                    <a href="#Questions" onClick={(e) => scrollToSection(e, 'Questions')}>
-                                        {t('Questions')}
-                                    </a>
+                                    <a href="#Questions"
+                                       onClick={(e) => scrollToSection(e, 'Questions')}>{t('Questions')}</a>
                                 </li>
                                 <li>
-                                    <a href="#for_whom" onClick={(e) => scrollToSection(e, 'for_whom')}>
-                                        {t('ForWhom')}
-                                    </a>
+                                    <a href="#for_whom"
+                                       onClick={(e) => scrollToSection(e, 'for_whom')}>{t('ForWhom')}</a>
                                 </li>
                             </ul>
                         </nav>
@@ -137,20 +132,20 @@ export const Header = () => {
                 </div>
                 <div className="right_side">
                     <div className="language">
-                        <ul className="nav-links">
+                    <ul className="nav-links">
                             <li className="nav-link services" onClick={handleLanguageClick}>
                                 <a>
                                     {selectedLanguage.toUpperCase()}
                                     <span
                                         className="material-icons dropdown-icon"
-                                        style={languages ? { transform: 'rotate(180deg)' } : {}}
+                                        style={languages ? {transform: 'rotate(180deg)'} : {}}
                                     >
-                                        <ArrowUp />
-                                    </span>
+                    <ArrowUp/>
+                  </span>
                                 </a>
                                 <ul
                                     className="drop-down"
-                                    style={languages ? { display: 'block', justifyContent: 'center' } : {}}
+                                    style={languages ? {display: 'block', justifyContent: 'center'} : {}}
                                 >
                                     <li
                                         onClick={() => {
@@ -185,9 +180,9 @@ export const Header = () => {
                     <button className="demo" onClick={handleTelegramLink}>
                         {t('Get a free demo')}
                     </button>
-                    <DarkMode darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+                    <DarkMode darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
                     <label className="burger">
-                        <input type="checkbox" checked={isChecked} name="" />
+                        <input type="checkbox" checked={isChecked} name=""/>
                         <div className="bar" onClick={handleClick}>
                             <span className="top"></span>
                             <span className="middle"></span>

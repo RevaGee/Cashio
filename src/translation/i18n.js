@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
 import en from './en.json';
 import ru from './ru.json';
 import ua from './ua.json';
-import { useTranslation } from 'react-i18next';
-import Cookies from 'js-cookie';
+
+import { initReactI18next } from 'react-i18next';
+import i18n from 'i18next';
 
 const resources = {
     en: {
@@ -17,28 +17,23 @@ const resources = {
     },
 };
 
-const useSaveLanguageToCookies = (language) => {
-    useEffect(() => {
-        Cookies.set('language', language, { expires: 365 });
-    }, [language]);
-};
+// Зчитуємо значення мови з localStorage
+const savedLanguage = localStorage.getItem('language');
 
-const InitializeI18n = () => {
-    const { i18n } = useTranslation();
+i18n
+    .use(initReactI18next)
+    .init({
+        resources,
+        lng: savedLanguage || 'en', // Використовуємо збережене значення мови або англійську, якщо немає збереженого значення
+        fallbackLng: 'en',
+    });
 
-    const savedLanguage = Cookies.get('language') || 'en';
+// Прослуховуємо подію зміни мови і зберігаємо нове значення у localStorage
+i18n.on('languageChanged', (lng) => {
+    localStorage.setItem('language', lng);
+});
 
-    useEffect(() => {
-        i18n.init({
-            resources,
-            lng: savedLanguage,
-            fallbackLng: 'en',
-        });
-    }, [i18n, savedLanguage]);
+// Зберігаємо список доступних мов у localStorage
+localStorage.setItem('availableLanguages', JSON.stringify(Object.keys(resources)));
 
-    useSaveLanguageToCookies(i18n.language); // Викликаємо хук безпосередньо тут
-
-    return null; // Функціональні компоненти повинні повертати JSX або null
-};
-
-export default InitializeI18n;
+export default i18n;
