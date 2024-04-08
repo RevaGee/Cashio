@@ -190,7 +190,7 @@
 @media(max-width: 480px){
   .collage{
     margin: 30px auto !important;
-    width: 280px !important;
+    //width: 280px !important;
     height: 260px !important;
     padding: 20px;
     h1{
@@ -212,7 +212,7 @@
 }
 @media(max-width: 380px){
   .collage{
-    width: 240px !important;
+    //width: 240px !important;
   }
 }
 .slick-dots{
@@ -239,8 +239,6 @@
 }
 .right_arrow, .left_arrow{
   display: block;
-  //width: 20px;
-  //height: 20px;
   padding: 0;
   cursor: pointer;
   border: none;
@@ -248,17 +246,7 @@
   background-color: transparent;
 
 }
-/*.right_arrow_hide, .left_arrow_hide{
-  position: absolute;
-  top: 50%;
-  display: none;
-  padding: 0;
-  transform: translate(0, -50%);
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background-color: transparent;
-}*/
+
 .left_arrow:before,
 .right_arrow:before
 {
