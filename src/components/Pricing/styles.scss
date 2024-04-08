@@ -146,6 +146,7 @@
 
 
 .demo_contacts_pricing {
+  white-space: nowrap;
   background: #1FA84F;
   height: 55px;
   color: var(--buttton_text_color);
@@ -190,6 +191,7 @@
 }
 
 .demo_contacts_pricing_main {
+  white-space: nowrap;
   background: #1FA84F;
   height: 55px;
   color: var(--buttton_text_color);
@@ -400,12 +402,12 @@
   }
   .demo_contacts_pricing_main{
     //width: 90%;
-    padding: 8px 30vw;
+    padding: 8px 25vw;
     justify-content: center;
   }
   .demo_contacts_pricing{
     //width: 90%;
-    padding: 8px 30vw;
+    padding: 8px 25vw;
     justify-content: center;
   }
 }
