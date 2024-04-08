@@ -1,14 +1,7 @@
 
 .slogan {
   display: flex;
-  //align-items: center;
-  //justify-content: left;
-  //flex-direction: column;
-  //width: 90%;
   height: calc(100lvh - 110px);
-  //min-height: 100vh;
-  //width: 100%;
-  //margin: 100px auto;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -19,30 +12,20 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  //position: relative;
 }
 
 .slogan_text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  //align-self: center;
-  //margin-top: 5px;
-  //margin-top: 75px;/
-  //height: calc(100vh - 80px);
-  /*text-align: left;
-  margin-bottom: inherit;*/
 }
 .slogan_image{
-  //height: 36vw;
   height: 640px;
 }
 
 .slogan_head_text {
   display: flex;
-  //font-size: 60px;
   font-size: 55px;
-  //font-size: 4vw;
   font-weight: bold;
   color: var(--text_color);
   p{
@@ -56,16 +39,13 @@
 }
 
 .signature {
-  //font-size: 30px;
   font-size: 16px;
   margin: 15px 0;
-  //font-size: 2vw;
   color: var(--text_color);
 }
 
 .img_slogan {
   width: 700px;
-  //margin-top: 75px;//
 }
 
 .demo_slogan {
@@ -118,8 +98,6 @@
 
 
 .button_digits{
-  //margin-top: 30px;
-  //display: flex;
   margin-top: 1vw;
   .info_text {
     font-weight: bold;
@@ -127,8 +105,6 @@
     display: flex;
     justify-content: space-between;
     width: 95%;
-    //width: 110%;
-    //font-size: 1.0vw;
     font-size: 16px;
     margin-bottom: 20px;
 
@@ -137,7 +113,6 @@
     }
 
     .digits {
-      //margin-top: 50px;
       margin-top: 3.5vw;
       display: flex;
       flex-direction: column;
@@ -173,10 +148,6 @@
   .img_and_text {
     max-width:960px;
   }
-  .img_slogan{
-    //margin-top: 75px;
-    //width: 100%;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -184,26 +155,15 @@
     max-width:1140px;
   }
   .slogan_image{
-    //height: 600px;
-    //height: 725px;
     height: calc(100lvh - 110px);
   }
   .img_slogan{
-    //width: 530px;
     width: calc(100lvh - 70px);
     height: inherit;
-  }
-  .slogan{
-    /*
-    margin: 100px 0 100px 0;
-    */
   }
 }
 
 @media (min-width: 1400px) {
-  .slogan{
-    //margin: 100px 0 0 0;
-  }
   .img_and_text {
     max-width:1320px;
   }
@@ -211,7 +171,6 @@
     height: 630px;
   }
   .img_slogan{
-    //width: 750px;
     width: 720px;
     height: 640px;
   }
@@ -238,7 +197,6 @@
   }
   .info_text{
     width: 100% !important;
-    //width: 70% !important;
     .digits_margin{
       margin: 0 5px 0 5px;
     }
@@ -266,9 +224,6 @@
   }
 }
 @media(max-width: 768px){
-  .slogan{
-    //margin-top: 100px;
-  }
   .slogan_head_text{
     font-size: 8vw;
   }
@@ -279,7 +234,6 @@
     width: 100%;
   }
   .info_text{
-    //width: 60vw !important;
     .digits{
       h1{
         font-size: 4vw !important;
