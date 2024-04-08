@@ -45,6 +45,7 @@ export const Header = () => {
         setSelectedLanguage(language);
         i18n.changeLanguage(language);
         localStorage.setItem('language', language);
+        window.location.reload();
     };
 
     const handleTelegramLink = () => {
