@@ -29,6 +29,7 @@
     "sass": "^1.71.1",
     "slick-carousel": "^1.8.1",
     "smoothscroll-polyfill": "^0.4.4",
+    "swiper": "^11.1.0",
     "tailwind-merge": "^2.2.2",
     "typescript": "^4.9.5",
     "use-local-storage": "^3.0.0",

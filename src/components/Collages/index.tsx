@@ -6,6 +6,8 @@ import { Collage } from "./Collage";
 import './styles.scss';
 import {useTranslation} from "react-i18next";
 import {useInView} from "react-intersection-observer";
+import Swiper from 'swiper';
+import 'swiper/css';
 import { motion } from "framer-motion";
 import {
     faChartBar,
@@ -62,7 +64,7 @@ export const Collages = () => {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     infinite: true,
-                    adaptiveHeight: true,
+                    //adaptiveHeight: true,
                     dots: true,
                     autoplaySpeed: 4000,
                     autoplay: true,
@@ -91,7 +93,7 @@ export const Collages = () => {
                     rows: 1,
                     infinite: true,
                     initialSlide: 0,
-                    adaptiveHeight: true,
+                    //adaptiveHeight: true,
                     dots: true,
                     autoplaySpeed: 4000,
                     autoplay: true,
