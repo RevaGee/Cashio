@@ -40,12 +40,14 @@ export const Header = () => {
         window.dispatchEvent(new Event('resetDarkMode'));
     }, [darkMode]);
 
-
-    const handleLanguageChange = (language: string) => {
-        localStorage.setItem('language', language);
+    const handleLanguageChange = async (language: string) => {
         window.location.reload();
-        setSelectedLanguage(language);
-        i18n.changeLanguage(language);
+        window.localStorage.setItem('language', language);
+
+        setTimeout(() => {
+            setSelectedLanguage(language);
+            i18n.changeLanguage(language);
+        }, 250);
     };
 
 
@@ -55,9 +57,9 @@ export const Header = () => {
 
     const handleClick = () => {
         setOpen(!open);
-        if(!open){
+        if (!open) {
             setIsChecked(true)
-        }else {
+        } else {
             setIsChecked(false)
         }
 
@@ -79,7 +81,7 @@ export const Header = () => {
         if (element) {
             const topOffset = 100;
             const topPos = element.getBoundingClientRect().top + window.pageYOffset - topOffset;
-            window.scrollTo({ top: topPos, behavior: 'smooth' });
+            window.scrollTo({top: topPos, behavior: 'smooth'});
             setOpen(false)
         }
         setIsChecked(false);
@@ -134,7 +136,7 @@ export const Header = () => {
                 </div>
                 <div className="right_side">
                     <div className="language">
-                    <ul className="nav-links">
+                        <ul className="nav-links">
                             <li className="nav-link services" onClick={handleLanguageClick}>
                                 <a>
                                     {selectedLanguage.toUpperCase()}
