@@ -110,7 +110,7 @@
   display: flex;
   font-size: 22px;
   font-weight: inherit;
-  border-bottom: px solid gray;
+  border-bottom: 1px solid gray;
   margin-bottom: 2vh;
   color: var(--text_color_pricing);
 }
@@ -145,7 +145,7 @@
 }
 
 
-.knopka_abba {
+.demo_contacts_pricing {
   background: #1FA84F;
   height: 55px;
   color: var(--buttton_text_color);
@@ -400,7 +400,7 @@
 }
 
 @media(max-width: 480px) {
-  .pricing {
+  /*.pricing {
     margin-bottom: 30px;
     .demo_contacts_pricing_main{
       width: 90% !important;
@@ -408,5 +408,5 @@
     .demo_contacts_pricing{
       width: 90% !important;
     }
-  }
+  }*/
 }

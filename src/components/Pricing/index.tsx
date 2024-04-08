@@ -114,7 +114,7 @@ export const Pricing = () => {
                         <div className='under_description_pricing'>
                             <p> {t('pricing.billed6')}</p>
                         </div>
-                        <button className='knopka_abba' onClick={handleTelegramLink}>
+                        <button className='demo_contacts_pricing' onClick={handleTelegramLink}>
                             {t('pricing.getStarted')}
                         </button>
                     </motion.div>
